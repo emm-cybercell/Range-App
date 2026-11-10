@@ -2,7 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Check, ChevronDown, Loader2, Minus, Plus, SkipForward, Trash2, X } from "lucide-react";
+import { ChevronDown, Loader2, Minus, Plus, SkipForward, Trash2, X } from "lucide-react";
+import { CheckDraw } from "@/components/motion/check-draw";
 import { addSetAction, deleteSetAction, finishWorkoutAction, toggleSkipAction, updateSetAction } from "../actions";
 import { nowMs } from "@/lib/date";
 
@@ -275,7 +276,13 @@ export function WorkoutClient({ sessionId, planName, dayName, initialElapsedSec,
                         : "bg-sunken text-ink-2"
                   }`}
                 >
-                  {block.status === "SKIPPED" ? "—" : done > 0 ? <Check className="size-3.5" /> : index + 1}
+                  {block.status === "SKIPPED" ? (
+                    "—"
+                  ) : done > 0 ? (
+                    <CheckDraw key={done} className="size-3.5" />
+                  ) : (
+                    index + 1
+                  )}
                 </span>
 
                 <span className="min-w-0 flex-1">
@@ -388,9 +395,10 @@ export function WorkoutClient({ sessionId, planName, dayName, initialElapsedSec,
                       type="button"
                       onClick={() => submitSet(block)}
                       aria-label="完成这一组"
-                      className="grid size-8 place-items-center rounded-full bg-brand text-white transition-transform active:scale-95"
+                      data-ripple
+                      className="grid size-8 place-items-center rounded-full bg-brand text-white"
                     >
-                      <Check className="size-4" strokeWidth={3} />
+                      <CheckDraw key={done} className="size-4" />
                     </button>
                   </div>
 

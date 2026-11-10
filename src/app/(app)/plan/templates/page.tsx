@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Check, Clock3, Dumbbell, Plus } from "lucide-react";
+import { ArrowLeft, ArrowRight, Plus } from "lucide-react";
 import { prisma } from "@/lib/db";
 import { requireAccount } from "@/lib/account";
 import { estimateMinutes, recommendTemplates, type UserEquipment } from "@/lib/plan-templates";
-import { createPlanAction, startBlankPlanAction } from "../actions";
+import { startBlankPlanAction } from "../actions";
+import { TemplateCard } from "./template-card";
 
 const EQUIPMENT_LABEL: Record<UserEquipment, string> = {
   GYM: "健身房",
@@ -85,67 +86,19 @@ export default async function PlanTemplatesPage({
           const totalExercises = t.days.reduce((sum, d) => sum + d.exercises.length, 0);
 
           return (
-            <div
+            <TemplateCard
               key={t.slug}
-              className={`rounded-card border bg-surface p-5 ${
-                t.recommended ? "border-brand/40" : "border-line"
-              }`}
-            >
-              <div className="flex items-start justify-between gap-3">
-                <div className="min-w-0">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <h2 className="text-base font-semibold">{t.name}</h2>
-                    {t.recommended ? (
-                      <span className="rounded-full bg-brand-soft px-2 py-0.5 text-[10px] font-semibold text-brand">
-                        推荐
-                      </span>
-                    ) : null}
-                    {!t.compatible ? (
-                      <span className="rounded-full bg-sunken px-2 py-0.5 text-[10px] font-medium text-ink-3">
-                        {t.reason}
-                      </span>
-                    ) : null}
-                  </div>
-                  <p className="mt-1 text-[12px] text-ink-3">{t.subtitle}</p>
-                </div>
-
-                <span className="shrink-0 text-right">
-                  <span className="num block text-lg font-bold">{t.days.length}</span>
-                  <span className="block text-[10px] text-ink-3">训练日</span>
-                </span>
-              </div>
-
-              <p className="mt-3 text-sm leading-6 text-ink-2">{t.description}</p>
-
-              <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-[11px] text-ink-3">
-                <span className="inline-flex items-center gap-1">
-                  <Dumbbell className="size-3" />
-                  {totalExercises} 个动作
-                </span>
-                <span className="inline-flex items-center gap-1">
-                  <Clock3 className="size-3" />
-                  每次约 {avgMinutes} 分钟
-                </span>
-                <span className="inline-flex items-center gap-1">
-                  <Check className="size-3" />
-                  {t.days.map((d) => d.name).join(" / ")}
-                </span>
-              </div>
-
-              <form action={createPlanAction} className="mt-4">
-                <input type="hidden" name="templateSlug" value={t.slug} />
-                <button
-                  type="submit"
-                  className={`h-11 w-full rounded-btn text-sm font-semibold transition-colors ${
-                    t.recommended
-                      ? "bg-brand text-white hover:bg-brand-hover"
-                      : "border border-line bg-surface text-ink hover:border-ink-3/40"
-                  }`}
-                >
-                  用这套计划
-                </button>
-              </form>
-            </div>
+              slug={t.slug}
+              name={t.name}
+              subtitle={t.subtitle}
+              description={t.description}
+              days={t.days}
+              totalExercises={totalExercises}
+              avgMinutes={avgMinutes}
+              recommended={t.recommended}
+              compatible={t.compatible}
+              reason={t.reason}
+            />
           );
         })}
       </div>

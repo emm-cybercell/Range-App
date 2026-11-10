@@ -3,6 +3,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Check, X } from "lucide-react";
 import { prisma } from "@/lib/db";
+import { requireAccount } from "@/lib/account";
+import { FavoriteButton } from "./favorite-button";
 
 const BODY_PART_LABEL: Record<string, string> = {
   CHEST: "胸",
@@ -51,6 +53,16 @@ export default async function ExerciseDetailPage({
   });
 
   if (!exercise) notFound();
+
+  const account = await requireAccount();
+  const favorited = account
+    ? Boolean(
+        await prisma.exerciseFavorite.findUnique({
+          where: { accountId_exerciseId: { accountId: account.id, exerciseId: exercise.id } },
+          select: { accountId: true },
+        }),
+      )
+    : false;
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-6 sm:px-8">
@@ -101,8 +113,13 @@ export default async function ExerciseDetailPage({
         ) : null}
       </div>
 
-      <h1 className="mt-6 text-2xl font-bold tracking-tight">{exercise.name}</h1>
-      <p className="mt-0.5 text-[13px] text-ink-3">{exercise.nameEn}</p>
+      <div className="mt-6 flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <h1 className="text-2xl font-bold tracking-tight">{exercise.name}</h1>
+          <p className="mt-0.5 text-[13px] text-ink-3">{exercise.nameEn}</p>
+        </div>
+        <FavoriteButton exerciseId={exercise.id} initialFavorited={favorited} />
+      </div>
 
       <div className="mt-3 flex flex-wrap gap-1.5">
         <span className="rounded-full bg-brand-soft px-2.5 py-1 text-[11px] font-medium text-brand">

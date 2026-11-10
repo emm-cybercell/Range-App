@@ -31,15 +31,15 @@ function PlanSkeleton() {
     <div className="mx-auto max-w-3xl px-4 py-6 sm:px-8">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0 flex-1">
-          <div className="h-7 w-32 animate-pulse rounded bg-sunken" />
-          <div className="mt-2 h-4 w-48 animate-pulse rounded bg-sunken" />
+          <div className="h-7 w-32 skeleton rounded" />
+          <div className="mt-2 h-4 w-48 skeleton rounded" />
         </div>
-        <div className="h-9 w-16 animate-pulse rounded-btn bg-sunken" />
+        <div className="h-9 w-16 skeleton rounded-btn" />
       </div>
-      <div className="mt-5 h-12 animate-pulse rounded-xl bg-sunken" />
+      <div className="mt-5 h-12 skeleton rounded-xl" />
       <div className="mt-4 space-y-3">
         {[0, 1].map((i) => (
-          <div key={i} className="h-40 animate-pulse rounded-card bg-sunken" />
+          <div key={i} className="h-40 skeleton rounded-card" />
         ))}
       </div>
     </div>

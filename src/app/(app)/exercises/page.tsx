@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Search } from "lucide-react";
 import { prisma } from "@/lib/db";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { FilterPanel } from "@/components/filter-panel";
 
 const BODY_PART_LABEL: Record<string, string> = {
   CHEST: "胸",
@@ -98,6 +99,7 @@ export default async function ExercisesPage({
         </div>
       </form>
 
+      <FilterPanel>
       {/* 部位筛选 */}
       <div className="-mx-4 mt-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
         <div className="flex gap-2 pb-1">
@@ -142,6 +144,8 @@ export default async function ExercisesPage({
         </div>
       </div>
 
+      </FilterPanel>
+
       {/* 列表 */}
       {exercises.length === 0 ? (
         <div className="mt-12 rounded-card border border-line bg-surface p-10 text-center">
@@ -160,6 +164,8 @@ export default async function ExercisesPage({
             <Link
               key={e.id}
               href={`/exercises/${e.slug}`}
+              data-ripple
+              data-press
               className="group flex items-center gap-3 rounded-card border border-line bg-surface p-3 transition-colors hover:border-brand/40"
             >
               <div className="relative size-16 shrink-0 overflow-hidden rounded-xl bg-sunken">

@@ -21,6 +21,13 @@
   --accent: #c8f169;
   --danger: #e5533d;
   --warn: #e5a63d;
+
+  /* 动效：曲线决定手感，统一放这里，避免各页面各写一套 */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1); /* Cubic Out：收尾利落不拖沓 */
+  --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1); /* Back Out：越过原尺寸再回弹 */
+  --dur-fast: 140ms;
+  --dur-base: 220ms;
+  --dur-slow: 380ms;
 }
 
 /* ─────────── 设计 Token：深色 ─────────── */
@@ -102,4 +109,210 @@
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ─────────── 交互微动效 ─────────── */
+
+/*
+ * 按压回弹：按下缩到 96%，松手由 Back Out 曲线带回，会轻微越过 100% 再停。
+ * 用 utilities 层是为了盖住组件上的 transition-colors（同一属性后写优先），
+ * 同时把颜色过渡一起写进来，避免按钮失去原有的 hover 渐变色。
+ */
+@layer utilities {
+  button:not([data-no-press]):not(:disabled),
+  [role="button"]:not([data-no-press]):not([aria-disabled="true"]),
+  a[data-press] {
+    transition:
+      transform var(--dur-fast) var(--ease-back),
+      background-color 150ms ease,
+      border-color 150ms ease,
+      color 150ms ease,
+      opacity 150ms ease;
+    will-change: transform;
+  }
+
+  button:not([data-no-press]):not(:disabled):active,
+  [role="button"]:not([data-no-press]):not([aria-disabled="true"]):active,
+  a[data-press]:active {
+    transform: scale(0.96);
+  }
+
+  /* 波纹需要一个定位参照与裁剪边界 */
+  [data-ripple] {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+/* 波纹跟手：位置由脚本按手指坐标写入，这里只负责扩散 */
+.ripple-dot {
+  position: absolute;
+  z-index: 0;
+  border-radius: 9999px;
+  pointer-events: none;
+  background: color-mix(in srgb, currentColor 22%, transparent);
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple-spread 600ms var(--ease-out-soft) forwards;
+}
+
+@keyframes ripple-spread {
+  from {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* 收藏成功时四周散开的粒子 */
+.burst-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  background: currentColor;
+  pointer-events: none;
+  animation: particle-burst 600ms var(--ease-out-soft) forwards;
+}
+
+@keyframes particle-burst {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(var(--a)) translateY(0) scale(0.4);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(var(--a)) translateY(-24px) scale(1);
+  }
+}
+
+/* 收藏图标：按下放大再回弹 */
+.icon-pop {
+  animation: icon-pop 420ms var(--ease-back);
+}
+
+@keyframes icon-pop {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.35);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 对勾描边：pathLength=1 归一化后，用 dashoffset 从下往上“画”出来 */
+.check-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: check-draw 200ms var(--ease-out-soft) forwards;
+}
+
+@keyframes check-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* 底部抽屉入场 */
+.sheet-in {
+  animation: sheet-in var(--dur-base) var(--ease-out-soft);
+}
+
+@keyframes sheet-in {
+  from {
+    transform: translateY(14%);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 骨架微光：比纯 pulse 更像“正在加载”，且不会整体呼吸导致跳动 */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--sunken);
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in srgb, var(--surface) 65%, transparent) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  animation: skeleton-sweep 1.4s ease-in-out infinite;
+}
+
+@keyframes skeleton-sweep {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* 液态滑块：轨道填充、滑钮位置、数值三者共用同一缓动，拖起来是一个整体 */
+.liquid-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  border-radius: 9999px;
+  outline: none;
+  background: linear-gradient(
+    to right,
+    var(--brand) 0%,
+    var(--brand) var(--fill, 0%),
+    var(--sunken) var(--fill, 0%),
+    var(--sunken) 100%
+  );
+}
+
+.liquid-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: var(--surface);
+  border: 2px solid var(--brand);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.18);
+  transition: transform var(--dur-fast) var(--ease-back);
+}
+
+.liquid-range:active::-webkit-slider-thumb {
+  transform: scale(1.18);
+}
+
+.liquid-range::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: var(--surface);
+  border: 2px solid var(--brand);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.18);
+  transition: transform var(--dur-fast) var(--ease-back);
+}
+
+.liquid-range:active::-moz-range-thumb {
+  transform: scale(1.18);
+}
+
+/* 弹性开关：圆点移动时拉长成胶囊，到位后回圆 */
+.switch-thumb {
+  transition:
+    left var(--dur-base) var(--ease-back),
+    width var(--dur-fast) var(--ease-back),
+    background-color var(--dur-base) ease;
 }

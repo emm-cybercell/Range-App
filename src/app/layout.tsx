@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { RippleLayer } from "@/components/motion/ripple-layer";
 
 export const metadata: Metadata = {
   title: "练迹 Range · 轻量健身训练记录",
@@ -25,7 +26,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           }}
         />
       </head>
-      <body className="min-h-full bg-canvas text-ink">{children}</body>
+      <body className="min-h-full bg-canvas text-ink">
+        {children}
+        <RippleLayer />
+      </body>
     </html>
   );
 }

@@ -45,11 +45,11 @@ export function PageHeader({ title, subtitle, back, actions, className = "" }: P
 export function PageHeaderSkeleton({ back = false }: { back?: boolean }) {
   return (
     <div>
-      {back ? <div className="mb-4 h-4 w-16 animate-pulse rounded bg-sunken" /> : null}
+      {back ? <div className="mb-4 h-4 w-16 skeleton rounded" /> : null}
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0 flex-1">
-          <div className="h-7 w-40 animate-pulse rounded bg-sunken" />
-          <div className="mt-2 h-4 w-56 animate-pulse rounded bg-sunken" />
+          <div className="h-7 w-40 skeleton rounded" />
+          <div className="mt-2 h-4 w-56 skeleton rounded" />
         </div>
       </div>
     </div>

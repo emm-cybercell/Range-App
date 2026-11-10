@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PageHeader } from "@/components/page-header";
 import { Flame, Timer, Weight } from "lucide-react";
 import { prisma } from "@/lib/db";
+import { AnimatedNumber } from "@/components/motion/animated-number";
 import { requireAccount } from "@/lib/account";
 import { getStats } from "@/lib/stats";
 
@@ -63,20 +64,22 @@ export default async function StatsPage() {
         <div className="rounded-card border border-line bg-surface p-3.5">
           <Timer className="size-3.5 text-ink-3" />
           <p className="num mt-2 text-[22px] leading-7 font-bold">
-            {summary.week.count}
+            <AnimatedNumber value={summary.week.count} />
             <span className="text-xs font-medium text-ink-3">/{target || "—"}</span>
           </p>
           <p className="text-[11px] text-ink-3">本周训练</p>
         </div>
         <div className="rounded-card border border-line bg-surface p-3.5">
           <Flame className="size-3.5 text-ink-3" />
-          <p className="num mt-2 text-[22px] leading-7 font-bold">{summary.streakDays}</p>
+          <p className="num mt-2 text-[22px] leading-7 font-bold">
+            <AnimatedNumber value={summary.streakDays} />
+          </p>
           <p className="text-[11px] text-ink-3">连续打卡</p>
         </div>
         <div className="rounded-card border border-line bg-surface p-3.5">
           <Weight className="size-3.5 text-ink-3" />
           <p className="num mt-2 text-[22px] leading-7 font-bold">
-            {summary.week.volumeKg.toLocaleString()}
+            <AnimatedNumber value={Math.round(summary.week.volumeKg)} />
           </p>
           <p className="text-[11px] text-ink-3">本周容量 kg</p>
         </div>

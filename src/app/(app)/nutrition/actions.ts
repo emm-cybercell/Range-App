@@ -167,3 +167,21 @@ export async function addWater(input: { date: string; delta: number }) {
   revalidatePath("/nutrition");
   return { ok: true as const, ml: next };
 }
+
+/** 滑块用：直接设成某个绝对值，而不是加减 */
+export async function setWaterAmount(input: { date: string; ml: number }) {
+  const account = await getCurrentAccount();
+  if (!account) return { ok: false as const, message: "会话已失效，请刷新页面" };
+
+  const date = parseDate(input.date);
+  const ml = Math.max(0, Math.min(6000, Math.round(input.ml)));
+
+  await prisma.waterLog.upsert({
+    where: { accountId_date: { accountId: account.id, date } },
+    create: { accountId: account.id, date, ml },
+    update: { ml },
+  });
+
+  revalidatePath("/nutrition");
+  return { ok: true as const, ml };
+}

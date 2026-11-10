@@ -3,8 +3,9 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ChevronLeft, ChevronRight, Droplets, Loader2, Minus, Plus, Search, Trash2, X } from "lucide-react";
-import { addFoodEntry, addManualEntry, addWater, deleteFoodEntry, searchFoods, type FoodHit } from "./actions";
+import { ChevronLeft, ChevronRight, Droplets, Loader2, Plus, Search, Trash2, X } from "lucide-react";
+import { addFoodEntry, addManualEntry, addWater, deleteFoodEntry, searchFoods, setWaterAmount, type FoodHit } from "./actions";
+import { AnimatedNumber } from "@/components/motion/animated-number";
 
 export type MealEntryView = {
   id: string;
@@ -75,6 +76,12 @@ export function NutritionClient({
   const [grams, setGrams] = useState("100");
   const [manual, setManual] = useState({ name: "", kcal: "", protein: "", carbs: "", fat: "" });
   const [busy, setBusy] = useState(false);
+  // 拖动时只改本地值，松手才落库，避免每 50ml 打一次数据库
+  const [water, setWater] = useState({ base: waterMl, value: waterMl });
+  // 服务端刷新后以 props 为准；用渲染期派生代替 effect，避免额外一轮渲染
+  if (water.base !== waterMl) setWater({ base: waterMl, value: waterMl });
+  const waterDraft = water.value;
+  const setWaterDraft = (value: number) => setWater({ base: waterMl, value });
   const [toast, setToast] = useState<string | null>(null);
 
   useEffect(() => {
@@ -183,6 +190,13 @@ export function NutritionClient({
     router.refresh();
   }
 
+  async function commitWater() {
+    if (waterDraft === waterMl) return;
+    const result = await setWaterAmount({ date: dateKey, ml: waterDraft });
+    if (!result.ok) setToast(result.message);
+    else router.refresh();
+  }
+
   async function changeWater(delta: number) {
     const result = await addWater({ date: dateKey, delta });
     if (!result.ok) setToast(result.message);
@@ -240,7 +254,9 @@ export function NutritionClient({
               />
             </svg>
             <div className="text-center">
-              <p className="num text-xl font-bold leading-6">{totals.kcal}</p>
+              <p className="num text-xl font-bold leading-6">
+                <AnimatedNumber value={totals.kcal} />
+              </p>
               <p className="text-[10px] text-ink-3">/ {targets.kcal}</p>
             </div>
           </div>
@@ -280,36 +296,49 @@ export function NutritionClient({
         </div>
       </section>
 
-      {/* 饮水 */}
-      <section className="mt-3 flex items-center gap-3 rounded-card border border-line bg-surface px-5 py-3.5">
-        <Droplets className="size-4 shrink-0 text-brand" />
-        <div className="min-w-0 flex-1">
-          <p className="num text-[13px] font-medium">
-            {waterMl} <span className="text-[11px] font-normal text-ink-3">/ {targets.waterMl} ml</span>
+      {/* 饮水：拖动条，轨道填充 / 滑钮 / 数字三者同步 */}
+      <section className="mt-3 rounded-card border border-line bg-surface px-5 py-4">
+        <div className="flex items-center gap-2">
+          <Droplets className="size-4 shrink-0 text-brand" />
+          <p className="num min-w-0 flex-1 text-[13px] font-medium">
+            <AnimatedNumber value={waterDraft} />{" "}
+            <span className="text-[11px] font-normal text-ink-3">/ {targets.waterMl} ml</span>
           </p>
-          <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-sunken">
-            <div
-              className="h-full rounded-full bg-brand"
-              style={{ width: `${Math.min(100, (waterMl / Math.max(targets.waterMl, 1)) * 100)}%` }}
-            />
-          </div>
+          <button
+            type="button"
+            onClick={() => changeWater(250)}
+            aria-label="增加 250 毫升"
+            data-ripple
+            className="grid size-8 shrink-0 place-items-center rounded-full bg-brand-soft text-brand"
+          >
+            <Plus className="size-3.5" />
+          </button>
         </div>
-        <button
-          type="button"
-          onClick={() => changeWater(-250)}
-          aria-label="减少 250 毫升"
-          className="grid size-8 shrink-0 place-items-center rounded-full border border-line text-ink-3"
-        >
-          <Minus className="size-3.5" />
-        </button>
-        <button
-          type="button"
-          onClick={() => changeWater(250)}
-          aria-label="增加 250 毫升"
-          className="grid size-8 shrink-0 place-items-center rounded-full bg-brand-soft text-brand"
-        >
-          <Plus className="size-3.5" />
-        </button>
+
+        <input
+          type="range"
+          min={0}
+          max={2500}
+          step={50}
+          value={waterDraft}
+          aria-label="今日饮水量"
+          onChange={(e) => setWaterDraft(Number(e.target.value))}
+          onPointerUp={commitWater}
+          onKeyUp={commitWater}
+          onBlur={commitWater}
+          data-ripple
+          className="liquid-range mt-3 w-full"
+          style={
+            {
+              "--fill": `${Math.min(100, (waterDraft / Math.max(targets.waterMl, 1)) * 100)}%`,
+            } as React.CSSProperties
+          }
+        />
+
+        <div className="mt-1 flex justify-between text-[10px] text-ink-3">
+          <span className="num">0</span>
+          <span className="num">2500 ml</span>
+        </div>
       </section>
 
       {/* 四餐 */}

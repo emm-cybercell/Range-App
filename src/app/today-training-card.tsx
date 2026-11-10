@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AnimatedNumber } from "@/components/motion/animated-number";
 import { ArrowRight, CalendarDays, Lock } from "lucide-react";
 import { peekAccount } from "@/lib/account";
 import { prisma } from "@/lib/db";
@@ -112,7 +113,7 @@ function LockedCard() {
 /** Suspense 兜底：与锁定态一致，避免已登录用户看到「未登录」的措辞 */
 export function TodayCardFallback() {
   return (
-    <div className="animate-pulse">
+    <div>
       <CardShell>
         <div className="h-4 w-16 rounded bg-sunken" />
         <div className="mt-2 h-6 w-24 rounded bg-sunken" />
@@ -151,7 +152,7 @@ export async function TodayTrainingCard() {
     <div className="mt-3 inline-flex flex-col rounded-2xl border border-line bg-surface px-4 py-2.5">
       <span className="text-[11px] text-ink-3">本周容量</span>
       <span className="num text-lg leading-6 font-bold">
-        {volume.toLocaleString()}
+        <AnimatedNumber value={volume} />
         <span className="ml-1 text-xs font-medium text-ink-2">kg</span>
       </span>
     </div>
