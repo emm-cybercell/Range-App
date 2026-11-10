@@ -27,6 +27,9 @@ const LEVEL_LABEL: Record<string, string> = {
   ADVANCED: "老手",
 };
 
+// 详情页依赖 params 与登录态，暂按请求渲染（后续改 generateStaticParams 预渲染）
+export const instant = false;
+
 export default async function ExerciseDetailPage({
   params,
 }: {
