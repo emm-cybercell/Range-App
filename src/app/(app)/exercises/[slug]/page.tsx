@@ -62,22 +62,43 @@ export default async function ExerciseDetailPage({
         动作库
       </Link>
 
-      {/* 封面 */}
-      <div className="relative mt-4 aspect-[16/9] overflow-hidden rounded-card border border-line bg-sunken">
-        {exercise.coverUrl ? (
-          <Image
-            src={exercise.coverUrl}
-            alt={exercise.name}
-            fill
-            sizes="(max-width: 768px) 100vw, 720px"
-            className="object-cover"
-            priority
-          />
-        ) : (
-          <div className="grid h-full place-items-center">
+      {/* 演示：有动图就播动图，否则退回静态封面。动图必须用原生 img，next/image 会把 GIF 压成静帧 */}
+      <div className="mt-4 overflow-hidden rounded-card border border-line bg-sunken">
+        <div className="grid h-[240px] place-items-center">
+          {exercise.demoUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element -- 动图必须原生 img，优化器会把 GIF 压成静帧
+            <img
+              src={exercise.demoUrl}
+              alt={exercise.name + " 动作演示"}
+              width={240}
+              height={240}
+              className="size-[240px] object-contain"
+            />
+          ) : exercise.coverUrl ? (
+            <Image
+              src={exercise.coverUrl}
+              alt={exercise.name}
+              width={240}
+              height={240}
+              className="size-[240px] rounded-lg object-contain"
+              priority
+            />
+          ) : (
             <span className="text-5xl font-bold text-ink-3/60">{exercise.name.slice(0, 1)}</span>
-          </div>
-        )}
+          )}
+        </div>
+        {exercise.mediaCredit ? (
+          <p className="border-t border-line px-3 py-1.5 text-center text-[10px] text-ink-3">
+            <a
+              href={exercise.mediaCredit.includes("Gym visual") ? "https://gymvisual.com/" : "https://gymbells.app/"}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-ink-2"
+            >
+              {exercise.mediaCredit}
+            </a>
+          </p>
+        ) : null}
       </div>
 
       <h1 className="mt-6 text-2xl font-bold tracking-tight">{exercise.name}</h1>

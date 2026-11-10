@@ -13,6 +13,13 @@ const prisma = new PrismaClient({ adapter: new PrismaPg({ connectionString }) })
 const dir = join(process.cwd(), "prisma", "seed");
 const read = <T>(file: string): T => JSON.parse(readFileSync(join(dir, file), "utf8")) as T;
 
+// 动作素材清单（由 scripts/import-exercise-media.mjs 生成）
+const mediaBySlug = new Map(
+  read<{ slug: string; coverUrl: string | null; demoUrl: string | null; mediaCredit: string | null }[]>(
+    "exercise-media.json",
+  ).map((m) => [m.slug, m]),
+);
+
 type MuscleSeed = { slug: string; name: string; bodyPart: string; order: number };
 
 type ExerciseSeed = {
@@ -92,6 +99,9 @@ async function seedExercises() {
       steps: e.steps,
       tips: e.tips,
       mistakes: e.mistakes,
+      coverUrl: mediaBySlug.get(e.slug)?.coverUrl ?? null,
+      demoUrl: mediaBySlug.get(e.slug)?.demoUrl ?? null,
+      mediaCredit: mediaBySlug.get(e.slug)?.mediaCredit ?? null,
     };
 
     const row = await prisma.exercise.upsert({

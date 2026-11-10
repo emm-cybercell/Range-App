@@ -158,6 +158,44 @@ export default async function MePage() {
       </form>
 
       <p className="mt-6 text-center text-[12px] text-ink-3">练迹 v0.1</p>
+
+      <section className="mt-6 rounded-card border border-line bg-surface p-4">
+        <p className="text-[13px] font-medium">素材来源</p>
+        <ul className="mt-2 space-y-1.5 text-[11px] leading-5 text-ink-3">
+          <li>
+            动作演示 ©{" "}
+            <a href="https://gymvisual.com/" target="_blank" rel="noreferrer" className="underline">
+              Gym visual
+            </a>
+            ，经{" "}
+            <a
+              href="https://github.com/hasaneyldrm/exercises-dataset"
+              target="_blank"
+              rel="noreferrer"
+              className="underline"
+            >
+              Exercises Dataset
+            </a>{" "}
+            分发
+          </li>
+          <li>
+            部分动作插图{" "}
+            <a href="https://gymbells.app/" target="_blank" rel="noreferrer" className="underline">
+              GymBells
+            </a>
+            ，依{" "}
+            <a
+              href="https://creativecommons.org/licenses/by-nc/4.0/"
+              target="_blank"
+              rel="noreferrer"
+              className="underline"
+            >
+              CC BY-NC 4.0
+            </a>{" "}
+            使用
+          </li>
+        </ul>
+      </section>
     </div>
   );
 }

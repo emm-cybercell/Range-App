@@ -1,0 +1,1562 @@
+[
+  {
+    "index": 1,
+    "group": "胸",
+    "name_zh": "杠铃卧推",
+    "equipment": "杠铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Barbell_Bench_Press_-_Medium_Grip",
+      "name_en": "Barbell Bench Press",
+      "pose": "barbell-bench-press",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/barbell-bench-press/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/barbell-bench-press/end.png"
+    },
+    "repdb": {
+      "id": "bench-press",
+      "name_en": "Barbell Bench Press",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/bench-press-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/bench-press-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0025",
+      "name_en": "barbell bench press",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0025-EIeI8Vf.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0025-EIeI8Vf.jpg"
+    }
+  },
+  {
+    "index": 2,
+    "group": "胸",
+    "name_zh": "上斜杠铃卧推",
+    "equipment": "杠铃",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Barbell_Incline_Bench_Press_-_Medium_Grip",
+      "name_en": "Incline Barbell Bench Press",
+      "pose": "barbell-incline-bench-press",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/barbell-incline-bench-press/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/barbell-incline-bench-press/end.png"
+    },
+    "repdb": {
+      "id": "incline-bench-press",
+      "name_en": "Incline Barbell Bench Press",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/incline-bench-press-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/incline-bench-press-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0047",
+      "name_en": "barbell incline bench press",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0047-3TZduzM.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0047-3TZduzM.jpg"
+    }
+  },
+  {
+    "index": 3,
+    "group": "胸",
+    "name_zh": "下斜杠铃卧推",
+    "equipment": "杠铃",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Decline_Barbell_Bench_Press",
+      "name_en": "Decline Barbell Bench Press",
+      "pose": "decline-barbell-bench-press",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/decline-barbell-bench-press/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/decline-barbell-bench-press/end.png"
+    },
+    "repdb": {
+      "id": "decline-bench-press-barbell",
+      "name_en": "Decline Barbell Bench Press",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/decline-bench-press-barbell-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/decline-bench-press-barbell-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0033",
+      "name_en": "barbell decline bench press",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0033-GrO65fd.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0033-GrO65fd.jpg"
+    }
+  },
+  {
+    "index": 4,
+    "group": "胸",
+    "name_zh": "哑铃卧推",
+    "equipment": "哑铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Dumbbell_Bench_Press",
+      "name_en": "Dumbbell Bench Press",
+      "pose": "dumbbell-bench-press",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/dumbbell-bench-press/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/dumbbell-bench-press/end.png"
+    },
+    "repdb": {
+      "id": "db-bench-press",
+      "name_en": "Dumbbell Bench Press",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/db-bench-press-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/db-bench-press-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0289",
+      "name_en": "dumbbell bench press",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0289-SpYC0Kp.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0289-SpYC0Kp.jpg"
+    }
+  },
+  {
+    "index": 5,
+    "group": "胸",
+    "name_zh": "上斜哑铃卧推",
+    "equipment": "哑铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Incline_Dumbbell_Press",
+      "name_en": "Incline Dumbbell Press",
+      "pose": "incline-dumbbell-press",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/incline-dumbbell-press/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/incline-dumbbell-press/end.png"
+    },
+    "repdb": {
+      "id": "incline-db-press",
+      "name_en": "Incline Dumbbell Press",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/incline-db-press-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/incline-db-press-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0314",
+      "name_en": "dumbbell incline bench press",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0314-ns0SIbU.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0314-ns0SIbU.jpg"
+    }
+  },
+  {
+    "index": 6,
+    "group": "胸",
+    "name_zh": "哑铃飞鸟",
+    "equipment": "哑铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Dumbbell_Flyes",
+      "name_en": "Dumbbell Fly",
+      "pose": "dumbbell-flyes",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/dumbbell-flyes/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/dumbbell-flyes/end.png"
+    },
+    "repdb": {
+      "id": "db-fly",
+      "name_en": "Dumbbell Fly",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/db-fly-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/db-fly-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0308",
+      "name_en": "dumbbell fly",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0308-yz9nUhF.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0308-yz9nUhF.jpg"
+    }
+  },
+  {
+    "index": 7,
+    "group": "胸",
+    "name_zh": "绳索夹胸",
+    "equipment": "拉力器",
+    "level": "入门",
+    "gymbells": {
+      "id": "Cable_Crossover",
+      "name_en": "Cable Crossover",
+      "pose": "cable-crossover",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/cable-crossover/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/cable-crossover/end.png"
+    },
+    "repdb": {
+      "id": "cable-fly",
+      "name_en": "Cable Fly",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/cable-fly-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/cable-fly-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0188",
+      "name_en": "cable middle fly",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0188-xLYSdtg.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0188-xLYSdtg.jpg"
+    }
+  },
+  {
+    "index": 8,
+    "group": "胸",
+    "name_zh": "蝴蝶机夹胸",
+    "equipment": "器械",
+    "level": "入门",
+    "gymbells": {
+      "id": "Butterfly",
+      "name_en": "Machine Chest Fly",
+      "pose": "butterfly",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/butterfly/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/butterfly/end.png"
+    },
+    "repdb": {
+      "id": "pec-deck",
+      "name_en": "Pec Deck",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/pec-deck-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/pec-deck-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0596",
+      "name_en": "lever seated fly",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0596-v3xmPAR.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0596-v3xmPAR.jpg"
+    }
+  },
+  {
+    "index": 9,
+    "group": "胸",
+    "name_zh": "俯卧撑",
+    "equipment": "自重",
+    "level": "入门",
+    "gymbells": {
+      "id": "Pushups",
+      "name_en": "Push-Up",
+      "pose": "pushups",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/pushups/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/pushups/end.png"
+    },
+    "repdb": {
+      "id": "push-up",
+      "name_en": "Push-Up",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/push-up-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/push-up-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0662",
+      "name_en": "push-up",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0662-I4hDWkc.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0662-I4hDWkc.jpg"
+    }
+  },
+  {
+    "index": 10,
+    "group": "胸",
+    "name_zh": "双杠臂屈伸",
+    "equipment": "自重",
+    "level": "高级",
+    "gymbells": {
+      "id": "Dips_-_Chest_Version",
+      "name_en": "Chest Dip",
+      "pose": "chest-dip",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/chest-dip/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/chest-dip/end.png"
+    },
+    "repdb": {
+      "id": "dips",
+      "name_en": "Chest Dips",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/dips-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/dips-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0251",
+      "name_en": "chest dip",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0251-9WTm7dq.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0251-9WTm7dq.jpg"
+    }
+  },
+  {
+    "index": 11,
+    "group": "背",
+    "name_zh": "引体向上",
+    "equipment": "自重",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Pullups",
+      "name_en": "Pull-Up",
+      "pose": "pull-up",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/pull-up/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/pull-up/end.png"
+    },
+    "repdb": {
+      "id": "pull-up",
+      "name_en": "Pull-Up",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/pull-up-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/pull-up-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0652",
+      "name_en": "pull-up",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0652-lBDjFxJ.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0652-lBDjFxJ.jpg"
+    }
+  },
+  {
+    "index": 12,
+    "group": "背",
+    "name_zh": "高位下拉",
+    "equipment": "拉力器",
+    "level": "入门",
+    "gymbells": {
+      "id": "Wide-Grip_Lat_Pulldown",
+      "name_en": "Lat Pulldown, Wide Grip",
+      "pose": "wide-grip-lat-pulldown",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/wide-grip-lat-pulldown/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/wide-grip-lat-pulldown/end.png"
+    },
+    "repdb": {
+      "id": "lat-pulldown",
+      "name_en": "Lat Pulldown",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/lat-pulldown-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/lat-pulldown-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0198",
+      "name_en": "cable pulldown",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0198-RVwzP10.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0198-RVwzP10.jpg"
+    }
+  },
+  {
+    "index": 13,
+    "group": "背",
+    "name_zh": "杠铃划船",
+    "equipment": "杠铃",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Bent_Over_Barbell_Row",
+      "name_en": "Bent-Over Barbell Row",
+      "pose": "bent-over-barbell-row",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/bent-over-barbell-row/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/bent-over-barbell-row/end.png"
+    },
+    "repdb": {
+      "id": "barbell-row",
+      "name_en": "Bent-Over Barbell Row",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/barbell-row-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/barbell-row-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0027",
+      "name_en": "barbell bent over row",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0027-eZyBC3j.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0027-eZyBC3j.jpg"
+    }
+  },
+  {
+    "index": 14,
+    "group": "背",
+    "name_zh": "单臂哑铃划船",
+    "equipment": "哑铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "One-Arm_Dumbbell_Row",
+      "name_en": "One-Arm Dumbbell Row",
+      "pose": "one-arm-dumbbell-row",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/one-arm-dumbbell-row/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/one-arm-dumbbell-row/end.png"
+    },
+    "repdb": {
+      "id": "single-arm-db-row",
+      "name_en": "Single-Arm Dumbbell Row",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/single-arm-db-row-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/single-arm-db-row-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0293",
+      "name_en": "dumbbell bent over row",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0293-BJ0Hz5L.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0293-BJ0Hz5L.jpg"
+    }
+  },
+  {
+    "index": 15,
+    "group": "背",
+    "name_zh": "坐姿绳索划船",
+    "equipment": "拉力器",
+    "level": "入门",
+    "gymbells": {
+      "id": "Seated_Cable_Rows",
+      "name_en": "Seated Cable Row",
+      "pose": "seated-cable-row",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/seated-cable-row/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/seated-cable-row/end.png"
+    },
+    "repdb": {
+      "id": "seated-cable-row",
+      "name_en": "Seated Cable Row",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/seated-cable-row-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/seated-cable-row-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0861",
+      "name_en": "cable seated row",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0861-fUBheHs.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0861-fUBheHs.jpg"
+    }
+  },
+  {
+    "index": 16,
+    "group": "背",
+    "name_zh": "T 杠划船",
+    "equipment": "杠铃",
+    "level": "进阶",
+    "gymbells": {
+      "id": "T-Bar_Row_with_Handle",
+      "name_en": "T-Bar Row",
+      "pose": "t-bar-row-with-handle",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/t-bar-row-with-handle/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/t-bar-row-with-handle/end.png"
+    },
+    "repdb": {
+      "id": "t-bar-row",
+      "name_en": "T-Bar Row",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/t-bar-row-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/t-bar-row-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0606",
+      "name_en": "lever t bar row",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0606-aaXr7ld.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0606-aaXr7ld.jpg"
+    }
+  },
+  {
+    "index": 17,
+    "group": "背",
+    "name_zh": "直臂下压",
+    "equipment": "拉力器",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Straight-Arm_Pulldown",
+      "name_en": "Straight-Arm Pulldown",
+      "pose": "straight-arm-pulldown",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/straight-arm-pulldown/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/straight-arm-pulldown/end.png"
+    },
+    "repdb": {
+      "id": "straight-arm-pulldown",
+      "name_en": "Straight-Arm Pulldown",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/straight-arm-pulldown-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/straight-arm-pulldown-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0238",
+      "name_en": "cable straight arm pulldown",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0238-x69MAlq.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0238-x69MAlq.jpg"
+    }
+  },
+  {
+    "index": 18,
+    "group": "背",
+    "name_zh": "面拉",
+    "equipment": "拉力器",
+    "level": "入门",
+    "gymbells": {
+      "id": "Face_Pull",
+      "name_en": "Face Pull",
+      "pose": "face-pull",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/face-pull/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/face-pull/end.png"
+    },
+    "repdb": {
+      "id": "face-pull",
+      "name_en": "Cable Face Pull",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/face-pull-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/face-pull-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0233",
+      "name_en": "cable standing rear delt row (with rope)",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0233-ZfyAGhK.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0233-ZfyAGhK.jpg"
+    }
+  },
+  {
+    "index": 19,
+    "group": "背",
+    "name_zh": "哑铃耸肩",
+    "equipment": "哑铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Dumbbell_Shrug",
+      "name_en": "Dumbbell Shrug",
+      "pose": "dumbbell-shrug",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/dumbbell-shrug/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/dumbbell-shrug/end.png"
+    },
+    "repdb": {
+      "id": "db-shrug",
+      "name_en": "Dumbbell Shrug",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/db-shrug-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/db-shrug-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0406",
+      "name_en": "dumbbell shrug",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0406-NJzBsGJ.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0406-NJzBsGJ.jpg"
+    }
+  },
+  {
+    "index": 20,
+    "group": "背",
+    "name_zh": "山羊挺身",
+    "equipment": "自重",
+    "level": "入门",
+    "gymbells": {
+      "id": "Hyperextensions_Back_Extensions",
+      "name_en": "Back Extension",
+      "pose": "hyperextension",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/hyperextension/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/hyperextension/end.png"
+    },
+    "repdb": {
+      "id": "back-extension",
+      "name_en": "Back Extension",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/back-extension-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/back-extension-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0489",
+      "name_en": "hyperextension",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0489-zhMwOwE.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0489-zhMwOwE.jpg"
+    }
+  },
+  {
+    "index": 21,
+    "group": "背",
+    "name_zh": "反向划船",
+    "equipment": "自重",
+    "level": "入门",
+    "gymbells": {
+      "id": "Inverted_Row",
+      "name_en": "Inverted Row",
+      "pose": "inverted-row",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/inverted-row/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/inverted-row/end.png"
+    },
+    "repdb": {
+      "id": "inverted-row",
+      "name_en": "Inverted Row",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/inverted-row-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/inverted-row-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0499",
+      "name_en": "inverted row",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0499-bZGHsAZ.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0499-bZGHsAZ.jpg"
+    }
+  },
+  {
+    "index": 22,
+    "group": "背",
+    "name_zh": "器械划船",
+    "equipment": "器械",
+    "level": "入门",
+    "gymbells": {
+      "id": "Leverage_Iso_Row",
+      "name_en": "Machine Row",
+      "pose": "leverage-iso-row",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/leverage-iso-row/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/leverage-iso-row/end.png"
+    },
+    "repdb": {
+      "id": "chest-supported-machine-row",
+      "name_en": "Chest-Supported Machine Row",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/chest-supported-machine-row-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/chest-supported-machine-row-peak.webp"
+    },
+    "exercisedb": {
+      "id": "1350",
+      "name_en": "lever seated row",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1350-7I6LNUG.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1350-7I6LNUG.jpg"
+    }
+  },
+  {
+    "index": 23,
+    "group": "肩",
+    "name_zh": "杠铃站姿推举",
+    "equipment": "杠铃",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Standing_Military_Press",
+      "name_en": "Barbell Overhead Press",
+      "pose": "standing-military-press",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/standing-military-press/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/standing-military-press/end.png"
+    },
+    "repdb": {
+      "id": "ohp",
+      "name_en": "Barbell Overhead Press",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/ohp-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/ohp-peak.webp"
+    },
+    "exercisedb": {
+      "id": "1457",
+      "name_en": "barbell standing wide military press",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1457-Kyd9Rz5.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1457-Kyd9Rz5.jpg"
+    }
+  },
+  {
+    "index": 24,
+    "group": "肩",
+    "name_zh": "哑铃肩推",
+    "equipment": "哑铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Dumbbell_Shoulder_Press",
+      "name_en": "Dumbbell Shoulder Press",
+      "pose": "dumbbell-shoulder-press",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/dumbbell-shoulder-press/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/dumbbell-shoulder-press/end.png"
+    },
+    "repdb": {
+      "id": "dumbbell-shoulder-press",
+      "name_en": "Dumbbell Shoulder Press",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/dumbbell-shoulder-press-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/dumbbell-shoulder-press-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0405",
+      "name_en": "dumbbell seated shoulder press",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0405-znQUdHY.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0405-znQUdHY.jpg"
+    }
+  },
+  {
+    "index": 25,
+    "group": "肩",
+    "name_zh": "阿诺德推举",
+    "equipment": "哑铃",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Arnold_Dumbbell_Press",
+      "name_en": "Arnold Press",
+      "pose": "arnold-dumbbell-press",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/arnold-dumbbell-press/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/arnold-dumbbell-press/end.png"
+    },
+    "repdb": {
+      "id": "arnold-press",
+      "name_en": "Arnold Press",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/arnold-press-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/arnold-press-peak.webp"
+    },
+    "exercisedb": {
+      "id": "2137",
+      "name_en": "dumbbell arnold press",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2137-Xy4jlWA.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2137-Xy4jlWA.jpg"
+    }
+  },
+  {
+    "index": 26,
+    "group": "肩",
+    "name_zh": "哑铃侧平举",
+    "equipment": "哑铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Side_Lateral_Raise",
+      "name_en": "Dumbbell Lateral Raise",
+      "pose": "dumbbell-lateral-raise",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/dumbbell-lateral-raise/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/dumbbell-lateral-raise/end.png"
+    },
+    "repdb": {
+      "id": "lateral-raise",
+      "name_en": "Dumbbell Lateral Raise",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/lateral-raise-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/lateral-raise-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0334",
+      "name_en": "dumbbell lateral raise",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0334-DsgkuIt.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0334-DsgkuIt.jpg"
+    }
+  },
+  {
+    "index": 27,
+    "group": "肩",
+    "name_zh": "绳索侧平举",
+    "equipment": "拉力器",
+    "level": "入门",
+    "gymbells": {
+      "id": "Cable_Seated_Lateral_Raise",
+      "name_en": "Seated Cable Lateral Raise",
+      "pose": "cable-seated-lateral-raise",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/cable-seated-lateral-raise/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/cable-seated-lateral-raise/end.png"
+    },
+    "repdb": {
+      "id": "cable-lateral-raise",
+      "name_en": "Cable Lateral Raise",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/cable-lateral-raise-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/cable-lateral-raise-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0178",
+      "name_en": "cable lateral raise",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0178-goJ6ezq.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0178-goJ6ezq.jpg"
+    }
+  },
+  {
+    "index": 28,
+    "group": "肩",
+    "name_zh": "俯身哑铃反向飞鸟",
+    "equipment": "哑铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Reverse_Flyes",
+      "name_en": "Dumbbell Reverse Fly",
+      "pose": "reverse-flyes",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/reverse-flyes/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/reverse-flyes/end.png"
+    },
+    "repdb": {
+      "id": "rear-delt-fly",
+      "name_en": "Rear Delt Fly",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/rear-delt-fly-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/rear-delt-fly-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0380",
+      "name_en": "dumbbell rear lateral raise",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0380-v1qBec9.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0380-v1qBec9.jpg"
+    }
+  },
+  {
+    "index": 29,
+    "group": "肩",
+    "name_zh": "器械反向飞鸟",
+    "equipment": "器械",
+    "level": "入门",
+    "gymbells": {
+      "id": "Reverse_Machine_Flyes",
+      "name_en": "Machine Reverse Fly",
+      "pose": "reverse-machine-flyes",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/reverse-machine-flyes/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/reverse-machine-flyes/end.png"
+    },
+    "repdb": {
+      "id": "machine-reverse-fly",
+      "name_en": "Machine Reverse Fly",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/machine-reverse-fly-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/machine-reverse-fly-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0602",
+      "name_en": "lever seated reverse fly",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0602-myfUsKf.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0602-myfUsKf.jpg"
+    }
+  },
+  {
+    "index": 30,
+    "group": "肩",
+    "name_zh": "直立划船",
+    "equipment": "杠铃",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Upright_Barbell_Row",
+      "name_en": "Barbell Upright Row",
+      "pose": "upright-barbell-row",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/upright-barbell-row/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/upright-barbell-row/end.png"
+    },
+    "repdb": {
+      "id": "upright-row",
+      "name_en": "Barbell Upright Row",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/upright-row-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/upright-row-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0120",
+      "name_en": "barbell upright row",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0120-UDlhcO8.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0120-UDlhcO8.jpg"
+    }
+  },
+  {
+    "index": 31,
+    "group": "肩",
+    "name_zh": "折刀俯卧撑",
+    "equipment": "自重",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Pike_Push-Up",
+      "name_en": "Pike Push-Up",
+      "pose": "pike-push-up",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/pike-push-up/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/pike-push-up/end.png"
+    },
+    "repdb": {
+      "id": "pike-push-ups",
+      "name_en": "Pike Push Ups",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/pike-push-ups-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/pike-push-ups-peak.webp"
+    },
+    "exercisedb": {
+      "id": "3662",
+      "name_en": "pike-to-cobra push-up",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3662-XPUDTt7.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3662-XPUDTt7.jpg"
+    }
+  },
+  {
+    "index": 32,
+    "group": "肩",
+    "name_zh": "哑铃前平举",
+    "equipment": "哑铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Front_Dumbbell_Raise",
+      "name_en": "Dumbbell Front Raise",
+      "pose": "front-dumbbell-raise",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/front-dumbbell-raise/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/front-dumbbell-raise/end.png"
+    },
+    "repdb": {
+      "id": "dumbbell-front-raise",
+      "name_en": "Dumbbell Front Raise",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/dumbbell-front-raise-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/dumbbell-front-raise-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0310",
+      "name_en": "dumbbell front raise",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0310-3eGE2JC.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0310-3eGE2JC.jpg"
+    }
+  },
+  {
+    "index": 33,
+    "group": "手臂",
+    "name_zh": "杠铃弯举",
+    "equipment": "杠铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Barbell_Curl",
+      "name_en": "Barbell Curl",
+      "pose": "barbell-curl",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/barbell-curl/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/barbell-curl/end.png"
+    },
+    "repdb": {
+      "id": "barbell-curl",
+      "name_en": "Barbell Curl",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/barbell-curl-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/barbell-curl-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0031",
+      "name_en": "barbell curl",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0031-25GPyDY.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0031-25GPyDY.jpg"
+    }
+  },
+  {
+    "index": 34,
+    "group": "手臂",
+    "name_zh": "哑铃弯举",
+    "equipment": "哑铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Dumbbell_Bicep_Curl",
+      "name_en": "Dumbbell Curl",
+      "pose": "dumbbell-bicep-curl",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/dumbbell-bicep-curl/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/dumbbell-bicep-curl/end.png"
+    },
+    "repdb": {
+      "id": "bicep-curl",
+      "name_en": "Dumbbell Bicep Curl",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/bicep-curl-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/bicep-curl-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0294",
+      "name_en": "dumbbell biceps curl",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0294-NbVPDMW.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0294-NbVPDMW.jpg"
+    }
+  },
+  {
+    "index": 35,
+    "group": "手臂",
+    "name_zh": "锤式弯举",
+    "equipment": "哑铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Hammer_Curls",
+      "name_en": "Dumbbell Hammer Curl",
+      "pose": "hammer-curl",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/hammer-curl/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/hammer-curl/end.png"
+    },
+    "repdb": {
+      "id": "hammer-curl",
+      "name_en": "Dumbbell Hammer Curl",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/hammer-curl-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/hammer-curl-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0313",
+      "name_en": "dumbbell hammer curl",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0313-slDvUAU.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0313-slDvUAU.jpg"
+    }
+  },
+  {
+    "index": 36,
+    "group": "手臂",
+    "name_zh": "牧师凳弯举",
+    "equipment": "杠铃",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Preacher_Curl",
+      "name_en": "Barbell Preacher Curl",
+      "pose": "preacher-curl",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/preacher-curl/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/preacher-curl/end.png"
+    },
+    "repdb": {
+      "id": "preacher-curl",
+      "name_en": "Preacher Curl",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/preacher-curl-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/preacher-curl-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0070",
+      "name_en": "barbell preacher curl",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0070-qOgPVf6.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0070-qOgPVf6.jpg"
+    }
+  },
+  {
+    "index": 37,
+    "group": "手臂",
+    "name_zh": "绳索弯举",
+    "equipment": "拉力器",
+    "level": "入门",
+    "gymbells": {
+      "id": "Standing_Biceps_Cable_Curl",
+      "name_en": "Cable Curl",
+      "pose": "standing-cable-curl",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/standing-cable-curl/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/standing-cable-curl/end.png"
+    },
+    "repdb": {
+      "id": "cable-curl",
+      "name_en": "Cable Curl",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/cable-curl-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/cable-curl-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0868",
+      "name_en": "cable curl",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0868-G08RZcQ.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0868-G08RZcQ.jpg"
+    }
+  },
+  {
+    "index": 38,
+    "group": "手臂",
+    "name_zh": "窄距卧推",
+    "equipment": "杠铃",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Close-Grip_Barbell_Bench_Press",
+      "name_en": "Barbell Bench Press, Close Grip",
+      "pose": "close-grip-bench-press",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/close-grip-bench-press/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/close-grip-bench-press/end.png"
+    },
+    "repdb": {
+      "id": "close-grip-bench-press",
+      "name_en": "Close-Grip Bench Press",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/close-grip-bench-press-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/close-grip-bench-press-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0030",
+      "name_en": "barbell close-grip bench press",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0030-J6Dx1Mu.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0030-J6Dx1Mu.jpg"
+    }
+  },
+  {
+    "index": 39,
+    "group": "手臂",
+    "name_zh": "绳索下压",
+    "equipment": "拉力器",
+    "level": "入门",
+    "gymbells": {
+      "id": "Triceps_Pushdown",
+      "name_en": "Triceps Pushdown",
+      "pose": "triceps-pushdown",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/triceps-pushdown/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/triceps-pushdown/end.png"
+    },
+    "repdb": {
+      "id": "tricep-pushdown",
+      "name_en": "Cable Tricep Pushdown",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/tricep-pushdown-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/tricep-pushdown-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0201",
+      "name_en": "cable pushdown",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0201-3ZflifB.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0201-3ZflifB.jpg"
+    }
+  },
+  {
+    "index": 40,
+    "group": "手臂",
+    "name_zh": "哑铃颈后臂屈伸",
+    "equipment": "哑铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Standing_Dumbbell_Triceps_Extension",
+      "name_en": "Dumbbell Overhead Triceps Extension",
+      "pose": "standing-dumbbell-triceps-extension",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/standing-dumbbell-triceps-extension/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/standing-dumbbell-triceps-extension/end.png"
+    },
+    "repdb": {
+      "id": "seated-dumbbell-tricep-extension",
+      "name_en": "Seated Dumbbell Tricep Extension",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/seated-dumbbell-tricep-extension-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/seated-dumbbell-tricep-extension-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0430",
+      "name_en": "dumbbell standing triceps extension",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0430-PdmaD0N.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0430-PdmaD0N.jpg"
+    }
+  },
+  {
+    "index": 41,
+    "group": "手臂",
+    "name_zh": "仰卧臂屈伸",
+    "equipment": "杠铃",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Lying_Triceps_Press",
+      "name_en": "Lying Triceps Press",
+      "pose": "lying-triceps-press",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/lying-triceps-press/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/lying-triceps-press/end.png"
+    },
+    "repdb": {
+      "id": "skull-crusher",
+      "name_en": "Skull Crusher",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/skull-crusher-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/skull-crusher-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0060",
+      "name_en": "barbell lying triceps extension skull crusher",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0060-h8LFzo9.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0060-h8LFzo9.jpg"
+    }
+  },
+  {
+    "index": 42,
+    "group": "手臂",
+    "name_zh": "凳上反屈伸",
+    "equipment": "自重",
+    "level": "入门",
+    "gymbells": {
+      "id": "Bench_Dips",
+      "name_en": "Bench Dip",
+      "pose": "bench-dips",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/bench-dips/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/bench-dips/end.png"
+    },
+    "repdb": {
+      "id": "bench-dips",
+      "name_en": "Bench Dips",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/bench-dips-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/bench-dips-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0129",
+      "name_en": "bench dip (knees bent)",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0129-RrLske5.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0129-RrLske5.jpg"
+    }
+  },
+  {
+    "index": 43,
+    "group": "手臂",
+    "name_zh": "腕弯举",
+    "equipment": "哑铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Dumbbell_Wrist_Curl",
+      "name_en": "Dumbbell Wrist Curl",
+      "pose": "dumbbell-wrist-curl",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/dumbbell-wrist-curl/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/dumbbell-wrist-curl/end.png"
+    },
+    "repdb": {
+      "id": "dumbbell-wrist-curl",
+      "name_en": "Dumbbell Wrist Curl",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/dumbbell-wrist-curl-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/dumbbell-wrist-curl-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0126",
+      "name_en": "barbell wrist curl",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0126-82LxxkW.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0126-82LxxkW.jpg"
+    }
+  },
+  {
+    "index": 44,
+    "group": "手臂",
+    "name_zh": "反握弯举",
+    "equipment": "杠铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Reverse_Barbell_Curl",
+      "name_en": "Barbell Reverse Curl",
+      "pose": "reverse-barbell-curl",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/reverse-barbell-curl/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/reverse-barbell-curl/end.png"
+    },
+    "repdb": {
+      "id": "reverse-curl",
+      "name_en": "Reverse Curl",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/reverse-curl-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/reverse-curl-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0080",
+      "name_en": "barbell reverse curl",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0080-xNrS20v.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0080-xNrS20v.jpg"
+    }
+  },
+  {
+    "index": 45,
+    "group": "腿",
+    "name_zh": "杠铃深蹲",
+    "equipment": "杠铃",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Barbell_Squat",
+      "name_en": "Barbell Back Squat",
+      "pose": "barbell-back-squat",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/barbell-back-squat/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/barbell-back-squat/end.png"
+    },
+    "repdb": {
+      "id": "squat",
+      "name_en": "Barbell Back Squat",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/squat-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/squat-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0043",
+      "name_en": "barbell full squat",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0043-qXTaZnJ.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0043-qXTaZnJ.jpg"
+    }
+  },
+  {
+    "index": 46,
+    "group": "腿",
+    "name_zh": "前蹲",
+    "equipment": "杠铃",
+    "level": "高级",
+    "gymbells": {
+      "id": "Front_Barbell_Squat",
+      "name_en": "Barbell Front Squat",
+      "pose": "front-barbell-squat",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/front-barbell-squat/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/front-barbell-squat/end.png"
+    },
+    "repdb": {
+      "id": "front-squat",
+      "name_en": "Front Squat",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/front-squat-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/front-squat-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0042",
+      "name_en": "barbell front squat",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0042-zG0zs85.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0042-zG0zs85.jpg"
+    }
+  },
+  {
+    "index": 47,
+    "group": "腿",
+    "name_zh": "高脚杯深蹲",
+    "equipment": "哑铃",
+    "level": "入门",
+    "gymbells": {
+      "id": "Goblet_Squat",
+      "name_en": "Goblet Squat",
+      "pose": "goblet-squat",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/goblet-squat/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/goblet-squat/end.png"
+    },
+    "repdb": {
+      "id": "goblet-squat",
+      "name_en": "Goblet Squat",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/goblet-squat-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/goblet-squat-peak.webp"
+    },
+    "exercisedb": {
+      "id": "1760",
+      "name_en": "dumbbell goblet squat",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1760-yn8yg1r.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1760-yn8yg1r.jpg"
+    }
+  },
+  {
+    "index": 48,
+    "group": "腿",
+    "name_zh": "腿举",
+    "equipment": "器械",
+    "level": "入门",
+    "gymbells": {
+      "id": "Leg_Press",
+      "name_en": "Leg Press",
+      "pose": "leg-press",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/leg-press/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/leg-press/end.png"
+    },
+    "repdb": {
+      "id": "leg-press",
+      "name_en": "Leg Press",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/leg-press-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/leg-press-peak.webp"
+    },
+    "exercisedb": {
+      "id": "1463",
+      "name_en": "sled 45° leg press (side pov)",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1463-2Qh2J1e.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1463-2Qh2J1e.jpg"
+    }
+  },
+  {
+    "index": 49,
+    "group": "腿",
+    "name_zh": "腿屈伸",
+    "equipment": "器械",
+    "level": "入门",
+    "gymbells": {
+      "id": "Leg_Extensions",
+      "name_en": "Leg Extension",
+      "pose": "leg-extension",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/leg-extension/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/leg-extension/end.png"
+    },
+    "repdb": {
+      "id": "leg-extension",
+      "name_en": "Leg Extension",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/leg-extension-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/leg-extension-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0585",
+      "name_en": "lever leg extension",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0585-my33uHU.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0585-my33uHU.jpg"
+    }
+  },
+  {
+    "index": 50,
+    "group": "腿",
+    "name_zh": "罗马尼亚硬拉",
+    "equipment": "杠铃",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Romanian_Deadlift",
+      "name_en": "Romanian Deadlift",
+      "pose": "romanian-deadlift",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/romanian-deadlift/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/romanian-deadlift/end.png"
+    },
+    "repdb": {
+      "id": "romanian-deadlift",
+      "name_en": "Romanian Deadlift",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/romanian-deadlift-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/romanian-deadlift-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0085",
+      "name_en": "barbell romanian deadlift",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0085-wQ2c4XD.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0085-wQ2c4XD.jpg"
+    }
+  },
+  {
+    "index": 51,
+    "group": "腿",
+    "name_zh": "腿弯举",
+    "equipment": "器械",
+    "level": "入门",
+    "gymbells": {
+      "id": "Lying_Leg_Curls",
+      "name_en": "Lying Leg Curl",
+      "pose": "lying-leg-curl",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/lying-leg-curl/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/lying-leg-curl/end.png"
+    },
+    "repdb": {
+      "id": "leg-curl",
+      "name_en": "Lying Leg Curl",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/leg-curl-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/leg-curl-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0586",
+      "name_en": "lever lying leg curl",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0586-17lJ1kr.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0586-17lJ1kr.jpg"
+    }
+  },
+  {
+    "index": 52,
+    "group": "腿",
+    "name_zh": "杠铃臀推",
+    "equipment": "杠铃",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Barbell_Hip_Thrust",
+      "name_en": "Barbell Hip Thrust",
+      "pose": "barbell-hip-thrust",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/barbell-hip-thrust/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/barbell-hip-thrust/end.png"
+    },
+    "repdb": {
+      "id": "hip-thrust",
+      "name_en": "Barbell Hip Thrust",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/hip-thrust-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/hip-thrust-peak.webp"
+    },
+    "exercisedb": {
+      "id": "1409",
+      "name_en": "barbell glute bridge",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/1409-qKBpF7I.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/1409-qKBpF7I.jpg"
+    }
+  },
+  {
+    "index": 53,
+    "group": "腿",
+    "name_zh": "臀桥",
+    "equipment": "自重",
+    "level": "入门",
+    "gymbells": {
+      "id": "Butt_Lift_Bridge",
+      "name_en": "Glute Bridge",
+      "pose": "glute-bridge",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/glute-bridge/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/glute-bridge/end.png"
+    },
+    "repdb": {
+      "id": "glute-bridge",
+      "name_en": "Glute Bridge",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/glute-bridge-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/glute-bridge-peak.webp"
+    },
+    "exercisedb": {
+      "id": "3013",
+      "name_en": "low glute bridge on floor",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3013-u0cNiij.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3013-u0cNiij.jpg"
+    }
+  },
+  {
+    "index": 54,
+    "group": "腿",
+    "name_zh": "保加利亚分腿蹲",
+    "equipment": "哑铃",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Split_Squat_with_Dumbbells",
+      "name_en": "Dumbbell Split Squat",
+      "pose": "split-squat-dumbbell",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/split-squat-dumbbell/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/split-squat-dumbbell/end.png"
+    },
+    "repdb": {
+      "id": "bulgarian-split-squat",
+      "name_en": "Bulgarian Split Squat",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/bulgarian-split-squat-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/bulgarian-split-squat-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0410",
+      "name_en": "dumbbell single leg split squat",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0410-qx4fgX7.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0410-qx4fgX7.jpg"
+    }
+  },
+  {
+    "index": 55,
+    "group": "腿",
+    "name_zh": "站姿提踵",
+    "equipment": "器械",
+    "level": "入门",
+    "gymbells": {
+      "id": "Standing_Calf_Raises",
+      "name_en": "Machine Calf Raise",
+      "pose": "standing-calf-raise",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/standing-calf-raise/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/standing-calf-raise/end.png"
+    },
+    "repdb": {
+      "id": "standing-calf-raise",
+      "name_en": "Standing Calf Raise",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/standing-calf-raise-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/standing-calf-raise-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0605",
+      "name_en": "lever standing calf raise",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0605-ykUOVze.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0605-ykUOVze.jpg"
+    }
+  },
+  {
+    "index": 56,
+    "group": "腿",
+    "name_zh": "徒手深蹲",
+    "equipment": "自重",
+    "level": "入门",
+    "gymbells": {
+      "id": "Bodyweight_Squat",
+      "name_en": "Bodyweight Squat",
+      "pose": "bodyweight-squat",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/bodyweight-squat/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/bodyweight-squat/end.png"
+    },
+    "repdb": {
+      "id": "bodyweight-squat",
+      "name_en": "Bodyweight Squat",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/bodyweight-squat-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/bodyweight-squat-peak.webp"
+    },
+    "exercisedb": {
+      "id": "3119",
+      "name_en": "potty squat",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/3119-75Bgtjy.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/3119-75Bgtjy.jpg"
+    }
+  },
+  {
+    "index": 57,
+    "group": "核心",
+    "name_zh": "平板支撑",
+    "equipment": "自重",
+    "level": "入门",
+    "gymbells": {
+      "id": "Plank",
+      "name_en": "Plank",
+      "pose": "plank",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/plank/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/plank/end.png"
+    },
+    "repdb": {
+      "id": "plank",
+      "name_en": "Plank",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/plank-main.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/plank-main.webp"
+    },
+    "exercisedb": {
+      "id": "2135",
+      "name_en": "weighted front plank",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/2135-VBAWRPG.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/2135-VBAWRPG.jpg"
+    }
+  },
+  {
+    "index": 58,
+    "group": "核心",
+    "name_zh": "悬垂举腿",
+    "equipment": "自重",
+    "level": "高级",
+    "gymbells": {
+      "id": "Hanging_Leg_Raise",
+      "name_en": "Hanging Leg Raise",
+      "pose": "hanging-leg-raise",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/hanging-leg-raise/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/hanging-leg-raise/end.png"
+    },
+    "repdb": {
+      "id": "hanging-leg-raise",
+      "name_en": "Hanging Leg Raise",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/hanging-leg-raise-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/hanging-leg-raise-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0472",
+      "name_en": "hanging leg raise",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0472-I3tsCnC.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0472-I3tsCnC.jpg"
+    }
+  },
+  {
+    "index": 59,
+    "group": "核心",
+    "name_zh": "绳索卷腹",
+    "equipment": "拉力器",
+    "level": "进阶",
+    "gymbells": {
+      "id": "Cable_Crunch",
+      "name_en": "Cable Crunch",
+      "pose": "cable-crunch",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/cable-crunch/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/cable-crunch/end.png"
+    },
+    "repdb": {
+      "id": "cable-crunch",
+      "name_en": "Cable Crunch",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/cable-crunch-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/cable-crunch-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0175",
+      "name_en": "cable kneeling crunch",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0175-WW95auq.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0175-WW95auq.jpg"
+    }
+  },
+  {
+    "index": 60,
+    "group": "核心",
+    "name_zh": "俄罗斯转体",
+    "equipment": "自重",
+    "level": "入门",
+    "gymbells": {
+      "id": "Russian_Twist",
+      "name_en": "Russian Twist",
+      "pose": "russian-twist",
+      "start_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/russian-twist/start.png",
+      "end_url": "https://raw.githubusercontent.com/gellyfish-ai/gymbells-exercises/main/images/russian-twist/end.png"
+    },
+    "repdb": {
+      "id": "russian-twist",
+      "name_en": "Russian Twist",
+      "start_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/russian-twist-start.webp",
+      "peak_url": "https://raw.githubusercontent.com/RepDB/exercise-dataset/main/images/flat/russian-twist-peak.webp"
+    },
+    "exercisedb": {
+      "id": "0687",
+      "name_en": "russian twist",
+      "gif_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/videos/0687-XVDdcoj.gif",
+      "thumb_url": "https://raw.githubusercontent.com/hasaneyldrm/exercises-dataset/main/images/0687-XVDdcoj.jpg"
+    }
+  }
+]

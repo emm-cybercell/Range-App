@@ -1,0 +1,482 @@
+[
+  {
+    "slug": "barbell-bench-press",
+    "nameZh": "杠铃卧推",
+    "coverUrl": "/exercises/barbell-bench-press.jpg",
+    "demoUrl": "/exercises/barbell-bench-press.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "incline-barbell-press",
+    "nameZh": "上斜杠铃卧推",
+    "coverUrl": "/exercises/incline-barbell-press.jpg",
+    "demoUrl": "/exercises/incline-barbell-press.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "decline-barbell-press",
+    "nameZh": "下斜杠铃卧推",
+    "coverUrl": "/exercises/decline-barbell-press.jpg",
+    "demoUrl": "/exercises/decline-barbell-press.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "dumbbell-bench-press",
+    "nameZh": "哑铃卧推",
+    "coverUrl": "/exercises/dumbbell-bench-press.jpg",
+    "demoUrl": "/exercises/dumbbell-bench-press.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "incline-dumbbell-press",
+    "nameZh": "上斜哑铃卧推",
+    "coverUrl": "/exercises/incline-dumbbell-press.jpg",
+    "demoUrl": "/exercises/incline-dumbbell-press.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "dumbbell-fly",
+    "nameZh": "哑铃飞鸟",
+    "coverUrl": "/exercises/dumbbell-fly.jpg",
+    "demoUrl": "/exercises/dumbbell-fly.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "cable-crossover",
+    "nameZh": "绳索夹胸",
+    "coverUrl": "/exercises/cable-crossover.jpg",
+    "demoUrl": "/exercises/cable-crossover.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "pec-deck",
+    "nameZh": "蝴蝶机夹胸",
+    "coverUrl": "/exercises/pec-deck.jpg",
+    "demoUrl": "/exercises/pec-deck.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "push-up",
+    "nameZh": "俯卧撑",
+    "coverUrl": "/exercises/push-up.jpg",
+    "demoUrl": "/exercises/push-up.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "chest-dip",
+    "nameZh": "双杠臂屈伸",
+    "coverUrl": "/exercises/chest-dip.jpg",
+    "demoUrl": "/exercises/chest-dip.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "pull-up",
+    "nameZh": "引体向上",
+    "coverUrl": "/exercises/pull-up.jpg",
+    "demoUrl": "/exercises/pull-up.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "lat-pulldown",
+    "nameZh": "高位下拉",
+    "coverUrl": "/exercises/lat-pulldown.png",
+    "demoUrl": null,
+    "mediaCredit": "动作插图 GymBells · CC BY-NC 4.0",
+    "source": "gymbells"
+  },
+  {
+    "slug": "barbell-row",
+    "nameZh": "杠铃划船",
+    "coverUrl": "/exercises/barbell-row.jpg",
+    "demoUrl": "/exercises/barbell-row.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "dumbbell-row",
+    "nameZh": "单臂哑铃划船",
+    "coverUrl": "/exercises/dumbbell-row.jpg",
+    "demoUrl": "/exercises/dumbbell-row.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "seated-cable-row",
+    "nameZh": "坐姿绳索划船",
+    "coverUrl": "/exercises/seated-cable-row.jpg",
+    "demoUrl": "/exercises/seated-cable-row.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "t-bar-row",
+    "nameZh": "T 杠划船",
+    "coverUrl": "/exercises/t-bar-row.jpg",
+    "demoUrl": "/exercises/t-bar-row.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "straight-arm-pulldown",
+    "nameZh": "直臂下压",
+    "coverUrl": "/exercises/straight-arm-pulldown.jpg",
+    "demoUrl": "/exercises/straight-arm-pulldown.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "face-pull",
+    "nameZh": "面拉",
+    "coverUrl": "/exercises/face-pull.jpg",
+    "demoUrl": "/exercises/face-pull.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "shrug",
+    "nameZh": "哑铃耸肩",
+    "coverUrl": "/exercises/shrug.jpg",
+    "demoUrl": "/exercises/shrug.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "back-extension",
+    "nameZh": "山羊挺身",
+    "coverUrl": "/exercises/back-extension.jpg",
+    "demoUrl": "/exercises/back-extension.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "inverted-row",
+    "nameZh": "反向划船",
+    "coverUrl": "/exercises/inverted-row.jpg",
+    "demoUrl": "/exercises/inverted-row.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "machine-row",
+    "nameZh": "器械划船",
+    "coverUrl": "/exercises/machine-row.jpg",
+    "demoUrl": "/exercises/machine-row.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "overhead-press",
+    "nameZh": "杠铃站姿推举",
+    "coverUrl": "/exercises/overhead-press.jpg",
+    "demoUrl": "/exercises/overhead-press.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "dumbbell-shoulder-press",
+    "nameZh": "哑铃肩推",
+    "coverUrl": "/exercises/dumbbell-shoulder-press.jpg",
+    "demoUrl": "/exercises/dumbbell-shoulder-press.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "arnold-press",
+    "nameZh": "阿诺德推举",
+    "coverUrl": "/exercises/arnold-press.jpg",
+    "demoUrl": "/exercises/arnold-press.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "lateral-raise",
+    "nameZh": "哑铃侧平举",
+    "coverUrl": "/exercises/lateral-raise.jpg",
+    "demoUrl": "/exercises/lateral-raise.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "cable-lateral-raise",
+    "nameZh": "绳索侧平举",
+    "coverUrl": "/exercises/cable-lateral-raise.jpg",
+    "demoUrl": "/exercises/cable-lateral-raise.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "reverse-fly",
+    "nameZh": "俯身哑铃反向飞鸟",
+    "coverUrl": "/exercises/reverse-fly.jpg",
+    "demoUrl": "/exercises/reverse-fly.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "machine-reverse-fly",
+    "nameZh": "器械反向飞鸟",
+    "coverUrl": "/exercises/machine-reverse-fly.jpg",
+    "demoUrl": "/exercises/machine-reverse-fly.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "upright-row",
+    "nameZh": "直立划船",
+    "coverUrl": "/exercises/upright-row.jpg",
+    "demoUrl": "/exercises/upright-row.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "pike-push-up",
+    "nameZh": "折刀俯卧撑",
+    "coverUrl": "/exercises/pike-push-up.png",
+    "demoUrl": null,
+    "mediaCredit": "动作插图 GymBells · CC BY-NC 4.0",
+    "source": "gymbells"
+  },
+  {
+    "slug": "front-raise",
+    "nameZh": "哑铃前平举",
+    "coverUrl": "/exercises/front-raise.jpg",
+    "demoUrl": "/exercises/front-raise.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "barbell-curl",
+    "nameZh": "杠铃弯举",
+    "coverUrl": "/exercises/barbell-curl.jpg",
+    "demoUrl": "/exercises/barbell-curl.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "dumbbell-curl",
+    "nameZh": "哑铃弯举",
+    "coverUrl": "/exercises/dumbbell-curl.jpg",
+    "demoUrl": "/exercises/dumbbell-curl.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "hammer-curl",
+    "nameZh": "锤式弯举",
+    "coverUrl": "/exercises/hammer-curl.jpg",
+    "demoUrl": "/exercises/hammer-curl.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "preacher-curl",
+    "nameZh": "牧师凳弯举",
+    "coverUrl": "/exercises/preacher-curl.jpg",
+    "demoUrl": "/exercises/preacher-curl.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "cable-curl",
+    "nameZh": "绳索弯举",
+    "coverUrl": "/exercises/cable-curl.jpg",
+    "demoUrl": "/exercises/cable-curl.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "close-grip-bench",
+    "nameZh": "窄距卧推",
+    "coverUrl": "/exercises/close-grip-bench.jpg",
+    "demoUrl": "/exercises/close-grip-bench.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "triceps-pushdown",
+    "nameZh": "绳索下压",
+    "coverUrl": "/exercises/triceps-pushdown.jpg",
+    "demoUrl": "/exercises/triceps-pushdown.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "overhead-triceps-extension",
+    "nameZh": "哑铃颈后臂屈伸",
+    "coverUrl": "/exercises/overhead-triceps-extension.jpg",
+    "demoUrl": "/exercises/overhead-triceps-extension.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "skull-crusher",
+    "nameZh": "仰卧臂屈伸",
+    "coverUrl": "/exercises/skull-crusher.jpg",
+    "demoUrl": "/exercises/skull-crusher.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "bench-dip",
+    "nameZh": "凳上反屈伸",
+    "coverUrl": "/exercises/bench-dip.jpg",
+    "demoUrl": "/exercises/bench-dip.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "wrist-curl",
+    "nameZh": "腕弯举",
+    "coverUrl": "/exercises/wrist-curl.png",
+    "demoUrl": null,
+    "mediaCredit": "动作插图 GymBells · CC BY-NC 4.0",
+    "source": "gymbells"
+  },
+  {
+    "slug": "reverse-curl",
+    "nameZh": "反握弯举",
+    "coverUrl": "/exercises/reverse-curl.jpg",
+    "demoUrl": "/exercises/reverse-curl.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "barbell-squat",
+    "nameZh": "杠铃深蹲",
+    "coverUrl": "/exercises/barbell-squat.jpg",
+    "demoUrl": "/exercises/barbell-squat.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "front-squat",
+    "nameZh": "前蹲",
+    "coverUrl": "/exercises/front-squat.jpg",
+    "demoUrl": "/exercises/front-squat.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "goblet-squat",
+    "nameZh": "高脚杯深蹲",
+    "coverUrl": "/exercises/goblet-squat.jpg",
+    "demoUrl": "/exercises/goblet-squat.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "leg-press",
+    "nameZh": "腿举",
+    "coverUrl": "/exercises/leg-press.jpg",
+    "demoUrl": "/exercises/leg-press.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "leg-extension",
+    "nameZh": "腿屈伸",
+    "coverUrl": "/exercises/leg-extension.jpg",
+    "demoUrl": "/exercises/leg-extension.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "romanian-deadlift",
+    "nameZh": "罗马尼亚硬拉",
+    "coverUrl": "/exercises/romanian-deadlift.jpg",
+    "demoUrl": "/exercises/romanian-deadlift.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "leg-curl",
+    "nameZh": "腿弯举",
+    "coverUrl": "/exercises/leg-curl.jpg",
+    "demoUrl": "/exercises/leg-curl.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "barbell-hip-thrust",
+    "nameZh": "杠铃臀推",
+    "coverUrl": "/exercises/barbell-hip-thrust.png",
+    "demoUrl": null,
+    "mediaCredit": "动作插图 GymBells · CC BY-NC 4.0",
+    "source": "gymbells"
+  },
+  {
+    "slug": "glute-bridge",
+    "nameZh": "臀桥",
+    "coverUrl": "/exercises/glute-bridge.jpg",
+    "demoUrl": "/exercises/glute-bridge.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "bulgarian-split-squat",
+    "nameZh": "保加利亚分腿蹲",
+    "coverUrl": "/exercises/bulgarian-split-squat.jpg",
+    "demoUrl": "/exercises/bulgarian-split-squat.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "standing-calf-raise",
+    "nameZh": "站姿提踵",
+    "coverUrl": "/exercises/standing-calf-raise.jpg",
+    "demoUrl": "/exercises/standing-calf-raise.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "bodyweight-squat",
+    "nameZh": "徒手深蹲",
+    "coverUrl": "/exercises/bodyweight-squat.png",
+    "demoUrl": null,
+    "mediaCredit": "动作插图 GymBells · CC BY-NC 4.0",
+    "source": "gymbells"
+  },
+  {
+    "slug": "plank",
+    "nameZh": "平板支撑",
+    "coverUrl": "/exercises/plank.jpg",
+    "demoUrl": "/exercises/plank.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "hanging-leg-raise",
+    "nameZh": "悬垂举腿",
+    "coverUrl": "/exercises/hanging-leg-raise.jpg",
+    "demoUrl": "/exercises/hanging-leg-raise.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "cable-crunch",
+    "nameZh": "绳索卷腹",
+    "coverUrl": "/exercises/cable-crunch.jpg",
+    "demoUrl": "/exercises/cable-crunch.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  },
+  {
+    "slug": "russian-twist",
+    "nameZh": "俄罗斯转体",
+    "coverUrl": "/exercises/russian-twist.jpg",
+    "demoUrl": "/exercises/russian-twist.gif",
+    "mediaCredit": "动作演示 © Gym visual · gymvisual.com",
+    "source": "exercises-dataset"
+  }
+]

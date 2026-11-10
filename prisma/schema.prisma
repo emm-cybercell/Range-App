@@ -241,7 +241,9 @@ model Exercise {
   primaryMuscleId String
   primaryMuscle   Muscle @relation("PrimaryMuscle", fields: [primaryMuscleId], references: [id])
 
-  coverUrl String?
+  coverUrl    String?
+  demoUrl     String?
+  mediaCredit String?
   steps    String[]
   tips     String[]
   mistakes String[]
