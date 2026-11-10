@@ -12,7 +12,8 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
   if (!account.onboarded) redirect("/onboarding");
 
   return (
-    <div className="flex min-h-screen">
+    // 移动端纵向（顶部品牌栏 + 内容），桌面端横向（左侧栏 + 内容）
+    <div className="min-h-screen md:flex">
       <AppNav />
       <div className="min-w-0 flex-1 pb-20 md:pb-0">{children}</div>
     </div>

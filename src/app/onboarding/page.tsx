@@ -1,6 +1,8 @@
 "use client";
 
 import { useActionState, useMemo, useState } from "react";
+import Link from "next/link";
+import { BrandLockup } from "@/components/brand-mark";
 import { ArrowLeft, ArrowRight, Loader2 } from "lucide-react";
 import { calcMetabolic, type Goal } from "@/lib/metabolic";
 import { saveOnboarding } from "./actions";
@@ -87,6 +89,10 @@ export default function OnboardingPage() {
 
   return (
     <div className="mx-auto flex min-h-screen w-full max-w-lg flex-col px-5 py-8">
+      <Link href="/" aria-label="返回首页" className="mb-6 w-fit">
+        <BrandLockup />
+      </Link>
+
       {/* 进度 */}
       <div className="flex items-center gap-3">
         <span className="text-[13px] font-medium text-ink-2">

@@ -19,6 +19,13 @@ export function AppNav() {
 
   return (
     <>
+      {/* 移动：顶部品牌栏，点标识回首页 */}
+      <header className="sticky top-0 z-20 flex h-14 items-center border-b border-line bg-canvas/90 px-4 backdrop-blur md:hidden">
+        <Link href="/home" aria-label="回到首页" className="w-fit">
+          <BrandLockup />
+        </Link>
+      </header>
+
       {/* 桌面：左侧固定栏 */}
       <aside className="hidden w-60 shrink-0 border-r border-line px-3 py-6 md:block">
         <Link href="/home" className="mb-8 w-fit px-2">

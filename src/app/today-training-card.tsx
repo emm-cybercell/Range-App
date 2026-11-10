@@ -87,7 +87,7 @@ function LockedCard() {
           </span>
           <p className="mt-3 text-sm font-semibold">登录后查看你的今日训练</p>
           <p className="mt-1 text-[11px] leading-5 text-ink-2">
-            游客数据会在注册后自动同步过来
+            游客数据会在注册后自动同步
           </p>
           <div className="mt-3 flex gap-2">
             <Link
