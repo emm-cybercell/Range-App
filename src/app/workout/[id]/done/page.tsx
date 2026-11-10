@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { Check } from "lucide-react";
+import { ArrowLeft, Check } from "lucide-react";
 import { prisma } from "@/lib/db";
 import { requireAccount } from "@/lib/account";
 import { getSession, weeklyCompletedCount } from "@/lib/workouts";
@@ -41,6 +41,14 @@ export default async function WorkoutDonePage({ params }: { params: Promise<{ id
 
   return (
     <div className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6 py-10">
+      <Link
+        href="/home"
+        className="mb-6 inline-flex items-center gap-1.5 text-[13px] text-ink-2 transition-colors hover:text-ink"
+      >
+        <ArrowLeft className="size-3.5" />
+        返回首页
+      </Link>
+
       <div className="flex flex-col items-center text-center">
         <span className="grid size-16 place-items-center rounded-full bg-brand text-white">
           <Check className="size-8" strokeWidth={3} />

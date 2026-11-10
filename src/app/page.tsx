@@ -1,6 +1,8 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import { ArrowRight, Clock3, Dumbbell, LineChart, UtensilsCrossed } from "lucide-react";
 import { BrandLockup } from "@/components/brand-mark";
+import { TodayCardFallback, TodayTrainingCard } from "./today-training-card";
 
 const navLinks = [
   { href: "/exercises", label: "动作库" },
@@ -129,61 +131,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 产品预览：标注为示例，避免被误当成真实数据 */}
-            <div>
-              <div className="rounded-card border border-line bg-surface p-5 shadow-[0_8px_40px_rgba(20,35,28,0.06)]">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <p className="text-xs text-ink-3">今天 · 周一</p>
-                    <p className="mt-1 text-lg font-semibold">上肢 A</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="rounded-full border border-line px-2 py-0.5 text-[10px] text-ink-3">
-                      示例
-                    </span>
-                    <span className="rounded-full bg-accent px-2.5 py-1 text-[11px] font-semibold text-[#14231C]">
-                      第 3 练
-                    </span>
-                  </div>
-                </div>
-
-                <div className="mt-4 space-y-2.5">
-                  {[
-                    ["杠铃卧推", "4 × 6–10", true],
-                    ["杠铃划船", "4 × 6–10", true],
-                    ["站姿推举", "3 × 8–12", false],
-                    ["高位下拉", "3 × 10–12", false],
-                  ].map(([name, target, done]) => (
-                    <div
-                      key={name as string}
-                      className="flex items-center gap-3 rounded-xl bg-sunken px-3 py-2.5"
-                    >
-                      <span
-                        className={`grid size-5 shrink-0 place-items-center rounded-full text-[10px] font-bold ${
-                          done ? "bg-brand text-white" : "border-[1.5px] border-line text-transparent"
-                        }`}
-                      >
-                        ✓
-                      </span>
-                      <span className="flex-1 text-sm font-medium">{name as string}</span>
-                      <span className="num text-xs text-ink-2">{target as string}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-4 flex items-center justify-between rounded-xl border border-line px-3 py-3">
-                  <span className="text-xs text-ink-2">组间休息</span>
-                  <span className="num text-2xl font-bold tracking-tight text-brand">01:12</span>
-                </div>
-              </div>
-
-              <div className="mt-3 inline-flex flex-col rounded-2xl border border-line bg-surface px-4 py-2.5">
-                <span className="text-[11px] text-ink-3">本周容量</span>
-                <span className="num text-lg leading-6 font-bold">
-                  12,450<span className="ml-1 text-xs font-medium text-ink-2">kg</span>
-                </span>
-              </div>
-            </div>
+            <Suspense fallback={<TodayCardFallback />}>
+              <TodayTrainingCard />
+            </Suspense>
           </div>
         </section>
 

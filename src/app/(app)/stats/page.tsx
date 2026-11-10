@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PageHeader } from "@/components/page-header";
 import { Flame, Timer, Weight } from "lucide-react";
 import { prisma } from "@/lib/db";
 import { requireAccount } from "@/lib/account";
@@ -51,8 +52,11 @@ export default async function StatsPage() {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-6 sm:px-8">
-      <h1 className="text-2xl font-bold tracking-tight">数据</h1>
-      <p className="mt-1 text-sm text-ink-2">累计 {summary.totalWorkouts} 次训练</p>
+      <PageHeader
+        title="数据"
+        subtitle={`累计 ${summary.totalWorkouts} 次训练`}
+        back={{ href: "/me", label: "我的" }}
+      />
 
       {/* 本周三项 */}
       <div className="mt-4 grid grid-cols-3 gap-2.5">

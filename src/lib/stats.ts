@@ -31,16 +31,23 @@ export async function getStats(accountId: string, weeklyTarget: number): Promise
   const now = new Date();
   const weekStart = startOfWeek(now);
 
+  // 统计口径只看近期：会话 180 天（覆盖 84 天热力图 + 56 天柱状图 + 连续打卡），
+  // 组数 28 天（部位分布本来就是近期口径）。累计值由下面的 aggregate 单独取，不依赖全量。
+  const sessionWindow = new Date(now);
+  sessionWindow.setDate(sessionWindow.getDate() - 180);
+  const setWindow = new Date(now);
+  setWindow.setDate(setWindow.getDate() - 28);
+
   const [sessions, bodyPartRows, totals] = await Promise.all([
     prisma.workoutSession.findMany({
-      where: { accountId, status: "COMPLETED" },
+      where: { accountId, status: "COMPLETED", date: { gte: sessionWindow } },
       select: { date: true, durationSec: true, totalVolumeKg: true, totalSets: true },
       orderBy: { date: "desc" },
     }),
     prisma.workoutSet.findMany({
       where: {
         isWarmup: false,
-        workoutExercise: { session: { accountId, status: "COMPLETED" } },
+        workoutExercise: { session: { accountId, status: "COMPLETED", date: { gte: setWindow } } },
       },
       select: { workoutExercise: { select: { bodyPartSnapshot: true } } },
     }),

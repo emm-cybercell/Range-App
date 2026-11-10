@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { ArrowLeft, Download } from "lucide-react";
+import { Download } from "lucide-react";
+import { PageHeader } from "@/components/page-header";
 import { prisma } from "@/lib/db";
 import { requireAccount } from "@/lib/account";
 import { DangerZone, SettingsClient } from "./settings-client";
@@ -18,12 +18,7 @@ export default async function SettingsPage() {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-6 sm:px-8">
-      <Link href="/me" className="inline-flex items-center gap-1.5 text-[13px] text-ink-2 hover:text-ink">
-        <ArrowLeft className="size-3.5" />
-        我的
-      </Link>
-
-      <h1 className="mt-4 text-2xl font-bold tracking-tight">设置</h1>
+      <PageHeader title="设置" back={{ href: "/me", label: "我的" }} />
 
       {/* 外观 */}
       <section className="mt-5 rounded-card border border-line bg-surface p-5">

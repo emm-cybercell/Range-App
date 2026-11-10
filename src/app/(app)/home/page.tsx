@@ -36,24 +36,36 @@ export default async function HomePage() {
   const dateKey = todayString();
   const dateValue = new Date(`${dateKey}T00:00:00.000Z`);
 
-  const [profile, todayMetric, quoteCount, latestMetric] = await Promise.all([
-    prisma.profile.findUnique({ where: { accountId: account.id } }),
-    prisma.bodyMetric.findUnique({
-      where: { accountId_date: { accountId: account.id, date: dateValue } },
-    }),
-    prisma.quote.count({ where: { active: true } }),
-    prisma.bodyMetric.findFirst({
-      where: { accountId: account.id },
-      orderBy: { date: "desc" },
-    }),
-  ]);
+  // 一次并行发出：这些查询互相没有依赖
+  const [profile, todayMetric, latestMetric, quotes, todayPlan, activeSessionId, todayKcal] =
+    await Promise.all([
+      prisma.profile.findUnique({ where: { accountId: account.id } }),
+      prisma.bodyMetric.findUnique({
+        where: { accountId_date: { accountId: account.id, date: dateValue } },
+      }),
+      prisma.bodyMetric.findFirst({
+        where: { accountId: account.id },
+        orderBy: { date: "desc" },
+      }),
+      // 标语总量很小，一次取回在内存里按日期取模，省掉 count + skip 两次往返
+      prisma.quote.findMany({
+        where: { active: true },
+        orderBy: { order: "asc" },
+        take: 200,
+        select: { text: true },
+      }),
+      getTodayPlan(account.id),
+      getActiveSessionId(account.id),
+      prisma.mealEntry.aggregate({
+        where: { accountId: account.id, date: dateValue },
+        _sum: { kcal: true },
+      }),
+    ]);
 
-  const dayIndex = Number(dateKey.replace(/-/g, "")) % Math.max(quoteCount, 1);
-  const quote = await prisma.quote.findFirst({
-    where: { active: true },
-    orderBy: { order: "asc" },
-    skip: dayIndex,
-  });
+  const quote =
+    quotes.length > 0
+      ? quotes[Number(dateKey.replace(/-/g, "")) % quotes.length]
+      : null;
 
   const derived =
     profile?.sex && profile.age && profile.heightCm && profile.weightKg && profile.goal && profile.daysPerWeek
@@ -68,12 +80,6 @@ export default async function HomePage() {
       : null;
 
   const weightNow = latestMetric ? Number(latestMetric.weightKg) : null;
-  const todayPlan = await getTodayPlan(account.id);
-  const activeSessionId = await getActiveSessionId(account.id);
-  const todayKcal = await prisma.mealEntry.aggregate({
-    where: { accountId: account.id, date: dateValue },
-    _sum: { kcal: true },
-  });
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-8">

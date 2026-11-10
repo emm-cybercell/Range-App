@@ -146,6 +146,8 @@ export type ActivePlan = NonNullable<Awaited<ReturnType<typeof getActivePlan>>>;
 export async function getActivePlan(accountId: string) {
   return prisma.plan.findFirst({
     where: { accountId, isActive: true, deletedAt: null },
+    // 历史数据理论上只应有一个 active；万一出现多个，按最近更新取，避免结果随机
+    orderBy: [{ updatedAt: "desc" }, { id: "asc" }],
     include: {
       days: {
         orderBy: { order: "asc" },
