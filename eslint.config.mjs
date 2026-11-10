@@ -9,6 +9,8 @@ const eslintConfig = defineConfig([
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
+    // 本机为避开删除限制使用了多个构建产物目录
+    ".next-*/**",
     "out/**",
     "build/**",
     "next-env.d.ts",

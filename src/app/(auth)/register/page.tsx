@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { BrandLockup } from "@/components/brand-mark";
 import { useActionState } from "react";
 import { Loader2 } from "lucide-react";
 import { registerAction } from "../actions";
@@ -13,11 +14,8 @@ export default function RegisterPage() {
 
   return (
     <div className="mx-auto flex min-h-screen w-full max-w-md flex-col justify-center px-5 py-10">
-      <Link href="/" className="mb-8 flex items-center gap-2">
-        <span className="grid size-8 place-items-center rounded-[10px] bg-brand text-sm font-bold text-white">
-          练
-        </span>
-        <span className="text-[17px] font-semibold tracking-tight">练迹</span>
+      <Link href="/" className="mb-8 w-fit">
+        <BrandLockup />
       </Link>
 
       <h1 className="text-2xl font-bold tracking-tight">创建账号</h1>

@@ -1,5 +1,12 @@
 import Link from "next/link";
 import { ArrowRight, Clock3, Dumbbell, LineChart, UtensilsCrossed } from "lucide-react";
+import { BrandLockup } from "@/components/brand-mark";
+
+const navLinks = [
+  { href: "/exercises", label: "动作库" },
+  { href: "/plan", label: "训练计划" },
+  { href: "/nutrition", label: "饮食记录" },
+];
 
 const templates = [
   {
@@ -40,104 +47,142 @@ const features = [
 export default function Home() {
   return (
     <div className="flex min-h-full flex-col">
-      <header className="sticky top-0 z-10 border-b border-line bg-canvas/80 backdrop-blur">
+      <header className="sticky top-0 z-20 border-b border-line bg-canvas/80 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-8">
-          <div className="flex items-center gap-2">
-            <span className="grid size-8 place-items-center rounded-[10px] bg-brand text-sm font-bold text-white">
-              练
-            </span>
-            <span className="text-[17px] font-semibold tracking-tight">练迹</span>
-          </div>
-          <nav className="hidden items-center gap-7 text-sm text-ink-2 sm:flex">
-            <span className="transition-colors hover:text-ink">动作库</span>
-            <span className="transition-colors hover:text-ink">训练计划</span>
-            <span className="transition-colors hover:text-ink">饮食记录</span>
-          </nav>
-          <Link
-            href="/onboarding"
-            className="rounded-btn bg-brand px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-hover"
-          >
-            开始训练
+          <Link href="/" aria-label="练迹首页">
+            <BrandLockup />
           </Link>
+
+          <nav className="hidden items-center gap-7 text-sm text-ink-2 sm:flex">
+            {navLinks.map((item) => (
+              <Link key={item.href} href={item.href} className="transition-colors hover:text-ink">
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-2">
+            <Link
+              href="/login"
+              className="rounded-btn px-3 py-2 text-sm font-medium text-ink-2 transition-colors hover:text-ink"
+            >
+              登录
+            </Link>
+            <Link
+              href="/onboarding"
+              className="rounded-btn bg-brand px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-hover"
+            >
+              开始训练
+            </Link>
+          </div>
         </div>
       </header>
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="mx-auto grid max-w-6xl gap-12 px-4 pt-14 pb-20 sm:px-8 md:grid-cols-2 md:items-center md:pt-20">
-          <div>
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-soft px-3 py-1 text-xs font-medium text-brand">
-              <span className="size-1.5 rounded-full bg-brand" />
-              新手也能照着练
-            </span>
-            <h1 className="mt-5 text-[34px] leading-[1.15] font-bold tracking-tight sm:text-[44px]">
-              选好计划，
-              <br />
-              今天该练什么
-              <span className="text-brand">一目了然</span>
-            </h1>
-            <p className="mt-5 max-w-md text-[15px] leading-7 text-ink-2">
-              练完点一下，重量和次数自动记住。数据会自己长成曲线，你只需要每周多来一次。
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link
-                href="/onboarding"
-                className="inline-flex h-13 items-center gap-2 rounded-btn bg-brand px-6 text-[15px] font-semibold text-white transition-colors hover:bg-brand-hover"
-              >
-                3 分钟开始训练
-                <ArrowRight className="size-4" />
-              </Link>
-            </div>
+        <section className="relative overflow-hidden">
+          {/* 背景装饰：网格 + 光晕，纯 CSS/SVG，不增加请求 */}
+          <div aria-hidden className="pointer-events-none absolute inset-0">
+            <div
+              className="absolute inset-0 opacity-[0.35]"
+              style={{
+                backgroundImage:
+                  "radial-gradient(circle at 1px 1px, var(--line) 1px, transparent 0)",
+                backgroundSize: "22px 22px",
+                maskImage: "radial-gradient(ellipse 70% 60% at 30% 20%, #000 30%, transparent 75%)",
+                WebkitMaskImage:
+                  "radial-gradient(ellipse 70% 60% at 30% 20%, #000 30%, transparent 75%)",
+              }}
+            />
+            <div className="absolute -top-24 -right-10 size-[420px] rounded-full bg-brand/10 blur-[90px]" />
           </div>
 
-          {/* 产品卡预览（纯 CSS，不依赖图片） */}
-          <div>
-            <div className="rounded-card border border-line bg-surface p-5 shadow-[0_8px_40px_rgba(20,35,28,0.06)]">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-xs text-ink-3">今天 · 周一</p>
-                  <p className="mt-1 text-lg font-semibold">上肢 A</p>
-                </div>
-                <span className="rounded-full bg-accent px-2.5 py-1 text-[11px] font-semibold text-[#14231C]">
-                  第 3 练
-                </span>
-              </div>
-
-              <div className="mt-4 space-y-2.5">
-                {[
-                  ["杠铃卧推", "4 × 6–10", true],
-                  ["杠铃划船", "4 × 6–10", true],
-                  ["站姿推举", "3 × 8–12", false],
-                  ["高位下拉", "3 × 10–12", false],
-                ].map(([name, target, done]) => (
-                  <div
-                    key={name as string}
-                    className="flex items-center gap-3 rounded-xl bg-sunken px-3 py-2.5"
-                  >
-                    <span
-                      className={`grid size-5 shrink-0 place-items-center rounded-full text-[10px] font-bold ${
-                        done ? "bg-brand text-white" : "border-[1.5px] border-line text-transparent"
-                      }`}
-                    >
-                      ✓
-                    </span>
-                    <span className="flex-1 text-sm font-medium">{name as string}</span>
-                    <span className="num text-xs text-ink-2">{target as string}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-4 flex items-center justify-between rounded-xl border border-line px-3 py-3">
-                <span className="text-xs text-ink-2">组间休息</span>
-                <span className="num text-2xl font-bold tracking-tight text-brand">01:12</span>
+          <div className="relative mx-auto grid max-w-6xl gap-12 px-4 pt-14 pb-20 sm:px-8 md:grid-cols-2 md:items-center md:pt-20">
+            <div>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-soft px-3 py-1 text-xs font-medium text-brand">
+                <span className="size-1.5 rounded-full bg-brand" />
+                新手也能照着练
+              </span>
+              <h1 className="mt-5 text-[34px] leading-[1.15] font-bold tracking-tight sm:text-[44px]">
+                选好计划，
+                <br />
+                今天该练什么
+                <span className="text-brand">一目了然</span>
+              </h1>
+              <p className="mt-5 max-w-md text-[15px] leading-7 text-ink-2">
+                练完点一下，重量和次数自动记住。数据会自己长成曲线，你只需要每周多来一次。
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <Link
+                  href="/onboarding"
+                  className="inline-flex h-13 items-center gap-2 rounded-btn bg-brand px-6 text-[15px] font-semibold text-white transition-colors hover:bg-brand-hover"
+                >
+                  3 分钟开始训练
+                  <ArrowRight className="size-4" />
+                </Link>
+                <Link
+                  href="/login"
+                  className="inline-flex h-13 items-center rounded-btn border border-line px-5 text-[15px] font-medium text-ink-2 transition-colors hover:border-ink-3/40 hover:text-ink"
+                >
+                  已有账号
+                </Link>
               </div>
             </div>
 
-            <div className="mt-3 inline-flex flex-col rounded-2xl border border-line bg-surface px-4 py-2.5">
-              <span className="text-[11px] text-ink-3">本周容量</span>
-              <span className="num text-lg leading-6 font-bold">
-                12,450<span className="ml-1 text-xs font-medium text-ink-2">kg</span>
-              </span>
+            {/* 产品预览：标注为示例，避免被误当成真实数据 */}
+            <div>
+              <div className="rounded-card border border-line bg-surface p-5 shadow-[0_8px_40px_rgba(20,35,28,0.06)]">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <p className="text-xs text-ink-3">今天 · 周一</p>
+                    <p className="mt-1 text-lg font-semibold">上肢 A</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="rounded-full border border-line px-2 py-0.5 text-[10px] text-ink-3">
+                      示例
+                    </span>
+                    <span className="rounded-full bg-accent px-2.5 py-1 text-[11px] font-semibold text-[#14231C]">
+                      第 3 练
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-4 space-y-2.5">
+                  {[
+                    ["杠铃卧推", "4 × 6–10", true],
+                    ["杠铃划船", "4 × 6–10", true],
+                    ["站姿推举", "3 × 8–12", false],
+                    ["高位下拉", "3 × 10–12", false],
+                  ].map(([name, target, done]) => (
+                    <div
+                      key={name as string}
+                      className="flex items-center gap-3 rounded-xl bg-sunken px-3 py-2.5"
+                    >
+                      <span
+                        className={`grid size-5 shrink-0 place-items-center rounded-full text-[10px] font-bold ${
+                          done ? "bg-brand text-white" : "border-[1.5px] border-line text-transparent"
+                        }`}
+                      >
+                        ✓
+                      </span>
+                      <span className="flex-1 text-sm font-medium">{name as string}</span>
+                      <span className="num text-xs text-ink-2">{target as string}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-4 flex items-center justify-between rounded-xl border border-line px-3 py-3">
+                  <span className="text-xs text-ink-2">组间休息</span>
+                  <span className="num text-2xl font-bold tracking-tight text-brand">01:12</span>
+                </div>
+              </div>
+
+              <div className="mt-3 inline-flex flex-col rounded-2xl border border-line bg-surface px-4 py-2.5">
+                <span className="text-[11px] text-ink-3">本周容量</span>
+                <span className="num text-lg leading-6 font-bold">
+                  12,450<span className="ml-1 text-xs font-medium text-ink-2">kg</span>
+                </span>
+              </div>
             </div>
           </div>
         </section>
@@ -145,13 +190,16 @@ export default function Home() {
         {/* 卖点 */}
         <section className="border-t border-line bg-surface/60">
           <div className="mx-auto grid max-w-6xl gap-8 px-4 py-16 sm:px-8 md:grid-cols-3">
-            {features.map((f) => (
-              <div key={f.title}>
-                <span className="grid size-10 place-items-center rounded-xl bg-brand-soft text-brand">
+            {features.map((f, i) => (
+              <div key={f.title} className="group relative">
+                <span className="num pointer-events-none absolute -top-3 right-0 text-[52px] leading-none font-bold text-line/60 select-none">
+                  0{i + 1}
+                </span>
+                <span className="relative grid size-11 place-items-center rounded-xl bg-brand-soft text-brand transition-transform group-hover:-translate-y-0.5">
                   <f.icon className="size-5" strokeWidth={1.8} />
                 </span>
-                <h3 className="mt-4 text-base font-semibold">{f.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-ink-2">{f.desc}</p>
+                <h3 className="relative mt-4 text-base font-semibold">{f.title}</h3>
+                <p className="relative mt-2 text-sm leading-6 text-ink-2">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -182,7 +230,7 @@ export default function Home() {
         </section>
 
         {/* 饮食 */}
-        <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-8">
+        <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-8">
           <div className="flex flex-col gap-6 rounded-card border border-line bg-surface p-6 sm:flex-row sm:items-center sm:p-8">
             <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-accent/25 text-brand">
               <UtensilsCrossed className="size-6" strokeWidth={1.8} />
@@ -195,12 +243,51 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* 收尾 CTA */}
+        <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-8">
+          <div className="relative overflow-hidden rounded-card border border-line bg-surface px-6 py-10 text-center sm:px-10">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 opacity-40"
+              style={{
+                backgroundImage:
+                  "radial-gradient(circle at 1px 1px, var(--line) 1px, transparent 0)",
+                backgroundSize: "18px 18px",
+                maskImage: "radial-gradient(ellipse 60% 80% at 50% 0%, #000 20%, transparent 70%)",
+                WebkitMaskImage:
+                  "radial-gradient(ellipse 60% 80% at 50% 0%, #000 20%, transparent 70%)",
+              }}
+            />
+            <h2 className="relative text-xl font-bold tracking-tight sm:text-2xl">
+              今天该练什么，三分钟就有答案
+            </h2>
+            <p className="relative mx-auto mt-2 max-w-md text-sm leading-6 text-ink-2">
+              不用先想清楚，跟着计划走一遍就知道了。
+            </p>
+            <Link
+              href="/onboarding"
+              className="relative mt-6 inline-flex h-12 items-center gap-2 rounded-btn bg-brand px-6 text-sm font-semibold text-white transition-colors hover:bg-brand-hover"
+            >
+              开始训练
+              <ArrowRight className="size-4" />
+            </Link>
+          </div>
+        </section>
       </main>
 
       <footer className="border-t border-line">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-xs text-ink-3 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <span>练迹 · 一个不用学就会用的训练记录本</span>
-          <span>© 2026 练迹</span>
+          <div className="flex items-center gap-4">
+            <Link href="/login" className="hover:text-ink">
+              登录
+            </Link>
+            <Link href="/register" className="hover:text-ink">
+              注册
+            </Link>
+            <span>© 2026 练迹</span>
+          </div>
         </div>
       </footer>
     </div>

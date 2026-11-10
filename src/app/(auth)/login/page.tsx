@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { BrandLockup } from "@/components/brand-mark";
 import { useActionState } from "react";
 import { Loader2 } from "lucide-react";
 import { loginAction } from "../actions";
@@ -13,11 +14,8 @@ export default function LoginPage() {
 
   return (
     <div className="mx-auto flex min-h-screen w-full max-w-md flex-col justify-center px-5 py-10">
-      <Link href="/" className="mb-8 flex items-center gap-2">
-        <span className="grid size-8 place-items-center rounded-[10px] bg-brand text-sm font-bold text-white">
-          练
-        </span>
-        <span className="text-[17px] font-semibold tracking-tight">练迹</span>
+      <Link href="/" className="mb-8 w-fit">
+        <BrandLockup />
       </Link>
 
       <h1 className="text-2xl font-bold tracking-tight">欢迎回来</h1>
@@ -75,8 +73,8 @@ export default function LoginPage() {
         </Link>
       </p>
 
-      <Link href="/" className="mt-3 text-center text-[13px] text-ink-3 hover:text-ink-2">
-        暂不登录，先看看
+      <Link href="/onboarding" className="mt-3 text-center text-[13px] text-ink-3 hover:text-ink-2">
+        先不登录，直接开始训练
       </Link>
     </div>
   );

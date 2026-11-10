@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BookOpen, CalendarDays, House, User, UtensilsCrossed } from "lucide-react";
+import { BrandLockup } from "@/components/brand-mark";
 
 const NAV = [
   { href: "/home", label: "首页", icon: House },
@@ -20,11 +21,8 @@ export function AppNav() {
     <>
       {/* 桌面：左侧固定栏 */}
       <aside className="hidden w-60 shrink-0 border-r border-line px-3 py-6 md:block">
-        <Link href="/home" className="mb-8 flex items-center gap-2 px-2">
-          <span className="grid size-8 place-items-center rounded-[10px] bg-brand text-sm font-bold text-white">
-            练
-          </span>
-          <span className="text-[17px] font-semibold tracking-tight">练迹</span>
+        <Link href="/home" className="mb-8 w-fit px-2">
+          <BrandLockup />
         </Link>
 
         <nav className="space-y-1">

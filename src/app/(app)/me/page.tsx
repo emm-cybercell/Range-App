@@ -57,6 +57,29 @@ export default async function MePage() {
         <ThemeToggle />
       </header>
 
+      {account.type !== "USER" ? (
+        <section className="mt-5 rounded-card border border-brand/30 bg-brand-soft/50 p-4">
+          <p className="text-sm font-semibold">当前是游客模式</p>
+          <p className="mt-1 text-[12px] leading-5 text-ink-2">
+            注册后训练记录会跟着账号走，换台设备也能接着练。
+          </p>
+          <div className="mt-3 flex gap-2">
+            <Link
+              href="/register"
+              className="flex h-10 flex-1 items-center justify-center rounded-btn bg-brand text-[13px] font-semibold text-white"
+            >
+              注册账号
+            </Link>
+            <Link
+              href="/login"
+              className="flex h-10 flex-1 items-center justify-center rounded-btn border border-line bg-surface text-[13px] font-medium text-ink-2"
+            >
+              已有账号，登录
+            </Link>
+          </div>
+        </section>
+      ) : null}
+
       <section className="mt-5 rounded-card border border-line bg-surface p-5">
         <div className="flex items-center gap-3">
           <span className="grid size-11 place-items-center rounded-full bg-brand-soft text-base font-bold text-brand">
