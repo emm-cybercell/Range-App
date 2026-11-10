@@ -69,7 +69,7 @@ for (const item of mapping) {
 
   if (useGymBells) {
     const pose = item.gymbells.pose;
-    const path = `images/${pose}/start.png`;
+    const path = `images/${pose}/end.png`;
     jobs.push({
       slug,
       kind: "cover",
