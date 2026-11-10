@@ -5,6 +5,7 @@ import { prisma } from "@/lib/db";
 import { getCurrentAccount } from "@/lib/account";
 import { materializePlan } from "@/lib/plans";
 import type { UserEquipment } from "@/lib/plan-templates";
+import { createEmptyPlan, setActivePlan } from "./editor-actions";
 
 export async function createPlanAction(formData: FormData) {
   const templateSlug = String(formData.get("templateSlug") ?? "");
@@ -41,4 +42,19 @@ export async function deletePlanAction(formData: FormData) {
   });
 
   redirect("/plan/templates");
+}
+
+/** 从空白开始：建一份空计划，直接进编辑器 */
+export async function startBlankPlanAction() {
+  const result = await createEmptyPlan();
+  if (result.ok && result.planId) redirect(`/plan/${result.planId}/edit`);
+  redirect("/plan/templates?reason=create");
+}
+
+/** 切换当前计划（供列表页的表单调用） */
+export async function activatePlanAction(formData: FormData) {
+  const planId = String(formData.get("planId") ?? "");
+  if (!planId) redirect("/plan");
+  await setActivePlan(planId);
+  redirect("/plan");
 }

@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { ArrowLeft, Check, Clock3, Dumbbell } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Clock3, Dumbbell, Plus } from "lucide-react";
 import { prisma } from "@/lib/db";
 import { requireAccount } from "@/lib/account";
 import { estimateMinutes, recommendTemplates, type UserEquipment } from "@/lib/plan-templates";
-import { createPlanAction } from "../actions";
+import { createPlanAction, startBlankPlanAction } from "../actions";
 
 const EQUIPMENT_LABEL: Record<UserEquipment, string> = {
   GYM: "健身房",
@@ -58,6 +58,24 @@ export default async function PlanTemplatesPage({
           这套计划需要的器械不够，换一套更合适的试试。
         </p>
       ) : null}
+
+      <form action={startBlankPlanAction} className="mt-6">
+        <button
+          type="submit"
+          className="flex w-full items-center gap-3 rounded-card border border-dashed border-line bg-surface px-4 py-3.5 text-left transition-colors hover:border-brand/50"
+        >
+          <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-brand-soft text-brand">
+            <Plus className="size-5" strokeWidth={1.8} />
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-sm font-semibold">从空白开始</span>
+            <span className="mt-0.5 block text-[12px] text-ink-2">
+              自己排训练日、挑动作、定组数，完全按你的习惯来
+            </span>
+          </span>
+          <ArrowRight className="size-4 shrink-0 text-ink-3" />
+        </button>
+      </form>
 
       <div className="mt-6 space-y-3">
         {options.map((t) => {

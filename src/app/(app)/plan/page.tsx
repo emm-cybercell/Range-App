@@ -2,9 +2,11 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { ArrowRight, CalendarDays, Repeat } from "lucide-react";
 import { requireAccount } from "@/lib/account";
+import { prisma } from "@/lib/db";
 import { getActivePlan, isoWeekday, planDayMinutes } from "@/lib/plans";
 import { WEEKDAY_LABEL } from "@/lib/plan-templates";
 import { startWorkoutAction } from "@/app/workout/actions";
+import { activatePlanAction } from "./actions";
 
 const BODY_PART_LABEL: Record<string, string> = {
   CHEST: "胸",
@@ -48,7 +50,14 @@ async function PlanBody() {
   const account = await requireAccount();
   if (!account) return null;
 
-  const plan = await getActivePlan(account.id);
+  const [plan, plans] = await Promise.all([
+    getActivePlan(account.id),
+    prisma.plan.findMany({
+      where: { accountId: account.id, deletedAt: null },
+      orderBy: { updatedAt: "desc" },
+      select: { id: true, name: true, isActive: true },
+    }),
+  ]);
   const today = isoWeekday();
 
   if (!plan) {
@@ -86,13 +95,41 @@ async function PlanBody() {
             每周 {plan.days.length} 练 · {plan.days.reduce((n, d) => n + d.exercises.length, 0)} 个动作
           </p>
         </div>
-        <Link
-          href="/plan/templates"
-          className="shrink-0 rounded-btn border border-line px-3 py-2 text-[13px] font-medium text-ink-2 transition-colors hover:text-ink"
-        >
-          更换
-        </Link>
+        <div className="flex shrink-0 items-center gap-2">
+          <Link
+            href={`/plan/${plan.id}/edit`}
+            className="rounded-btn bg-brand px-3 py-2 text-[13px] font-semibold text-white transition-colors hover:bg-brand-hover"
+          >
+            编辑
+          </Link>
+          <Link
+            href="/plan/templates"
+            className="rounded-btn border border-line px-3 py-2 text-[13px] font-medium text-ink-2 transition-colors hover:text-ink"
+          >
+            更换
+          </Link>
+        </div>
       </header>
+
+      {plans.length > 1 ? (
+        <div className="mt-3 flex gap-1.5 overflow-x-auto pb-1">
+          {plans.map((item) => (
+            <form key={item.id} action={activatePlanAction} className="shrink-0">
+              <input type="hidden" name="planId" value={item.id} />
+              <button
+                type="submit"
+                className={`rounded-full px-3 py-1.5 text-[12px] font-medium transition-colors ${
+                  item.isActive
+                    ? "bg-brand-soft text-brand"
+                    : "border border-line text-ink-2 hover:text-ink"
+                }`}
+              >
+                {item.name}
+              </button>
+            </form>
+          ))}
+        </div>
+      ) : null}
 
       {/* 本周排期 */}
       <section className="mt-5 rounded-card border border-line bg-surface p-4">
