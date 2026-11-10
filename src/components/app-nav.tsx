@@ -1,0 +1,71 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { BookOpen, CalendarDays, House, User, UtensilsCrossed } from "lucide-react";
+
+const NAV = [
+  { href: "/home", label: "首页", icon: House },
+  { href: "/plan", label: "计划", icon: CalendarDays },
+  { href: "/nutrition", label: "饮食", icon: UtensilsCrossed },
+  { href: "/exercises", label: "动作库", icon: BookOpen },
+  { href: "/me", label: "我的", icon: User },
+];
+
+export function AppNav() {
+  const pathname = usePathname();
+  const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+
+  return (
+    <>
+      {/* 桌面：左侧固定栏 */}
+      <aside className="hidden w-60 shrink-0 border-r border-line px-3 py-6 md:block">
+        <Link href="/home" className="mb-8 flex items-center gap-2 px-2">
+          <span className="grid size-8 place-items-center rounded-[10px] bg-brand text-sm font-bold text-white">
+            练
+          </span>
+          <span className="text-[17px] font-semibold tracking-tight">练迹</span>
+        </Link>
+
+        <nav className="space-y-1">
+          {NAV.map((item) => {
+            const active = isActive(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors ${
+                  active ? "bg-brand-soft text-brand" : "text-ink-2 hover:bg-sunken hover:text-ink"
+                }`}
+              >
+                <item.icon className="size-[18px]" strokeWidth={1.8} />
+                {item.label}
+              </Link>
+            );
+          })}
+        </nav>
+      </aside>
+
+      {/* 移动：底部 Tab */}
+      <nav className="fixed inset-x-0 bottom-0 z-20 border-t border-line bg-surface/95 pb-[env(safe-area-inset-bottom)] backdrop-blur md:hidden">
+        <div className="flex h-16 items-center justify-around">
+          {NAV.map((item) => {
+            const active = isActive(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`flex flex-1 flex-col items-center gap-1 py-2 text-[11px] font-medium transition-colors ${
+                  active ? "text-brand" : "text-ink-3"
+                }`}
+              >
+                <item.icon className="size-[22px]" strokeWidth={active ? 2.2 : 1.8} />
+                {item.label}
+              </Link>
+            );
+          })}
+        </div>
+      </nav>
+    </>
+  );
+}

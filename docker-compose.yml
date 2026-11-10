@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: range-pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: range
+      POSTGRES_PASSWORD: range_dev
+      POSTGRES_DB: range
+      TZ: Asia/Shanghai
+    ports:
+      - "55432:5432"
+    volumes:
+      - range-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U range -d range"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  range-pgdata:

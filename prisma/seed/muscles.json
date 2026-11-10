@@ -1,0 +1,27 @@
+[
+  { "slug": "chest-upper", "name": "上胸", "bodyPart": "CHEST", "order": 1 },
+  { "slug": "chest-mid", "name": "中胸", "bodyPart": "CHEST", "order": 2 },
+  { "slug": "chest-lower", "name": "下胸", "bodyPart": "CHEST", "order": 3 },
+
+  { "slug": "lats", "name": "背阔肌", "bodyPart": "BACK", "order": 1 },
+  { "slug": "traps", "name": "斜方肌", "bodyPart": "BACK", "order": 2 },
+  { "slug": "rhomboids", "name": "菱形肌", "bodyPart": "BACK", "order": 3 },
+  { "slug": "lower-back", "name": "下背", "bodyPart": "BACK", "order": 4 },
+
+  { "slug": "delt-front", "name": "三角肌前束", "bodyPart": "SHOULDERS", "order": 1 },
+  { "slug": "delt-side", "name": "三角肌中束", "bodyPart": "SHOULDERS", "order": 2 },
+  { "slug": "delt-rear", "name": "三角肌后束", "bodyPart": "SHOULDERS", "order": 3 },
+
+  { "slug": "biceps", "name": "肱二头肌", "bodyPart": "ARMS", "order": 1 },
+  { "slug": "triceps", "name": "肱三头肌", "bodyPart": "ARMS", "order": 2 },
+  { "slug": "forearm", "name": "前臂", "bodyPart": "ARMS", "order": 3 },
+
+  { "slug": "quads", "name": "股四头肌", "bodyPart": "LEGS", "order": 1 },
+  { "slug": "hamstrings", "name": "腘绳肌", "bodyPart": "LEGS", "order": 2 },
+  { "slug": "glutes", "name": "臀大肌", "bodyPart": "LEGS", "order": 3 },
+  { "slug": "calves", "name": "小腿", "bodyPart": "LEGS", "order": 4 },
+
+  { "slug": "abs", "name": "腹直肌", "bodyPart": "CORE", "order": 1 },
+  { "slug": "obliques", "name": "腹斜肌", "bodyPart": "CORE", "order": 2 },
+  { "slug": "deep-core", "name": "深层核心", "bodyPart": "CORE", "order": 3 }
+]

@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: range
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?请设置 POSTGRES_PASSWORD}
+      POSTGRES_DB: range
+      TZ: Asia/Shanghai
+    volumes:
+      - range-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U range -d range"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://range:${POSTGRES_PASSWORD}@db:5432/range?schema=public
+      SESSION_SECRET: ${SESSION_SECRET:?请设置 SESSION_SECRET}
+      NODE_ENV: production
+    ports:
+      - "3000:3000"
+
+volumes:
+  range-pgdata:

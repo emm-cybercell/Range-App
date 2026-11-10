@@ -1,0 +1,512 @@
+// 练迹 · Fitness App — 数据模型
+// 文档：docs/03-SCHEMA.md
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─────────────────────────── 枚举 ───────────────────────────
+
+enum AccountType {
+  USER
+  GUEST
+}
+
+enum Sex {
+  MALE
+  FEMALE
+}
+
+enum Goal {
+  MUSCLE_GAIN
+  FAT_LOSS
+  SHAPING
+  STRENGTH
+  MAINTAIN
+}
+
+enum Equipment {
+  GYM
+  DUMBBELL
+  BODYWEIGHT
+}
+
+// 动作自身所需的器械（与用户器械条件 Equipment 是两回事）
+enum ExerciseEquipment {
+  BARBELL
+  DUMBBELL
+  MACHINE
+  CABLE
+  BODYWEIGHT
+}
+
+enum Level {
+  BEGINNER
+  INTERMEDIATE
+  ADVANCED
+}
+
+enum BodyPart {
+  CHEST
+  BACK
+  SHOULDERS
+  ARMS
+  LEGS
+  CORE
+}
+
+enum ExerciseKind {
+  COMPOUND
+  ISOLATION
+}
+
+enum WorkoutStatus {
+  ACTIVE
+  COMPLETED
+  ABANDONED
+}
+
+enum WorkoutExerciseStatus {
+  PENDING
+  DONE
+  SKIPPED
+}
+
+enum MealType {
+  BREAKFAST
+  LUNCH
+  DINNER
+  SNACK
+}
+
+enum FoodSource {
+  BUILTIN
+  USER
+  EXTERNAL
+}
+
+enum Theme {
+  LIGHT
+  DARK
+  SYSTEM
+}
+
+enum WeightUnit {
+  KG
+  LB
+}
+
+enum QuoteCategory {
+  PERSIST
+  BREAKTHROUGH
+  DISCIPLINE
+  EASY
+}
+
+// ─────────────────────────── 账号与档案 ───────────────────────────
+
+model Account {
+  id           String      @id @default(cuid())
+  type         AccountType @default(GUEST)
+  email        String?     @unique
+  passwordHash String?
+  nickname     String      @default("健身新手")
+  lastSeenAt   DateTime    @default(now())
+  createdAt    DateTime    @default(now())
+  deletedAt    DateTime?
+
+  profile      Profile?
+  setting      Setting?
+  bodyMetrics  BodyMetric[]
+  measurements Measurement[]
+  plans        Plan[]
+  sessions     WorkoutSession[]
+  mealEntries  MealEntry[]
+  waterLogs    WaterLog[]
+  foods        Food[]
+  clientOps    ClientOp[]
+  favorites    ExerciseFavorite[]
+
+  @@index([type, lastSeenAt])
+  @@index([deletedAt])
+}
+
+model Profile {
+  id        String   @id @default(cuid())
+  accountId String   @unique
+  account   Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  sex            Sex?
+  age            Int?
+  heightCm       Decimal? @db.Decimal(5, 1)
+  weightKg       Decimal? @db.Decimal(5, 1)
+  goal           Goal?
+  daysPerWeek    Int?
+  equipment      Equipment?
+  level          Level?
+  targetWeightKg Decimal? @db.Decimal(5, 1)
+  trainingDays   Int[]
+  completedAt    DateTime?
+
+  targetKcalOverride    Int?
+  targetProteinOverride Decimal? @db.Decimal(5, 1)
+  targetCarbsOverride   Decimal? @db.Decimal(5, 1)
+  targetFatOverride     Decimal? @db.Decimal(5, 1)
+  waterTargetMlOverride Int?
+
+  updatedAt DateTime @updatedAt
+
+  @@index([completedAt])
+}
+
+model Setting {
+  accountId String     @id
+  account   Account    @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  theme     Theme      @default(SYSTEM)
+  unit      WeightUnit @default(KG)
+  beepOn    Boolean    @default(true)
+  language  String     @default("zh-CN")
+  updatedAt DateTime   @updatedAt
+}
+
+// ─────────────────────────── 身体数据 ───────────────────────────
+
+model BodyMetric {
+  id        String   @id @default(cuid())
+  accountId String
+  account   Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  date       DateTime @db.Date
+  weightKg   Decimal  @db.Decimal(5, 2)
+  bodyFatPct Decimal? @db.Decimal(4, 1)
+  muscleKg   Decimal? @db.Decimal(5, 2)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([accountId, date])
+  @@index([accountId, date])
+}
+
+model Measurement {
+  id        String   @id @default(cuid())
+  accountId String
+  account   Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  date  DateTime @db.Date
+  chest Decimal? @db.Decimal(5, 1)
+  waist Decimal? @db.Decimal(5, 1)
+  hip   Decimal? @db.Decimal(5, 1)
+  arm   Decimal? @db.Decimal(5, 1)
+  thigh Decimal? @db.Decimal(5, 1)
+
+  createdAt DateTime @default(now())
+
+  @@unique([accountId, date])
+  @@index([accountId, date])
+}
+
+// ─────────────────────────── 动作库 ───────────────────────────
+
+model Muscle {
+  id       String   @id @default(cuid())
+  slug     String   @unique
+  name     String
+  bodyPart BodyPart
+  order    Int
+
+  primaryOf   Exercise[]               @relation("PrimaryMuscle")
+  secondaryOf ExerciseSecondaryMuscle[]
+
+  @@index([bodyPart, order])
+}
+
+model Exercise {
+  id        String       @id @default(cuid())
+  slug      String       @unique
+  name      String
+  nameEn    String
+  pinyin    String
+  pinyinInitials String @default("")
+  bodyPart  BodyPart
+  equipment ExerciseEquipment
+  level     Level
+  kind      ExerciseKind
+
+  primaryMuscleId String
+  primaryMuscle   Muscle @relation("PrimaryMuscle", fields: [primaryMuscleId], references: [id])
+
+  coverUrl String?
+  steps    String[]
+  tips     String[]
+  mistakes String[]
+  active   Boolean  @default(true)
+
+  createdAt DateTime @default(now())
+
+  secondaryMuscles ExerciseSecondaryMuscle[]
+  alternativesFrom ExerciseAlternative[]      @relation("FromExercise")
+  alternativesTo   ExerciseAlternative[]      @relation("ToExercise")
+  planExercises    PlanExercise[]
+  workoutExercises WorkoutExercise[]
+  favorites        ExerciseFavorite[]
+
+  @@index([bodyPart, level, equipment])
+  @@index([primaryMuscleId])
+  @@index([name])
+}
+
+model ExerciseSecondaryMuscle {
+  exerciseId String
+  muscleId   String
+  exercise   Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  muscle     Muscle   @relation(fields: [muscleId], references: [id], onDelete: Cascade)
+
+  @@id([exerciseId, muscleId])
+}
+
+model ExerciseAlternative {
+  fromId String
+  toId   String
+  from   Exercise @relation("FromExercise", fields: [fromId], references: [id], onDelete: Cascade)
+  to     Exercise @relation("ToExercise", fields: [toId], references: [id], onDelete: Cascade)
+
+  @@id([fromId, toId])
+}
+
+model ExerciseFavorite {
+  accountId  String
+  exerciseId String
+  account    Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  exercise   Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  createdAt  DateTime @default(now())
+
+  @@id([accountId, exerciseId])
+  @@index([accountId, createdAt])
+}
+
+// ─────────────────────────── 训练计划 ───────────────────────────
+
+model Plan {
+  id        String   @id @default(cuid())
+  accountId String
+  account   Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  name             String
+  isActive         Boolean   @default(false)
+  sourceTemplateId String?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  deletedAt        DateTime?
+
+  days     PlanDay[]
+  sessions WorkoutSession[]
+
+  @@index([accountId, isActive])
+  @@index([accountId, deletedAt])
+}
+
+model PlanDay {
+  id     String @id @default(cuid())
+  planId String
+  plan   Plan   @relation(fields: [planId], references: [id], onDelete: Cascade)
+
+  name    String
+  weekday Int?
+  order   Int
+
+  exercises PlanExercise[]
+  sessions  WorkoutSession[]
+
+  @@index([planId, order])
+}
+
+model PlanExercise {
+  id        String  @id @default(cuid())
+  planDayId String
+  planDay   PlanDay @relation(fields: [planDayId], references: [id], onDelete: Cascade)
+
+  exerciseId String
+  exercise   Exercise @relation(fields: [exerciseId], references: [id], onDelete: Restrict)
+
+  order      Int
+  targetSets Int @default(3)
+  repsMin    Int @default(8)
+  repsMax    Int @default(12)
+  restSec    Int @default(90)
+
+  @@index([planDayId, order])
+}
+
+// ─────────────────────────── 训练执行 ───────────────────────────
+
+model WorkoutSession {
+  id        String   @id @default(cuid())
+  accountId String
+  account   Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  planId    String?
+  plan      Plan?    @relation(fields: [planId], references: [id], onDelete: SetNull)
+  planDayId String?
+  planDay   PlanDay? @relation(fields: [planDayId], references: [id], onDelete: SetNull)
+
+  planNameSnapshot String?
+  dayNameSnapshot  String?
+
+  date       DateTime      @db.Date
+  startedAt  DateTime      @default(now())
+  finishedAt DateTime?
+  status     WorkoutStatus @default(ACTIVE)
+
+  durationSec   Int?
+  totalVolumeKg Decimal? @db.Decimal(10, 2)
+  totalSets     Int?
+  note          String?
+
+  createdAt DateTime @default(now())
+
+  exercises WorkoutExercise[]
+
+  @@index([accountId, date])
+  @@index([accountId, status])
+  @@index([status, startedAt])
+}
+
+model WorkoutExercise {
+  id        String         @id @default(cuid())
+  sessionId String
+  session   WorkoutSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  exerciseId String?
+  exercise   Exercise? @relation(fields: [exerciseId], references: [id], onDelete: SetNull)
+
+  exerciseNameSnapshot String
+  bodyPartSnapshot     BodyPart
+  muscleNameSnapshot   String?
+  equipmentSnapshot    ExerciseEquipment?
+
+  order      Int
+  targetSets Int @default(3)
+  repsMin    Int @default(8)
+  repsMax    Int @default(12)
+  restSec    Int @default(90)
+
+  status         WorkoutExerciseStatus @default(PENDING)
+  replacedFromId String?
+  note           String?
+
+  sets WorkoutSet[]
+
+  @@index([sessionId, order])
+}
+
+model WorkoutSet {
+  id                String          @id @default(cuid())
+  workoutExerciseId String
+  workoutExercise   WorkoutExercise @relation(fields: [workoutExerciseId], references: [id], onDelete: Cascade)
+
+  setIndex    Int
+  weightKg    Decimal @db.Decimal(6, 2)
+  reps        Int
+  isWarmup    Boolean @default(false)
+  completedAt DateTime @default(now())
+
+  clientOpId String?
+
+  @@unique([workoutExerciseId, setIndex])
+  @@index([workoutExerciseId])
+}
+
+// ─────────────────────────── 饮食 ───────────────────────────
+
+model Food {
+  id        String   @id @default(cuid())
+  accountId String?
+  account   Account? @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  name           String
+  pinyin         String
+  category       String?
+  kcalPer100g    Int
+  proteinPer100g Decimal @db.Decimal(5, 1)
+  carbsPer100g   Decimal @db.Decimal(5, 1)
+  fatPer100g     Decimal @db.Decimal(5, 1)
+
+  servingName  String?
+  servingGrams Int?
+
+  source    FoodSource @default(BUILTIN)
+  active    Boolean    @default(true)
+  createdAt DateTime   @default(now())
+
+  entries MealEntry[]
+
+  @@index([accountId, name])
+  @@index([name])
+  @@index([category])
+}
+
+model MealEntry {
+  id        String  @id @default(cuid())
+  accountId String
+  account   Account @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  foodId String?
+  food   Food?   @relation(fields: [foodId], references: [id], onDelete: SetNull)
+
+  nameSnapshot String
+  grams        Decimal @db.Decimal(6, 1)
+  kcal         Int
+  protein      Decimal @db.Decimal(5, 1)
+  carbs        Decimal @db.Decimal(5, 1)
+  fat          Decimal @db.Decimal(5, 1)
+
+  date     DateTime @db.Date
+  mealType MealType
+
+  clientOpId String?
+
+  createdAt DateTime @default(now())
+
+  @@index([accountId, date, mealType])
+  @@index([accountId, foodId])
+}
+
+model WaterLog {
+  id        String   @id @default(cuid())
+  accountId String
+  account   Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  date DateTime @db.Date
+  ml   Int      @default(0)
+
+  updatedAt DateTime @updatedAt
+
+  @@unique([accountId, date])
+}
+
+// ─────────────────────────── 激励与基础设施 ───────────────────────────
+
+model Quote {
+  id       String        @id @default(cuid())
+  text     String
+  category QuoteCategory
+  active   Boolean       @default(true)
+  order    Int           @default(0)
+}
+
+model ClientOp {
+  id         String   @id @default(cuid())
+  accountId  String
+  account    Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  clientOpId String
+  createdAt  DateTime @default(now())
+
+  @@unique([accountId, clientOpId])
+  @@index([createdAt])
+}

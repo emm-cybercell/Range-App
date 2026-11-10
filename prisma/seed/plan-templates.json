@@ -1,0 +1,242 @@
+[
+  {
+    "slug": "beginner-full-body",
+    "name": "新手全身启动",
+    "subtitle": "每周 2–3 天 · 每次练全身",
+    "description": "每个部位每周练到 2 次，动作少、组数低，先把动作模式练对。适合健身 0–6 个月的人。",
+    "minDaysPerWeek": 2,
+    "maxDaysPerWeek": 3,
+    "requiresEquipment": "DUMBBELL",
+    "days": [
+      {
+        "name": "全身 A",
+        "exercises": [
+          { "slug": "goblet-squat", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 90 },
+          { "slug": "dumbbell-bench-press", "sets": 3, "repsMin": 8, "repsMax": 12, "restSec": 90 },
+          { "slug": "seated-cable-row", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 90 },
+          { "slug": "dumbbell-shoulder-press", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 75 },
+          { "slug": "plank", "sets": 3, "repsMin": 30, "repsMax": 45, "restSec": 60 }
+        ]
+      },
+      {
+        "name": "全身 B",
+        "exercises": [
+          { "slug": "leg-press", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 90 },
+          { "slug": "lat-pulldown", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 90 },
+          { "slug": "push-up", "sets": 3, "repsMin": 8, "repsMax": 15, "restSec": 75 },
+          { "slug": "lateral-raise", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 },
+          { "slug": "cable-crunch", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "slug": "upper-lower",
+    "name": "上下肢分化",
+    "subtitle": "每周 4 天 · 上肢 / 下肢交替",
+    "description": "上下肢分开练，每个部位每周 2 次，容量和恢复平衡得最好。适合有半年以上训练经验的人。",
+    "minDaysPerWeek": 4,
+    "maxDaysPerWeek": 4,
+    "requiresEquipment": "GYM",
+    "days": [
+      {
+        "name": "上肢 A",
+        "exercises": [
+          { "slug": "barbell-bench-press", "sets": 4, "repsMin": 6, "repsMax": 10, "restSec": 120 },
+          { "slug": "barbell-row", "sets": 4, "repsMin": 6, "repsMax": 10, "restSec": 120 },
+          { "slug": "overhead-press", "sets": 3, "repsMin": 8, "repsMax": 12, "restSec": 90 },
+          { "slug": "lat-pulldown", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 90 },
+          { "slug": "lateral-raise", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 },
+          { "slug": "barbell-curl", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 60 },
+          { "slug": "triceps-pushdown", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 60 }
+        ]
+      },
+      {
+        "name": "下肢 A",
+        "exercises": [
+          { "slug": "barbell-squat", "sets": 4, "repsMin": 6, "repsMax": 10, "restSec": 150 },
+          { "slug": "romanian-deadlift", "sets": 3, "repsMin": 8, "repsMax": 10, "restSec": 120 },
+          { "slug": "leg-press", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 90 },
+          { "slug": "leg-curl", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 },
+          { "slug": "standing-calf-raise", "sets": 4, "repsMin": 15, "repsMax": 20, "restSec": 45 },
+          { "slug": "cable-crunch", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 }
+        ]
+      },
+      {
+        "name": "上肢 B",
+        "exercises": [
+          { "slug": "incline-dumbbell-press", "sets": 4, "repsMin": 8, "repsMax": 12, "restSec": 90 },
+          { "slug": "seated-cable-row", "sets": 4, "repsMin": 8, "repsMax": 12, "restSec": 90 },
+          { "slug": "dumbbell-shoulder-press", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 75 },
+          { "slug": "dumbbell-fly", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 },
+          { "slug": "reverse-fly", "sets": 3, "repsMin": 15, "repsMax": 20, "restSec": 45 },
+          { "slug": "hammer-curl", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 60 },
+          { "slug": "overhead-triceps-extension", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 60 }
+        ]
+      },
+      {
+        "name": "下肢 B",
+        "exercises": [
+          { "slug": "barbell-hip-thrust", "sets": 4, "repsMin": 8, "repsMax": 12, "restSec": 120 },
+          { "slug": "bulgarian-split-squat", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 90 },
+          { "slug": "leg-extension", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 },
+          { "slug": "leg-curl", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 },
+          { "slug": "standing-calf-raise", "sets": 4, "repsMin": 15, "repsMax": 20, "restSec": 45 },
+          { "slug": "plank", "sets": 3, "repsMin": 45, "repsMax": 60, "restSec": 45 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "slug": "ppl",
+    "name": "推拉腿 PPL",
+    "subtitle": "每周 3 或 6 天 · 推 / 拉 / 腿",
+    "description": "按动作模式分化：推日练胸肩三头，拉日练背二头，腿日练下肢。每周 3 天走一轮，6 天走两轮。",
+    "minDaysPerWeek": 3,
+    "maxDaysPerWeek": 6,
+    "requiresEquipment": "GYM",
+    "days": [
+      {
+        "name": "推（胸肩三头）",
+        "exercises": [
+          { "slug": "barbell-bench-press", "sets": 4, "repsMin": 6, "repsMax": 10, "restSec": 120 },
+          { "slug": "incline-dumbbell-press", "sets": 3, "repsMin": 8, "repsMax": 12, "restSec": 90 },
+          { "slug": "overhead-press", "sets": 3, "repsMin": 8, "repsMax": 12, "restSec": 90 },
+          { "slug": "lateral-raise", "sets": 4, "repsMin": 12, "repsMax": 15, "restSec": 60 },
+          { "slug": "triceps-pushdown", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 60 },
+          { "slug": "overhead-triceps-extension", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 60 }
+        ]
+      },
+      {
+        "name": "拉（背二头）",
+        "exercises": [
+          { "slug": "pull-up", "sets": 4, "repsMin": 6, "repsMax": 10, "restSec": 120 },
+          { "slug": "barbell-row", "sets": 4, "repsMin": 6, "repsMax": 10, "restSec": 120 },
+          { "slug": "seated-cable-row", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 90 },
+          { "slug": "face-pull", "sets": 3, "repsMin": 15, "repsMax": 20, "restSec": 45 },
+          { "slug": "barbell-curl", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 60 },
+          { "slug": "hammer-curl", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 60 }
+        ]
+      },
+      {
+        "name": "腿（下肢核心）",
+        "exercises": [
+          { "slug": "barbell-squat", "sets": 4, "repsMin": 6, "repsMax": 10, "restSec": 150 },
+          { "slug": "romanian-deadlift", "sets": 3, "repsMin": 8, "repsMax": 10, "restSec": 120 },
+          { "slug": "leg-press", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 90 },
+          { "slug": "leg-curl", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 },
+          { "slug": "standing-calf-raise", "sets": 4, "repsMin": 15, "repsMax": 20, "restSec": 45 },
+          { "slug": "cable-crunch", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "slug": "five-day-split",
+    "name": "五分化",
+    "subtitle": "每周 5 天 · 一个部位一天",
+    "description": "胸 / 背 / 腿 / 肩 / 手臂各占一天，单部位容量拉满。适合训练 2 年以上、能保证每周 5 练的人。",
+    "minDaysPerWeek": 5,
+    "maxDaysPerWeek": 5,
+    "requiresEquipment": "GYM",
+    "days": [
+      {
+        "name": "胸",
+        "exercises": [
+          { "slug": "barbell-bench-press", "sets": 4, "repsMin": 6, "repsMax": 10, "restSec": 120 },
+          { "slug": "incline-dumbbell-press", "sets": 4, "repsMin": 8, "repsMax": 12, "restSec": 90 },
+          { "slug": "dumbbell-fly", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 },
+          { "slug": "cable-crossover", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 },
+          { "slug": "chest-dip", "sets": 3, "repsMin": 8, "repsMax": 12, "restSec": 90 }
+        ]
+      },
+      {
+        "name": "背",
+        "exercises": [
+          { "slug": "pull-up", "sets": 4, "repsMin": 6, "repsMax": 10, "restSec": 120 },
+          { "slug": "barbell-row", "sets": 4, "repsMin": 6, "repsMax": 10, "restSec": 120 },
+          { "slug": "lat-pulldown", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 90 },
+          { "slug": "seated-cable-row", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 90 },
+          { "slug": "straight-arm-pulldown", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 },
+          { "slug": "back-extension", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 }
+        ]
+      },
+      {
+        "name": "腿",
+        "exercises": [
+          { "slug": "barbell-squat", "sets": 4, "repsMin": 6, "repsMax": 10, "restSec": 150 },
+          { "slug": "front-squat", "sets": 3, "repsMin": 8, "repsMax": 10, "restSec": 120 },
+          { "slug": "romanian-deadlift", "sets": 3, "repsMin": 8, "repsMax": 10, "restSec": 120 },
+          { "slug": "leg-extension", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 },
+          { "slug": "leg-curl", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 },
+          { "slug": "standing-calf-raise", "sets": 5, "repsMin": 15, "repsMax": 20, "restSec": 45 }
+        ]
+      },
+      {
+        "name": "肩",
+        "exercises": [
+          { "slug": "overhead-press", "sets": 4, "repsMin": 6, "repsMax": 10, "restSec": 120 },
+          { "slug": "dumbbell-shoulder-press", "sets": 3, "repsMin": 8, "repsMax": 12, "restSec": 90 },
+          { "slug": "lateral-raise", "sets": 4, "repsMin": 12, "repsMax": 15, "restSec": 60 },
+          { "slug": "reverse-fly", "sets": 4, "repsMin": 15, "repsMax": 20, "restSec": 45 },
+          { "slug": "upright-row", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 60 },
+          { "slug": "shrug", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 }
+        ]
+      },
+      {
+        "name": "手臂",
+        "exercises": [
+          { "slug": "barbell-curl", "sets": 3, "repsMin": 8, "repsMax": 12, "restSec": 60 },
+          { "slug": "preacher-curl", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 60 },
+          { "slug": "hammer-curl", "sets": 3, "repsMin": 12, "repsMax": 15, "restSec": 60 },
+          { "slug": "close-grip-bench", "sets": 3, "repsMin": 8, "repsMax": 12, "restSec": 90 },
+          { "slug": "triceps-pushdown", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 60 },
+          { "slug": "skull-crusher", "sets": 3, "repsMin": 10, "repsMax": 12, "restSec": 60 },
+          { "slug": "wrist-curl", "sets": 3, "repsMin": 15, "repsMax": 20, "restSec": 45 }
+        ]
+      }
+    ]
+  },
+
+  {
+    "slug": "home-bodyweight",
+    "name": "家庭徒手",
+    "subtitle": "每周 3 天 · 零器械",
+    "description": "不需要任何器械，一张瑜伽垫就能练。强度靠动作幅度和间歇控制，适合在家训练或出差期间保持。",
+    "minDaysPerWeek": 3,
+    "maxDaysPerWeek": 3,
+    "requiresEquipment": "BODYWEIGHT",
+    "days": [
+      {
+        "name": "全身 A",
+        "exercises": [
+          { "slug": "bodyweight-squat", "sets": 3, "repsMin": 15, "repsMax": 20, "restSec": 60 },
+          { "slug": "push-up", "sets": 3, "repsMin": 8, "repsMax": 15, "restSec": 75 },
+          { "slug": "glute-bridge", "sets": 3, "repsMin": 15, "repsMax": 20, "restSec": 60 },
+          { "slug": "plank", "sets": 3, "repsMin": 30, "repsMax": 45, "restSec": 45 }
+        ]
+      },
+      {
+        "name": "全身 B",
+        "exercises": [
+          { "slug": "pike-push-up", "sets": 3, "repsMin": 8, "repsMax": 12, "restSec": 75 },
+          { "slug": "bodyweight-squat", "sets": 3, "repsMin": 20, "repsMax": 25, "restSec": 60 },
+          { "slug": "russian-twist", "sets": 3, "repsMin": 20, "repsMax": 30, "restSec": 45 },
+          { "slug": "push-up", "sets": 3, "repsMin": 10, "repsMax": 15, "restSec": 60 }
+        ]
+      },
+      {
+        "name": "核心 + 下肢",
+        "exercises": [
+          { "slug": "glute-bridge", "sets": 4, "repsMin": 20, "repsMax": 25, "restSec": 45 },
+          { "slug": "plank", "sets": 3, "repsMin": 45, "repsMax": 60, "restSec": 45 },
+          { "slug": "russian-twist", "sets": 3, "repsMin": 24, "repsMax": 30, "restSec": 45 },
+          { "slug": "bodyweight-squat", "sets": 3, "repsMin": 20, "repsMax": 25, "restSec": 60 }
+        ]
+      }
+    ]
+  }
+]

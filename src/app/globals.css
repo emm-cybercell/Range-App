@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* 深色模式走 class，由 <html class="dark"> 控制 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─────────── 设计 Token：浅色（默认） ─────────── */
+:root {
+  --canvas: #f6f8f5;
+  --surface: #ffffff;
+  --sunken: #eef2ec;
+  --line: #e4eae3;
+
+  --ink: #14231c;
+  --ink-2: #6b7c74;
+  --ink-3: #9aa8a0;
+
+  --brand: #1f9c6b;
+  --brand-hover: #18845a;
+  --brand-soft: #e6f6ef;
+
+  --accent: #c8f169;
+  --danger: #e5533d;
+  --warn: #e5a63d;
+}
+
+/* ─────────── 设计 Token：深色 ─────────── */
+.dark {
+  --canvas: #0c110e;
+  --surface: #151c18;
+  --sunken: #1d2621;
+  --line: #26302a;
+
+  --ink: #eaf2ec;
+  --ink-2: #8fa096;
+  --ink-3: #64756b;
+
+  --brand: #34d399;
+  --brand-hover: #4ae0a6;
+  --brand-soft: #12301f;
+
+  --accent: #c8f169;
+  --danger: #f87171;
+  --warn: #f0b44e;
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-line: var(--line);
+
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-soft: var(--brand-soft);
+
+  --color-accent: var(--accent);
+  --color-danger: var(--danger);
+  --color-warn: var(--warn);
+
+  --radius-card: 20px;
+  --radius-btn: 14px;
+
+  --font-sans: "Inter", -apple-system, "PingFang SC", "HarmonyOS Sans SC",
+    "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    letter-spacing: 0;
+  }
+
+  /* 数字必须等宽：表格、倒计时、容量都靠它对齐 */
+  .num {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+
+  ::selection {
+    background: var(--brand-soft);
+    color: var(--brand);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

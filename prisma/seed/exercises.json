@@ -1,0 +1,1891 @@
+[
+  {
+    "slug": "barbell-bench-press",
+    "name": "杠铃卧推",
+    "nameEn": "Barbell Bench Press",
+    "pinyin": "ganglingwotui",
+    "bodyPart": "CHEST",
+    "equipment": "BARBELL",
+    "level": "BEGINNER",
+    "kind": "COMPOUND",
+    "primaryMuscle": "chest-mid",
+    "secondary": [
+      "triceps",
+      "delt-front"
+    ],
+    "steps": [
+      "仰卧平板凳，双脚踩实地面，肩胛骨后缩下沉贴紧凳面",
+      "握距略宽于肩，杠铃下放至胸中部轻触",
+      "沿略向后的弧线推起至手臂接近伸直"
+    ],
+    "tips": [
+      "全程保持肩胛后缩，胸口主动迎向杠铃",
+      "手腕保持中立，不要向后折"
+    ],
+    "mistakes": [
+      "手肘完全外展成 90 度，肩关节压力过大",
+      "臀部离开凳面借力"
+    ],
+    "alt": [
+      "dumbbell-bench-press",
+      "push-up"
+    ]
+  },
+  {
+    "slug": "incline-barbell-press",
+    "name": "上斜杠铃卧推",
+    "nameEn": "Incline Barbell Press",
+    "pinyin": "shangxieganglingwotui",
+    "bodyPart": "CHEST",
+    "equipment": "BARBELL",
+    "level": "INTERMEDIATE",
+    "kind": "COMPOUND",
+    "primaryMuscle": "chest-upper",
+    "secondary": [
+      "delt-front",
+      "triceps"
+    ],
+    "steps": [
+      "将靠背调至 30 度，仰卧并固定肩胛",
+      "杠铃下放至锁骨下方约两指处",
+      "推起至手臂接近伸直，不锁死"
+    ],
+    "tips": [
+      "角度不要超过 45 度，否则变成肩推",
+      "下放时感受上胸拉伸"
+    ],
+    "mistakes": [
+      "靠背过高导致三角肌代偿",
+      "下放位置过低，变成平推"
+    ],
+    "alt": [
+      "incline-dumbbell-press"
+    ]
+  },
+  {
+    "slug": "decline-barbell-press",
+    "name": "下斜杠铃卧推",
+    "nameEn": "Decline Barbell Press",
+    "pinyin": "xiaxieganglingwotui",
+    "bodyPart": "CHEST",
+    "equipment": "BARBELL",
+    "level": "INTERMEDIATE",
+    "kind": "COMPOUND",
+    "primaryMuscle": "chest-lower",
+    "secondary": [
+      "triceps"
+    ],
+    "steps": [
+      "固定双腿于下斜凳，仰卧后肩胛收紧",
+      "杠铃下放至下胸位置",
+      "沿垂直方向推起"
+    ],
+    "tips": [
+      "下放幅度略小于平推，保护肩关节",
+      "让同伴辅助出杠更安全"
+    ],
+    "mistakes": [
+      "下放太快失去控制",
+      "头部低于心脏过久引起不适"
+    ],
+    "alt": [
+      "chest-dip",
+      "barbell-bench-press"
+    ]
+  },
+  {
+    "slug": "dumbbell-bench-press",
+    "name": "哑铃卧推",
+    "nameEn": "Dumbbell Bench Press",
+    "pinyin": "yalingwotui",
+    "bodyPart": "CHEST",
+    "equipment": "DUMBBELL",
+    "level": "BEGINNER",
+    "kind": "COMPOUND",
+    "primaryMuscle": "chest-mid",
+    "secondary": [
+      "triceps",
+      "delt-front"
+    ],
+    "steps": [
+      "双手持铃躺下，哑铃位于胸部两侧，掌心朝前",
+      "肩胛收紧，向上推起至两只哑铃接近但不碰撞",
+      "控制下放至胸部两侧有拉伸感"
+    ],
+    "tips": [
+      "活动范围比杠铃更大，更强调胸肌拉伸",
+      "手腕保持在肘部正上方"
+    ],
+    "mistakes": [
+      "哑铃在顶端相撞",
+      "下放过深导致肩前侧疼痛"
+    ],
+    "alt": [
+      "barbell-bench-press",
+      "dumbbell-fly"
+    ]
+  },
+  {
+    "slug": "incline-dumbbell-press",
+    "name": "上斜哑铃卧推",
+    "nameEn": "Incline Dumbbell Press",
+    "pinyin": "shangxieyalingwotui",
+    "bodyPart": "CHEST",
+    "equipment": "DUMBBELL",
+    "level": "BEGINNER",
+    "kind": "COMPOUND",
+    "primaryMuscle": "chest-upper",
+    "secondary": [
+      "delt-front",
+      "triceps"
+    ],
+    "steps": [
+      "靠背 30 度，哑铃置于上胸两侧",
+      "沿略向内的轨迹推起",
+      "顶端稍作停顿后控制下放"
+    ],
+    "tips": [
+      "顶端不要让哑铃靠在一起，保持胸部张力",
+      "肘部与躯干约 45 度夹角"
+    ],
+    "mistakes": [
+      "耸肩推起，斜方肌代偿",
+      "下放时手肘过度外展"
+    ],
+    "alt": [
+      "incline-barbell-press",
+      "arnold-press"
+    ]
+  },
+  {
+    "slug": "dumbbell-fly",
+    "name": "哑铃飞鸟",
+    "nameEn": "Dumbbell Fly",
+    "pinyin": "yalingfeiniao",
+    "bodyPart": "CHEST",
+    "equipment": "DUMBBELL",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "chest-mid",
+    "secondary": [
+      "delt-front"
+    ],
+    "steps": [
+      "仰卧持铃，手臂微屈举于胸部上方",
+      "保持肘角不变，向两侧打开至胸部有拉伸感",
+      "用胸部发力把哑铃合拢"
+    ],
+    "tips": [
+      "重量宁轻勿重，这是孤立动作",
+      "肘角全程固定，不要变成推举"
+    ],
+    "mistakes": [
+      "手臂伸直导致肘关节受压",
+      "打开幅度过大拉伤肩前侧"
+    ],
+    "alt": [
+      "cable-crossover",
+      "pec-deck"
+    ]
+  },
+  {
+    "slug": "cable-crossover",
+    "name": "绳索夹胸",
+    "nameEn": "Cable Crossover",
+    "pinyin": "suosuojiaxiong",
+    "bodyPart": "CHEST",
+    "equipment": "CABLE",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "chest-mid",
+    "secondary": [
+      "delt-front"
+    ],
+    "steps": [
+      "双手握把站立于龙门架中间，身体略前倾",
+      "保持微屈肘，把双手向身体前下方合拢",
+      "顶峰收缩一秒后缓慢还原"
+    ],
+    "tips": [
+      "全程有张力，比哑铃飞鸟更适合新手",
+      "想象用胸口把手肘拉近"
+    ],
+    "mistakes": [
+      "身体前后晃动借力",
+      "重量过大导致耸肩"
+    ],
+    "alt": [
+      "dumbbell-fly",
+      "pec-deck"
+    ]
+  },
+  {
+    "slug": "pec-deck",
+    "name": "蝴蝶机夹胸",
+    "nameEn": "Pec Deck Fly",
+    "pinyin": "hudiejijiaxiong",
+    "bodyPart": "CHEST",
+    "equipment": "MACHINE",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "chest-mid",
+    "secondary": [
+      "delt-front"
+    ],
+    "steps": [
+      "调整座椅高度使把手与胸中部齐平",
+      "背部贴紧靠垫，双手握把",
+      "胸部发力向内合拢，停顿后控制还原"
+    ],
+    "tips": [
+      "最适合新手找胸部发力的器械",
+      "还原时不要让配重片完全落下"
+    ],
+    "mistakes": [
+      "座椅过低导致肩部代偿",
+      "用惯性快速摆动"
+    ],
+    "alt": [
+      "dumbbell-fly",
+      "cable-crossover"
+    ]
+  },
+  {
+    "slug": "push-up",
+    "name": "俯卧撑",
+    "nameEn": "Push-up",
+    "pinyin": "fuwocheng",
+    "bodyPart": "CHEST",
+    "equipment": "BODYWEIGHT",
+    "level": "BEGINNER",
+    "kind": "COMPOUND",
+    "primaryMuscle": "chest-mid",
+    "secondary": [
+      "triceps",
+      "delt-front",
+      "abs"
+    ],
+    "steps": [
+      "双手略宽于肩撑地，身体成一条直线",
+      "屈肘下降至胸部接近地面",
+      "推起回到起始位，全程收紧核心"
+    ],
+    "tips": [
+      "身体是一条直线，臀部不要翘起或下塌",
+      "手掌略微外旋更利于发力"
+    ],
+    "mistakes": [
+      "塌腰造成腰部压力",
+      "只做半程"
+    ],
+    "alt": [
+      "dumbbell-bench-press",
+      "chest-dip"
+    ]
+  },
+  {
+    "slug": "chest-dip",
+    "name": "双杠臂屈伸",
+    "nameEn": "Chest Dip",
+    "pinyin": "shuanggangbiqushen",
+    "bodyPart": "CHEST",
+    "equipment": "BODYWEIGHT",
+    "level": "ADVANCED",
+    "kind": "COMPOUND",
+    "primaryMuscle": "chest-lower",
+    "secondary": [
+      "triceps",
+      "delt-front"
+    ],
+    "steps": [
+      "双手撑于双杠，身体略前倾",
+      "屈肘下降至肩略低于肘",
+      "胸部发力推起至手臂接近伸直"
+    ],
+    "tips": [
+      "身体前倾越多，胸部参与越多",
+      "下降幅度以肩部无痛为准"
+    ],
+    "mistakes": [
+      "下降过深导致肩关节受伤",
+      "身体完全直立变成练三头"
+    ],
+    "alt": [
+      "decline-barbell-press",
+      "bench-dip"
+    ]
+  },
+  {
+    "slug": "pull-up",
+    "name": "引体向上",
+    "nameEn": "Pull-up",
+    "pinyin": "yintixiangshang",
+    "bodyPart": "BACK",
+    "equipment": "BODYWEIGHT",
+    "level": "INTERMEDIATE",
+    "kind": "COMPOUND",
+    "primaryMuscle": "lats",
+    "secondary": [
+      "biceps",
+      "rhomboids"
+    ],
+    "steps": [
+      "正握单杠，握距略宽于肩，身体自然悬垂",
+      "肩胛骨下沉，把胸口拉向单杠",
+      "控制下降至手臂接近伸直"
+    ],
+    "tips": [
+      "先启动肩胛下沉，再屈肘",
+      "想象用手肘向下拉"
+    ],
+    "mistakes": [
+      "靠摆动身体借力",
+      "只做上半程"
+    ],
+    "alt": [
+      "lat-pulldown",
+      "inverted-row"
+    ]
+  },
+  {
+    "slug": "lat-pulldown",
+    "name": "高位下拉",
+    "nameEn": "Lat Pulldown",
+    "pinyin": "gaoweixiala",
+    "bodyPart": "BACK",
+    "equipment": "CABLE",
+    "level": "BEGINNER",
+    "kind": "COMPOUND",
+    "primaryMuscle": "lats",
+    "secondary": [
+      "biceps",
+      "rhomboids"
+    ],
+    "steps": [
+      "调整挡腿垫固定大腿，正握横杆略宽于肩",
+      "肩胛下沉，把横杆拉至上胸位置",
+      "控制还原至手臂接近伸直"
+    ],
+    "tips": [
+      "身体略后仰 10-15 度即可",
+      "拉的时候想手肘往腰后走"
+    ],
+    "mistakes": [
+      "身体大幅后仰借力",
+      "拉到颈后造成肩部压力"
+    ],
+    "alt": [
+      "pull-up",
+      "machine-row"
+    ]
+  },
+  {
+    "slug": "barbell-row",
+    "name": "杠铃划船",
+    "nameEn": "Barbell Row",
+    "pinyin": "ganglinghuachuan",
+    "bodyPart": "BACK",
+    "equipment": "BARBELL",
+    "level": "INTERMEDIATE",
+    "kind": "COMPOUND",
+    "primaryMuscle": "lats",
+    "secondary": [
+      "rhomboids",
+      "traps",
+      "lower-back"
+    ],
+    "steps": [
+      "屈髋俯身约 45 度，背部挺直，双手握杠",
+      "把杠铃拉向腹部，手肘贴近身体",
+      "控制下放至手臂伸直"
+    ],
+    "tips": [
+      "全程保持背部中立，不要弓背",
+      "核心收紧，避免腰部代偿"
+    ],
+    "mistakes": [
+      "用腰部起伏甩动重量",
+      "拉到胸口位置导致肩部代偿"
+    ],
+    "alt": [
+      "dumbbell-row",
+      "t-bar-row"
+    ]
+  },
+  {
+    "slug": "dumbbell-row",
+    "name": "单臂哑铃划船",
+    "nameEn": "One-arm Dumbbell Row",
+    "pinyin": "danbeyalinghuachuan",
+    "bodyPart": "BACK",
+    "equipment": "DUMBBELL",
+    "level": "BEGINNER",
+    "kind": "COMPOUND",
+    "primaryMuscle": "lats",
+    "secondary": [
+      "rhomboids",
+      "biceps"
+    ],
+    "steps": [
+      "单手单膝支撑于凳上，背部与地面接近平行",
+      "另一手把哑铃拉向髋部方向",
+      "控制下放至肩胛充分前伸"
+    ],
+    "tips": [
+      "躯干不要跟着旋转",
+      "顶点停顿感受背阔肌收缩"
+    ],
+    "mistakes": [
+      "身体转动借力",
+      "拉向肩膀而不是髋部"
+    ],
+    "alt": [
+      "barbell-row",
+      "seated-cable-row"
+    ]
+  },
+  {
+    "slug": "seated-cable-row",
+    "name": "坐姿绳索划船",
+    "nameEn": "Seated Cable Row",
+    "pinyin": "zuozisuosuohuachuan",
+    "bodyPart": "BACK",
+    "equipment": "CABLE",
+    "level": "BEGINNER",
+    "kind": "COMPOUND",
+    "primaryMuscle": "lats",
+    "secondary": [
+      "rhomboids",
+      "traps",
+      "biceps"
+    ],
+    "steps": [
+      "坐姿踩稳踏板，膝盖微屈，双手握把",
+      "肩胛后缩，把握把拉向腹部",
+      "控制还原，肩胛充分前伸"
+    ],
+    "tips": [
+      "躯干保持基本直立，只做小幅前后",
+      "胸口挺起，不要含胸"
+    ],
+    "mistakes": [
+      "用腰部前后摆动借力",
+      "耸肩拉"
+    ],
+    "alt": [
+      "machine-row",
+      "dumbbell-row"
+    ]
+  },
+  {
+    "slug": "t-bar-row",
+    "name": "T 杠划船",
+    "nameEn": "T-Bar Row",
+    "pinyin": "tganghuachuan",
+    "bodyPart": "BACK",
+    "equipment": "BARBELL",
+    "level": "INTERMEDIATE",
+    "kind": "COMPOUND",
+    "primaryMuscle": "lats",
+    "secondary": [
+      "rhomboids",
+      "traps",
+      "biceps"
+    ],
+    "steps": [
+      "跨立于 T 杠上方，屈髋俯身握住把手",
+      "把重量拉向腹部，手肘贴身",
+      "缓慢下放至手臂伸直"
+    ],
+    "tips": [
+      "背部中立是第一位，重量第二",
+      "顶端挤压肩胛骨"
+    ],
+    "mistakes": [
+      "弓背发力",
+      "膝盖过度弯曲变成深蹲姿势"
+    ],
+    "alt": [
+      "barbell-row",
+      "machine-row"
+    ]
+  },
+  {
+    "slug": "straight-arm-pulldown",
+    "name": "直臂下压",
+    "nameEn": "Straight-arm Pulldown",
+    "pinyin": "zhibixiaya",
+    "bodyPart": "BACK",
+    "equipment": "CABLE",
+    "level": "INTERMEDIATE",
+    "kind": "ISOLATION",
+    "primaryMuscle": "lats",
+    "secondary": [
+      "triceps"
+    ],
+    "steps": [
+      "站在高位绳索前，双手握杆，手臂伸直",
+      "保持微屈肘，把杆下压至大腿前侧",
+      "控制回到手臂与躯干成一条线"
+    ],
+    "tips": [
+      "全程肘角固定，只有肩关节在动",
+      "适合作为背部训练的收尾"
+    ],
+    "mistakes": [
+      "屈肘变成下压三头",
+      "身体前后晃动"
+    ],
+    "alt": [
+      "lat-pulldown"
+    ]
+  },
+  {
+    "slug": "face-pull",
+    "name": "面拉",
+    "nameEn": "Face Pull",
+    "pinyin": "mianla",
+    "bodyPart": "BACK",
+    "equipment": "CABLE",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "rhomboids",
+    "secondary": [
+      "delt-rear",
+      "traps"
+    ],
+    "steps": [
+      "绳索调至面部高度，双手握绳两端",
+      "向面部方向拉，双手向两侧打开",
+      "停顿后缓慢还原"
+    ],
+    "tips": [
+      "末端做出外旋动作，对肩关节很友好",
+      "重量宜轻，追求收缩质量"
+    ],
+    "mistakes": [
+      "重量过大靠身体后仰借力",
+      "没有外旋，只做了划船"
+    ],
+    "alt": [
+      "reverse-fly",
+      "machine-reverse-fly"
+    ]
+  },
+  {
+    "slug": "shrug",
+    "name": "哑铃耸肩",
+    "nameEn": "Dumbbell Shrug",
+    "pinyin": "yalingsongjian",
+    "bodyPart": "BACK",
+    "equipment": "DUMBBELL",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "traps",
+    "secondary": [
+      "forearm"
+    ],
+    "steps": [
+      "双手持铃自然下垂，站直",
+      "肩膀垂直向上耸起至最高点",
+      "停顿一秒后缓慢下放"
+    ],
+    "tips": [
+      "只做上下，不要转圈",
+      "顶点停顿比加重更有效"
+    ],
+    "mistakes": [
+      "耸肩时前后绕圈，伤肩",
+      "屈肘借力"
+    ],
+    "alt": [
+      "upright-row",
+      "face-pull"
+    ]
+  },
+  {
+    "slug": "back-extension",
+    "name": "山羊挺身",
+    "nameEn": "Back Extension",
+    "pinyin": "shanyangtingshen",
+    "bodyPart": "BACK",
+    "equipment": "BODYWEIGHT",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "lower-back",
+    "secondary": [
+      "glutes",
+      "hamstrings"
+    ],
+    "steps": [
+      "俯卧于罗马椅，髋部置于垫边缘",
+      "身体下俯至有拉伸感，背部保持中立",
+      "臀部与下背发力抬起至身体成直线"
+    ],
+    "tips": [
+      "抬到与腿成一条线即可，不要过度后仰",
+      "动作缓慢，感受下背收缩"
+    ],
+    "mistakes": [
+      "超过中立位后仰挤压腰椎",
+      "用惯性快速上下"
+    ],
+    "alt": [
+      "romanian-deadlift",
+      "glute-bridge"
+    ]
+  },
+  {
+    "slug": "inverted-row",
+    "name": "反向划船",
+    "nameEn": "Inverted Row",
+    "pinyin": "fanxianghuachuan",
+    "bodyPart": "BACK",
+    "equipment": "BODYWEIGHT",
+    "level": "BEGINNER",
+    "kind": "COMPOUND",
+    "primaryMuscle": "lats",
+    "secondary": [
+      "rhomboids",
+      "biceps",
+      "abs"
+    ],
+    "steps": [
+      "仰卧于低杠下方，双手握杠，身体成一条直线",
+      "肩胛后缩，把胸口拉向杠",
+      "控制下放至手臂伸直"
+    ],
+    "tips": [
+      "身体越水平难度越大，可屈膝降低难度",
+      "全程收紧臀部和核心"
+    ],
+    "mistakes": [
+      "塌腰",
+      "只用手臂拉，肩胛不动"
+    ],
+    "alt": [
+      "pull-up",
+      "seated-cable-row"
+    ]
+  },
+  {
+    "slug": "machine-row",
+    "name": "器械划船",
+    "nameEn": "Machine Row",
+    "pinyin": "qixiehuachuan",
+    "bodyPart": "BACK",
+    "equipment": "MACHINE",
+    "level": "BEGINNER",
+    "kind": "COMPOUND",
+    "primaryMuscle": "lats",
+    "secondary": [
+      "rhomboids",
+      "biceps"
+    ],
+    "steps": [
+      "调整座椅使把手与胸口齐平，胸口贴紧靠垫",
+      "把握把拉向身体，肩胛后缩",
+      "控制还原至肩胛前伸"
+    ],
+    "tips": [
+      "胸口贴住靠垫能有效防止借力",
+      "适合新手建立背部感受"
+    ],
+    "mistakes": [
+      "座椅太低导致向上拉",
+      "还原时配重完全落下失去张力"
+    ],
+    "alt": [
+      "seated-cable-row",
+      "t-bar-row"
+    ]
+  },
+  {
+    "slug": "overhead-press",
+    "name": "杠铃站姿推举",
+    "nameEn": "Overhead Press",
+    "pinyin": "ganglingzhanshituiju",
+    "bodyPart": "SHOULDERS",
+    "equipment": "BARBELL",
+    "level": "INTERMEDIATE",
+    "kind": "COMPOUND",
+    "primaryMuscle": "delt-front",
+    "secondary": [
+      "triceps",
+      "delt-side",
+      "abs"
+    ],
+    "steps": [
+      "站姿握杠于锁骨前，握距略宽于肩",
+      "收紧核心与臀部，把杠铃垂直推过头顶",
+      "杠铃过头后头部略前送，控制下放"
+    ],
+    "tips": [
+      "全程核心收紧，避免腰部后仰",
+      "杠铃走直线，贴近面部"
+    ],
+    "mistakes": [
+      "腰部过度后仰变成上斜推",
+      "推起时耸肩过早"
+    ],
+    "alt": [
+      "dumbbell-shoulder-press",
+      "arnold-press"
+    ]
+  },
+  {
+    "slug": "dumbbell-shoulder-press",
+    "name": "哑铃肩推",
+    "nameEn": "Dumbbell Shoulder Press",
+    "pinyin": "yalingshjatui",
+    "bodyPart": "SHOULDERS",
+    "equipment": "DUMBBELL",
+    "level": "BEGINNER",
+    "kind": "COMPOUND",
+    "primaryMuscle": "delt-front",
+    "secondary": [
+      "triceps",
+      "delt-side"
+    ],
+    "steps": [
+      "坐姿或站姿，哑铃举至耳侧，掌心朝前",
+      "向上推起至手臂接近伸直",
+      "控制下放至肘部略低于肩"
+    ],
+    "tips": [
+      "下放到位才有完整刺激",
+      "手腕保持中立"
+    ],
+    "mistakes": [
+      "下放太浅",
+      "腰部离开靠垫借力"
+    ],
+    "alt": [
+      "overhead-press",
+      "arnold-press"
+    ]
+  },
+  {
+    "slug": "arnold-press",
+    "name": "阿诺德推举",
+    "nameEn": "Arnold Press",
+    "pinyin": "anuodetuiju",
+    "bodyPart": "SHOULDERS",
+    "equipment": "DUMBBELL",
+    "level": "INTERMEDIATE",
+    "kind": "COMPOUND",
+    "primaryMuscle": "delt-front",
+    "secondary": [
+      "delt-side",
+      "triceps"
+    ],
+    "steps": [
+      "坐姿，哑铃置于胸前，掌心朝向自己",
+      "推起过程中手腕外旋，顶端掌心朝前",
+      "反向还原回到起始位"
+    ],
+    "tips": [
+      "旋转过程要连贯，不要停顿",
+      "重量比常规肩推轻 20%"
+    ],
+    "mistakes": [
+      "旋转过快导致肩关节不适",
+      "重量过大失去控制"
+    ],
+    "alt": [
+      "dumbbell-shoulder-press",
+      "incline-dumbbell-press"
+    ]
+  },
+  {
+    "slug": "lateral-raise",
+    "name": "哑铃侧平举",
+    "nameEn": "Dumbbell Lateral Raise",
+    "pinyin": "yalingcepingju",
+    "bodyPart": "SHOULDERS",
+    "equipment": "DUMBBELL",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "delt-side",
+    "secondary": [
+      "traps"
+    ],
+    "steps": [
+      "站姿双手持铃于体侧，肘部微屈",
+      "向两侧抬起至与肩同高",
+      "控制下放，不让惯性带走"
+    ],
+    "tips": [
+      "小拇指略高于大拇指，减少斜方肌参与",
+      "重量轻、次数多更适合中束"
+    ],
+    "mistakes": [
+      "耸肩抬起",
+      "身体前后摆动借力"
+    ],
+    "alt": [
+      "cable-lateral-raise",
+      "upright-row"
+    ]
+  },
+  {
+    "slug": "cable-lateral-raise",
+    "name": "绳索侧平举",
+    "nameEn": "Cable Lateral Raise",
+    "pinyin": "suosuocepingju",
+    "bodyPart": "SHOULDERS",
+    "equipment": "CABLE",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "delt-side",
+    "secondary": [
+      "traps"
+    ],
+    "steps": [
+      "侧身站立，低位绳索从身体前方握把",
+      "手臂微屈向侧上方抬起至肩高",
+      "控制还原，保持张力"
+    ],
+    "tips": [
+      "全程张力比哑铃更均匀，适合中束",
+      "单手做更容易控制"
+    ],
+    "mistakes": [
+      "身体侧倾借力",
+      "抬过肩高导致斜方肌主导"
+    ],
+    "alt": [
+      "lateral-raise"
+    ]
+  },
+  {
+    "slug": "reverse-fly",
+    "name": "俯身哑铃反向飞鸟",
+    "nameEn": "Bent-over Reverse Fly",
+    "pinyin": "fushenyalingfanxiangfeiniao",
+    "bodyPart": "SHOULDERS",
+    "equipment": "DUMBBELL",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "delt-rear",
+    "secondary": [
+      "rhomboids",
+      "traps"
+    ],
+    "steps": [
+      "屈髋俯身，背部挺直，双手持铃下垂",
+      "肘部微屈，向两侧抬起至上臂与地面平行",
+      "控制下放"
+    ],
+    "tips": [
+      "后束是最容易被忽略的部位，重量要轻",
+      "想象手肘向两侧远处伸展"
+    ],
+    "mistakes": [
+      "用背部发力变成划船",
+      "躯干上下起伏借力"
+    ],
+    "alt": [
+      "machine-reverse-fly",
+      "face-pull"
+    ]
+  },
+  {
+    "slug": "machine-reverse-fly",
+    "name": "器械反向飞鸟",
+    "nameEn": "Machine Reverse Fly",
+    "pinyin": "qixiefanxiangfeiniao",
+    "bodyPart": "SHOULDERS",
+    "equipment": "MACHINE",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "delt-rear",
+    "secondary": [
+      "rhomboids"
+    ],
+    "steps": [
+      "面向靠垫坐下，胸口贴紧，双手握把",
+      "向后打开手臂至与肩同高",
+      "控制还原"
+    ],
+    "tips": [
+      "胸口贴垫能彻底排除借力",
+      "适合后束训练的首选"
+    ],
+    "mistakes": [
+      "座椅过高导致动作变形",
+      "打开幅度过大拉伤肩后侧"
+    ],
+    "alt": [
+      "reverse-fly",
+      "face-pull"
+    ]
+  },
+  {
+    "slug": "upright-row",
+    "name": "直立划船",
+    "nameEn": "Upright Row",
+    "pinyin": "zhilihuachuan",
+    "bodyPart": "SHOULDERS",
+    "equipment": "BARBELL",
+    "level": "INTERMEDIATE",
+    "kind": "COMPOUND",
+    "primaryMuscle": "delt-side",
+    "secondary": [
+      "traps",
+      "biceps"
+    ],
+    "steps": [
+      "站姿握杠与肩同宽，杠铃置于大腿前",
+      "沿身体上提至胸部高度，手肘高于手腕",
+      "控制下放"
+    ],
+    "tips": [
+      "握距略宽可减少肩部夹挤",
+      "只提到胸口中部即可"
+    ],
+    "mistakes": [
+      "提得过高造成肩峰撞击",
+      "握距过窄"
+    ],
+    "alt": [
+      "lateral-raise",
+      "shrug"
+    ]
+  },
+  {
+    "slug": "pike-push-up",
+    "name": "折刀俯卧撑",
+    "nameEn": "Pike Push-up",
+    "pinyin": "zhedaofuwocheng",
+    "bodyPart": "SHOULDERS",
+    "equipment": "BODYWEIGHT",
+    "level": "INTERMEDIATE",
+    "kind": "COMPOUND",
+    "primaryMuscle": "delt-front",
+    "secondary": [
+      "triceps",
+      "traps"
+    ],
+    "steps": [
+      "俯卧撑姿势，臀部向上顶起成倒 V 形",
+      "屈肘让头顶接近地面",
+      "推起还原"
+    ],
+    "tips": [
+      "脚越靠近手，肩部压力越大",
+      "是徒手练肩最好的动作之一"
+    ],
+    "mistakes": [
+      "头部落点太靠前变成上斜俯卧撑",
+      "塌腰"
+    ],
+    "alt": [
+      "dumbbell-shoulder-press",
+      "push-up"
+    ]
+  },
+  {
+    "slug": "front-raise",
+    "name": "哑铃前平举",
+    "nameEn": "Dumbbell Front Raise",
+    "pinyin": "yalingqianpingju",
+    "bodyPart": "SHOULDERS",
+    "equipment": "DUMBBELL",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "delt-front",
+    "secondary": [
+      "delt-side"
+    ],
+    "steps": [
+      "站姿双手持铃于大腿前",
+      "手臂微屈向前抬起至肩高",
+      "控制下放"
+    ],
+    "tips": [
+      "前束在推类动作中已大量参与，量不必多",
+      "交替做更容易控制"
+    ],
+    "mistakes": [
+      "身体后仰借力",
+      "抬过肩高"
+    ],
+    "alt": [
+      "overhead-press",
+      "lateral-raise"
+    ]
+  },
+  {
+    "slug": "barbell-curl",
+    "name": "杠铃弯举",
+    "nameEn": "Barbell Curl",
+    "pinyin": "ganglingwanju",
+    "bodyPart": "ARMS",
+    "equipment": "BARBELL",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "biceps",
+    "secondary": [
+      "forearm"
+    ],
+    "steps": [
+      "站姿握杠与肩同宽，手臂自然下垂",
+      "上臂固定，屈肘把杠铃举至胸前",
+      "控制下放至手臂接近伸直"
+    ],
+    "tips": [
+      "上臂不要前后摆动",
+      "下放阶段慢一点，效果更好"
+    ],
+    "mistakes": [
+      "用腰部摆动借力",
+      "下放不到位"
+    ],
+    "alt": [
+      "dumbbell-curl",
+      "cable-curl"
+    ]
+  },
+  {
+    "slug": "dumbbell-curl",
+    "name": "哑铃弯举",
+    "nameEn": "Dumbbell Curl",
+    "pinyin": "yalingwanju",
+    "bodyPart": "ARMS",
+    "equipment": "DUMBBELL",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "biceps",
+    "secondary": [
+      "forearm"
+    ],
+    "steps": [
+      "站姿或坐姿持铃，掌心朝前",
+      "上臂固定，屈肘举起",
+      "顶端挤压后控制下放"
+    ],
+    "tips": [
+      "可交替做，注意力更集中",
+      "手腕保持中立不后折"
+    ],
+    "mistakes": [
+      "肘部前移变成前平举",
+      "身体晃动"
+    ],
+    "alt": [
+      "barbell-curl",
+      "hammer-curl"
+    ]
+  },
+  {
+    "slug": "hammer-curl",
+    "name": "锤式弯举",
+    "nameEn": "Hammer Curl",
+    "pinyin": "chuishiwanju",
+    "bodyPart": "ARMS",
+    "equipment": "DUMBBELL",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "biceps",
+    "secondary": [
+      "forearm"
+    ],
+    "steps": [
+      "双手持铃，掌心相对",
+      "上臂固定屈肘举起",
+      "控制下放"
+    ],
+    "tips": [
+      "对肱肌和前臂刺激更多，让手臂更粗",
+      "全程掌心相对不旋转"
+    ],
+    "mistakes": [
+      "耸肩",
+      "肘部外展"
+    ],
+    "alt": [
+      "dumbbell-curl",
+      "reverse-curl"
+    ]
+  },
+  {
+    "slug": "preacher-curl",
+    "name": "牧师凳弯举",
+    "nameEn": "Preacher Curl",
+    "pinyin": "mushidengwanju",
+    "bodyPart": "ARMS",
+    "equipment": "BARBELL",
+    "level": "INTERMEDIATE",
+    "kind": "ISOLATION",
+    "primaryMuscle": "biceps",
+    "secondary": [
+      "forearm"
+    ],
+    "steps": [
+      "上臂贴紧斜垫，双手握杠",
+      "屈肘举起至前臂接近垂直",
+      "缓慢下放至手臂接近伸直"
+    ],
+    "tips": [
+      "斜垫排除了借力，是最纯粹的弯举",
+      "下放要慢，避免肘部压力"
+    ],
+    "mistakes": [
+      "下放时完全放松导致肘关节被拉",
+      "臀部离开座位借力"
+    ],
+    "alt": [
+      "cable-curl",
+      "barbell-curl"
+    ]
+  },
+  {
+    "slug": "cable-curl",
+    "name": "绳索弯举",
+    "nameEn": "Cable Curl",
+    "pinyin": "suosuowanju",
+    "bodyPart": "ARMS",
+    "equipment": "CABLE",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "biceps",
+    "secondary": [
+      "forearm"
+    ],
+    "steps": [
+      "面对低位绳索，双手握杆",
+      "上臂固定，屈肘举起",
+      "控制还原，保持张力"
+    ],
+    "tips": [
+      "全程张力恒定，适合收尾泵感",
+      "站位稍微后退一点"
+    ],
+    "mistakes": [
+      "身体后仰借力",
+      "还原时配重落地"
+    ],
+    "alt": [
+      "barbell-curl",
+      "preacher-curl"
+    ]
+  },
+  {
+    "slug": "close-grip-bench",
+    "name": "窄距卧推",
+    "nameEn": "Close-grip Bench Press",
+    "pinyin": "zhaijuwotui",
+    "bodyPart": "ARMS",
+    "equipment": "BARBELL",
+    "level": "INTERMEDIATE",
+    "kind": "COMPOUND",
+    "primaryMuscle": "triceps",
+    "secondary": [
+      "chest-mid",
+      "delt-front"
+    ],
+    "steps": [
+      "仰卧，握距与肩同宽或略窄",
+      "下放至下胸，手肘贴近身体",
+      "推起至手臂接近伸直"
+    ],
+    "tips": [
+      "是练三头最好的复合动作",
+      "握距不要过窄，伤手腕"
+    ],
+    "mistakes": [
+      "握距太窄导致手腕疼",
+      "手肘外展变成常规卧推"
+    ],
+    "alt": [
+      "triceps-pushdown",
+      "bench-dip"
+    ]
+  },
+  {
+    "slug": "triceps-pushdown",
+    "name": "绳索下压",
+    "nameEn": "Triceps Pushdown",
+    "pinyin": "suosuoxiaya",
+    "bodyPart": "ARMS",
+    "equipment": "CABLE",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "triceps",
+    "secondary": [],
+    "steps": [
+      "面对高位绳索，双手握杆，上臂贴紧身体",
+      "伸肘把杆压至大腿前",
+      "控制还原至前臂接近水平"
+    ],
+    "tips": [
+      "上臂全程不动，只有前臂在动",
+      "末端稍作停顿"
+    ],
+    "mistakes": [
+      "肘部前后移动",
+      "身体前倾压重量"
+    ],
+    "alt": [
+      "overhead-triceps-extension",
+      "close-grip-bench"
+    ]
+  },
+  {
+    "slug": "overhead-triceps-extension",
+    "name": "哑铃颈后臂屈伸",
+    "nameEn": "Overhead Triceps Extension",
+    "pinyin": "yalingjinghoubiqushen",
+    "bodyPart": "ARMS",
+    "equipment": "DUMBBELL",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "triceps",
+    "secondary": [],
+    "steps": [
+      "坐姿双手握住一只哑铃举过头顶",
+      "保持上臂垂直，屈肘把哑铃下放至颈后",
+      "伸肘还原"
+    ],
+    "tips": [
+      "这个角度能充分拉伸三头长头",
+      "肘部朝前，不要外展"
+    ],
+    "mistakes": [
+      "肘部大幅外展",
+      "腰部后仰"
+    ],
+    "alt": [
+      "triceps-pushdown",
+      "skull-crusher"
+    ]
+  },
+  {
+    "slug": "skull-crusher",
+    "name": "仰卧臂屈伸",
+    "nameEn": "Skull Crusher",
+    "pinyin": "yangwobiqushen",
+    "bodyPart": "ARMS",
+    "equipment": "BARBELL",
+    "level": "INTERMEDIATE",
+    "kind": "ISOLATION",
+    "primaryMuscle": "triceps",
+    "secondary": [],
+    "steps": [
+      "仰卧持杠，手臂垂直向上",
+      "保持上臂不动，屈肘把杠下放至额头上方",
+      "伸肘还原"
+    ],
+    "tips": [
+      "下放到额头附近就够，不必更低",
+      "建议用曲杆减轻手腕压力"
+    ],
+    "mistakes": [
+      "上臂跟着移动变成卧推",
+      "下放位置过低碰到头"
+    ],
+    "alt": [
+      "overhead-triceps-extension",
+      "triceps-pushdown"
+    ]
+  },
+  {
+    "slug": "bench-dip",
+    "name": "凳上反屈伸",
+    "nameEn": "Bench Dip",
+    "pinyin": "dengshangfanqushen",
+    "bodyPart": "ARMS",
+    "equipment": "BODYWEIGHT",
+    "level": "BEGINNER",
+    "kind": "COMPOUND",
+    "primaryMuscle": "triceps",
+    "secondary": [
+      "delt-front",
+      "chest-lower"
+    ],
+    "steps": [
+      "背对长凳，双手撑于凳边，双腿前伸",
+      "屈肘下降至肘约 90 度",
+      "伸肘推起"
+    ],
+    "tips": [
+      "腿伸得越远越难",
+      "身体贴近凳边，减少肩部压力"
+    ],
+    "mistakes": [
+      "下降过深",
+      "身体离凳太远导致肩前侧疼"
+    ],
+    "alt": [
+      "chest-dip",
+      "close-grip-bench"
+    ]
+  },
+  {
+    "slug": "wrist-curl",
+    "name": "腕弯举",
+    "nameEn": "Wrist Curl",
+    "pinyin": "wanwanju",
+    "bodyPart": "ARMS",
+    "equipment": "DUMBBELL",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "forearm",
+    "secondary": [],
+    "steps": [
+      "坐姿，前臂放于大腿上，手心朝上握铃",
+      "只用手腕把重量卷起",
+      "缓慢下放至手指接近张开"
+    ],
+    "tips": [
+      "小重量多次数，前臂耐力为主",
+      "动作幅度要完整"
+    ],
+    "mistakes": [
+      "用前臂整体抬起",
+      "重量过大导致幅度变小"
+    ],
+    "alt": [
+      "reverse-curl",
+      "hammer-curl"
+    ]
+  },
+  {
+    "slug": "reverse-curl",
+    "name": "反握弯举",
+    "nameEn": "Reverse Curl",
+    "pinyin": "fanwowanju",
+    "bodyPart": "ARMS",
+    "equipment": "BARBELL",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "forearm",
+    "secondary": [
+      "biceps"
+    ],
+    "steps": [
+      "正握（手心朝下）握杠，手臂下垂",
+      "上臂固定，屈肘举起",
+      "控制下放"
+    ],
+    "tips": [
+      "能同时练到肱桡肌，让手臂线条更明显",
+      "重量比常规弯举轻"
+    ],
+    "mistakes": [
+      "手腕下垂",
+      "身体摆动"
+    ],
+    "alt": [
+      "wrist-curl",
+      "hammer-curl"
+    ]
+  },
+  {
+    "slug": "barbell-squat",
+    "name": "杠铃深蹲",
+    "nameEn": "Barbell Back Squat",
+    "pinyin": "ganglingshendun",
+    "bodyPart": "LEGS",
+    "equipment": "BARBELL",
+    "level": "INTERMEDIATE",
+    "kind": "COMPOUND",
+    "primaryMuscle": "quads",
+    "secondary": [
+      "glutes",
+      "hamstrings",
+      "lower-back",
+      "abs"
+    ],
+    "steps": [
+      "杠铃置于斜方肌上，双脚与肩同宽略外八",
+      "屈髋屈膝下蹲至大腿接近平行地面",
+      "脚掌踩实，蹬地起身"
+    ],
+    "tips": [
+      "膝盖方向与脚尖一致",
+      "全程背部中立，核心收紧"
+    ],
+    "mistakes": [
+      "膝盖内扣",
+      "起身时臀部先起，变成早安式"
+    ],
+    "alt": [
+      "front-squat",
+      "goblet-squat"
+    ]
+  },
+  {
+    "slug": "front-squat",
+    "name": "前蹲",
+    "nameEn": "Front Squat",
+    "pinyin": "qiandun",
+    "bodyPart": "LEGS",
+    "equipment": "BARBELL",
+    "level": "ADVANCED",
+    "kind": "COMPOUND",
+    "primaryMuscle": "quads",
+    "secondary": [
+      "glutes",
+      "abs",
+      "lower-back"
+    ],
+    "steps": [
+      "杠铃置于锁骨前，手肘抬高",
+      "保持躯干直立下蹲",
+      "蹬地起身，手肘始终朝前"
+    ],
+    "tips": [
+      "躯干更直立，股四头肌参与更多",
+      "手腕柔韧不足可用交叉臂握法"
+    ],
+    "mistakes": [
+      "手肘下沉导致杠铃前滑",
+      "上身前倾过多"
+    ],
+    "alt": [
+      "barbell-squat",
+      "goblet-squat"
+    ]
+  },
+  {
+    "slug": "goblet-squat",
+    "name": "高脚杯深蹲",
+    "nameEn": "Goblet Squat",
+    "pinyin": "gaojiaobeishendun",
+    "bodyPart": "LEGS",
+    "equipment": "DUMBBELL",
+    "level": "BEGINNER",
+    "kind": "COMPOUND",
+    "primaryMuscle": "quads",
+    "secondary": [
+      "glutes",
+      "abs"
+    ],
+    "steps": [
+      "双手抱住哑铃一端置于胸前",
+      "下蹲至大腿平行地面，膝盖随脚尖方向打开",
+      "蹬地起身"
+    ],
+    "tips": [
+      "最适合新手学习深蹲模式",
+      "哑铃在胸前能帮助保持躯干直立"
+    ],
+    "mistakes": [
+      "哑铃离开身体",
+      "脚跟离地"
+    ],
+    "alt": [
+      "bodyweight-squat",
+      "barbell-squat"
+    ]
+  },
+  {
+    "slug": "leg-press",
+    "name": "腿举",
+    "nameEn": "Leg Press",
+    "pinyin": "tuiju",
+    "bodyPart": "LEGS",
+    "equipment": "MACHINE",
+    "level": "BEGINNER",
+    "kind": "COMPOUND",
+    "primaryMuscle": "quads",
+    "secondary": [
+      "glutes",
+      "hamstrings"
+    ],
+    "steps": [
+      "坐入器械，双脚与肩同宽踩于踏板",
+      "解锁后屈膝下放至大腿接近胸口",
+      "蹬起至膝盖接近伸直但不锁死"
+    ],
+    "tips": [
+      "腰背全程贴紧靠垫",
+      "脚位越高臀部参与越多"
+    ],
+    "mistakes": [
+      "下放过深导致腰部离开靠垫",
+      "膝盖锁死"
+    ],
+    "alt": [
+      "barbell-squat",
+      "leg-extension"
+    ]
+  },
+  {
+    "slug": "leg-extension",
+    "name": "腿屈伸",
+    "nameEn": "Leg Extension",
+    "pinyin": "tuiqushen",
+    "bodyPart": "LEGS",
+    "equipment": "MACHINE",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "quads",
+    "secondary": [],
+    "steps": [
+      "坐姿调整靠背，小腿垫置于踝前",
+      "伸膝把重量抬起至腿接近伸直",
+      "控制下放"
+    ],
+    "tips": [
+      "股四头肌唯一的孤立动作",
+      "顶端停顿一秒效果更好"
+    ],
+    "mistakes": [
+      "重量过大靠惯性甩",
+      "下放太快"
+    ],
+    "alt": [
+      "leg-press"
+    ]
+  },
+  {
+    "slug": "romanian-deadlift",
+    "name": "罗马尼亚硬拉",
+    "nameEn": "Romanian Deadlift",
+    "pinyin": "luomaniyahardra",
+    "bodyPart": "LEGS",
+    "equipment": "BARBELL",
+    "level": "INTERMEDIATE",
+    "kind": "COMPOUND",
+    "primaryMuscle": "hamstrings",
+    "secondary": [
+      "glutes",
+      "lower-back"
+    ],
+    "steps": [
+      "站姿握杠置于大腿前，膝盖微屈",
+      "屈髋把杠沿腿前下滑至小腿中部",
+      "臀部发力把髋推回，站直"
+    ],
+    "tips": [
+      "这是屈髋动作，不是深蹲",
+      "背部中立，杠铃贴着腿走"
+    ],
+    "mistakes": [
+      "弓背下放",
+      "膝盖过度弯曲变成硬拉"
+    ],
+    "alt": [
+      "leg-curl",
+      "barbell-hip-thrust"
+    ]
+  },
+  {
+    "slug": "leg-curl",
+    "name": "腿弯举",
+    "nameEn": "Leg Curl",
+    "pinyin": "tuwanju",
+    "bodyPart": "LEGS",
+    "equipment": "MACHINE",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "hamstrings",
+    "secondary": [
+      "calves"
+    ],
+    "steps": [
+      "俯卧或坐姿，滚垫置于脚踝后",
+      "屈膝把重量拉向臀部",
+      "控制还原"
+    ],
+    "tips": [
+      "腘绳肌孤立动作，配合硬拉效果最好",
+      "还原时不要完全放松"
+    ],
+    "mistakes": [
+      "臀部抬起借力",
+      "只做半程"
+    ],
+    "alt": [
+      "romanian-deadlift"
+    ]
+  },
+  {
+    "slug": "barbell-hip-thrust",
+    "name": "杠铃臀推",
+    "nameEn": "Barbell Hip Thrust",
+    "pinyin": "ganglingtuntui",
+    "bodyPart": "LEGS",
+    "equipment": "BARBELL",
+    "level": "INTERMEDIATE",
+    "kind": "COMPOUND",
+    "primaryMuscle": "glutes",
+    "secondary": [
+      "hamstrings",
+      "abs"
+    ],
+    "steps": [
+      "上背靠于长凳，杠铃置于髋部",
+      "脚掌踩实，臀部发力把髋顶起至躯干水平",
+      "顶端挤压臀部后控制下放"
+    ],
+    "tips": [
+      "下巴微收，视线朝前",
+      "顶端停顿一秒，臀感更强"
+    ],
+    "mistakes": [
+      "腰椎过度伸展代替髋伸",
+      "脚位过远导致腘绳肌代偿"
+    ],
+    "alt": [
+      "glute-bridge",
+      "romanian-deadlift"
+    ]
+  },
+  {
+    "slug": "glute-bridge",
+    "name": "臀桥",
+    "nameEn": "Glute Bridge",
+    "pinyin": "tunqiao",
+    "bodyPart": "LEGS",
+    "equipment": "BODYWEIGHT",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "glutes",
+    "secondary": [
+      "hamstrings",
+      "abs"
+    ],
+    "steps": [
+      "仰卧屈膝，双脚踩地与髋同宽",
+      "臀部发力把髋顶起至躯干与大腿成直线",
+      "停顿后缓慢下放"
+    ],
+    "tips": [
+      "徒手版本适合激活臀部",
+      "脚跟发力更容易找到臀感"
+    ],
+    "mistakes": [
+      "用腰顶起",
+      "幅度过大反弓腰"
+    ],
+    "alt": [
+      "barbell-hip-thrust",
+      "back-extension"
+    ]
+  },
+  {
+    "slug": "bulgarian-split-squat",
+    "name": "保加利亚分腿蹲",
+    "nameEn": "Bulgarian Split Squat",
+    "pinyin": "baojialiyafentundun",
+    "bodyPart": "LEGS",
+    "equipment": "DUMBBELL",
+    "level": "INTERMEDIATE",
+    "kind": "COMPOUND",
+    "primaryMuscle": "quads",
+    "secondary": [
+      "glutes",
+      "hamstrings",
+      "abs"
+    ],
+    "steps": [
+      "后脚搭于长凳，前脚向前迈一步，双手持铃",
+      "屈膝下蹲至前腿大腿接近平行",
+      "前脚蹬地起身"
+    ],
+    "tips": [
+      "单腿动作，对臀腿刺激极强",
+      "躯干略前倾臀部参与更多"
+    ],
+    "mistakes": [
+      "前脚离凳太近导致膝盖过度前移",
+      "身体左右晃动"
+    ],
+    "alt": [
+      "goblet-squat",
+      "bodyweight-squat"
+    ]
+  },
+  {
+    "slug": "standing-calf-raise",
+    "name": "站姿提踵",
+    "nameEn": "Standing Calf Raise",
+    "pinyin": "zhanzitizhong",
+    "bodyPart": "LEGS",
+    "equipment": "MACHINE",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "calves",
+    "secondary": [],
+    "steps": [
+      "前脚掌踩于踏板边缘，脚跟悬空",
+      "踮起脚尖至最高点",
+      "缓慢下放至小腿充分拉伸"
+    ],
+    "tips": [
+      "小腿需要大重量高次数",
+      "下放到底比抬起更重要"
+    ],
+    "mistakes": [
+      "幅度太小",
+      "借膝盖弹动"
+    ],
+    "alt": [
+      "bodyweight-squat"
+    ]
+  },
+  {
+    "slug": "bodyweight-squat",
+    "name": "徒手深蹲",
+    "nameEn": "Bodyweight Squat",
+    "pinyin": "tushoushendun",
+    "bodyPart": "LEGS",
+    "equipment": "BODYWEIGHT",
+    "level": "BEGINNER",
+    "kind": "COMPOUND",
+    "primaryMuscle": "quads",
+    "secondary": [
+      "glutes",
+      "abs"
+    ],
+    "steps": [
+      "双脚与肩同宽，脚尖略外展",
+      "屈髋屈膝下蹲至大腿平行地面",
+      "蹬地起身，手臂可前伸保持平衡"
+    ],
+    "tips": [
+      "零基础首选，先把动作模式练对",
+      "可以手扶椅背辅助"
+    ],
+    "mistakes": [
+      "膝盖内扣",
+      "脚跟离地"
+    ],
+    "alt": [
+      "goblet-squat",
+      "glute-bridge"
+    ]
+  },
+  {
+    "slug": "plank",
+    "name": "平板支撑",
+    "nameEn": "Plank",
+    "pinyin": "pingbanzhicheng",
+    "bodyPart": "CORE",
+    "equipment": "BODYWEIGHT",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "abs",
+    "secondary": [
+      "deep-core",
+      "obliques",
+      "glutes"
+    ],
+    "steps": [
+      "肘部与前脚掌撑地，肘在肩正下方",
+      "收紧核心与臀部，身体成一条直线",
+      "保持呼吸，坚持到姿态开始变形"
+    ],
+    "tips": [
+      "质量优先于时长，30 秒标准胜过 2 分钟塌腰",
+      "主动收紧臀部能明显提升稳定性"
+    ],
+    "mistakes": [
+      "塌腰或翘臀",
+      "憋气"
+    ],
+    "alt": [
+      "russian-twist",
+      "glute-bridge"
+    ]
+  },
+  {
+    "slug": "hanging-leg-raise",
+    "name": "悬垂举腿",
+    "nameEn": "Hanging Leg Raise",
+    "pinyin": "xuanchuijutui",
+    "bodyPart": "CORE",
+    "equipment": "BODYWEIGHT",
+    "level": "ADVANCED",
+    "kind": "ISOLATION",
+    "primaryMuscle": "abs",
+    "secondary": [
+      "obliques",
+      "forearm"
+    ],
+    "steps": [
+      "悬垂于单杠，肩胛微收",
+      "收腹把双腿抬起至与地面平行或更高",
+      "控制下放，不要摆动"
+    ],
+    "tips": [
+      "先能做屈膝举腿再进阶到直腿",
+      "重点是骨盆后倾，不是抬腿"
+    ],
+    "mistakes": [
+      "身体前后摆荡",
+      "只抬腿不卷腹"
+    ],
+    "alt": [
+      "cable-crunch",
+      "plank"
+    ]
+  },
+  {
+    "slug": "cable-crunch",
+    "name": "绳索卷腹",
+    "nameEn": "Cable Crunch",
+    "pinyin": "suosuojuanfu",
+    "bodyPart": "CORE",
+    "equipment": "CABLE",
+    "level": "INTERMEDIATE",
+    "kind": "ISOLATION",
+    "primaryMuscle": "abs",
+    "secondary": [
+      "obliques"
+    ],
+    "steps": [
+      "跪于高位绳索前，双手握绳置于头两侧",
+      "保持髋部固定，用腹部把上身卷曲",
+      "控制还原至腹部拉伸"
+    ],
+    "tips": [
+      "可加重量的腹肌动作，适合渐进超负荷",
+      "想象把胸口拉向骨盆"
+    ],
+    "mistakes": [
+      "用手臂拉绳",
+      "髋部前后移动代替卷腹"
+    ],
+    "alt": [
+      "hanging-leg-raise",
+      "plank"
+    ]
+  },
+  {
+    "slug": "russian-twist",
+    "name": "俄罗斯转体",
+    "nameEn": "Russian Twist",
+    "pinyin": "eluosizhuanti",
+    "bodyPart": "CORE",
+    "equipment": "BODYWEIGHT",
+    "level": "BEGINNER",
+    "kind": "ISOLATION",
+    "primaryMuscle": "obliques",
+    "secondary": [
+      "abs",
+      "deep-core"
+    ],
+    "steps": [
+      "坐姿屈膝，上身后倾约 45 度，双脚可离地",
+      "双手合拢，向左右两侧转动躯干",
+      "保持核心收紧，动作均匀"
+    ],
+    "tips": [
+      "转的是躯干，不只是手臂",
+      "速度放慢，感受腹斜肌"
+    ],
+    "mistakes": [
+      "只摆手臂不转躯干",
+      "弓背"
+    ],
+    "alt": [
+      "plank",
+      "hanging-leg-raise"
+    ]
+  }
+]
