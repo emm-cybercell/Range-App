@@ -18,6 +18,9 @@ const only = onlyArg ? new Set(onlyArg.slice(7).split(",").map((s) => s.trim()))
  * Exercises Dataset 里这几条映射到的其实是另一个动作，改用 GymBells 的静态图。
  * 后续再发现错配，往这里加一行即可。
  */
+/** 静态图默认取动作到位帧；但这几条到位帧反而看不清动作，改回起始帧 */
+const USE_START_FRAME = new Set(["杠铃臀推"]);
+
 const USE_GYMBELLS = new Set([
   "腕弯举",
   "徒手深蹲",
@@ -69,7 +72,8 @@ for (const item of mapping) {
 
   if (useGymBells) {
     const pose = item.gymbells.pose;
-    const path = `images/${pose}/end.png`;
+    const frame = USE_START_FRAME.has(item.name_zh) ? "start" : "end";
+    const path = `images/${pose}/${frame}.png`;
     jobs.push({
       slug,
       kind: "cover",
