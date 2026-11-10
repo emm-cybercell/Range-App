@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { requireAccount } from "@/lib/account";
 import { prisma } from "@/lib/db";
-import { PlanEditor, type EditorDay } from "./plan-editor";
+import { PlanEditor, type InitialDay } from "./plan-editor";
 
 // 依赖 params 与登录态，按请求渲染
 export const instant = false;
@@ -42,7 +42,7 @@ export default async function EditPlanPage({
 
   if (!plan) notFound();
 
-  const days: EditorDay[] = plan.days.map((day) => ({
+  const days: InitialDay[] = plan.days.map((day) => ({
     id: day.id,
     name: day.name,
     weekday: day.weekday,
