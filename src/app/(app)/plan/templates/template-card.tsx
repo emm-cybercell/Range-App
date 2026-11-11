@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Check, ChevronLeft, Clock3, Dumbbell, RotateCw } from "lucide-react";
 import { createPlanAction } from "../actions";
+import { SubmitButton } from "@/components/submit-button";
 
 type Day = { name: string; exercises: { slug: string; sets: number }[] };
 
@@ -93,9 +94,8 @@ export function TemplateCard({
 
           <form action={createPlanAction} className="mt-4">
             <input type="hidden" name="templateSlug" value={slug} />
-            <button
-              type="submit"
-              data-ripple
+            <SubmitButton
+              pendingText="正在生成计划…"
               className={`h-11 w-full rounded-btn text-sm font-semibold transition-colors ${
                 recommended
                   ? "bg-brand text-white hover:bg-brand-hover"
@@ -103,7 +103,7 @@ export function TemplateCard({
               }`}
             >
               用这套计划
-            </button>
+            </SubmitButton>
           </form>
 
           <button
@@ -148,13 +148,12 @@ export function TemplateCard({
 
           <form action={createPlanAction} className="mt-3">
             <input type="hidden" name="templateSlug" value={slug} />
-            <button
-              type="submit"
-              data-ripple
+            <SubmitButton
+              pendingText="正在生成计划…"
               className="h-10 w-full rounded-btn bg-brand text-[13px] font-semibold text-white"
             >
               用这套计划
-            </button>
+            </SubmitButton>
           </form>
         </div>
       </div>
