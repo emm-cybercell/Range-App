@@ -1,5 +1,5 @@
 import { Suspense, type ReactNode } from "react";
-import { redirect } from "next/navigation";
+import { RedirectOnMount } from "@/components/redirect-on-mount";
 import { requireAccount } from "@/lib/account";
 import { AppNav } from "@/components/app-nav";
 
@@ -23,8 +23,10 @@ export default function AppLayout({ children }: { children: ReactNode }) {
 
 async function AuthGate({ children }: { children: ReactNode }) {
   const account = await requireAccount();
-  if (!account) redirect("/login");
-  if (!account.onboarded) redirect("/onboarding");
+  // 注意：这里不要用服务端 redirect。它会在 action 响应重渲染时抛 NEXT_REDIRECT，
+  // 导致首次注册/登录的响应被中断（表现为页面不动、会话丢失）。
+  if (!account) return <RedirectOnMount to="/login" />;
+  if (!account.onboarded) return <RedirectOnMount to="/onboarding" />;
   return <>{children}</>;
 }
 

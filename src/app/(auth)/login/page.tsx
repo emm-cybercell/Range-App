@@ -2,15 +2,45 @@
 
 import Link from "next/link";
 import { BrandLockup } from "@/components/brand-mark";
-import { useActionState } from "react";
+import { useState, type FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
-import { loginAction } from "../actions";
 
 const inputClass =
   "mt-1.5 h-12 w-full rounded-xl border border-line bg-surface px-3.5 text-[15px] outline-none transition-colors placeholder:text-ink-3 focus:border-brand";
 
 export default function LoginPage() {
-  const [state, action, pending] = useActionState(loginAction, null);
+  const router = useRouter();
+  const [pending, setPending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    setPending(true);
+    setError(null);
+    try {
+      const response = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          email: form.get("email"),
+          password: form.get("password"),
+        }),
+      });
+      const data = (await response.json()) as { error?: string; next?: string };
+      if (!response.ok) {
+        setError(data.error ?? "提交失败，请重试");
+        return;
+      }
+      router.replace(data.next ?? "/home");
+      router.refresh();
+    } catch {
+      setError("网络异常，请重试");
+    } finally {
+      setPending(false);
+    }
+  }
 
   return (
     <div className="mx-auto flex min-h-screen w-full max-w-md flex-col justify-center px-5 py-10">
@@ -21,7 +51,7 @@ export default function LoginPage() {
       <h1 className="text-2xl font-bold tracking-tight">欢迎回来</h1>
       <p className="mt-1.5 text-sm text-ink-2">登录后你的训练记录会在所有设备上同步。</p>
 
-      <form action={action} className="mt-8 space-y-4">
+      <form onSubmit={onSubmit} className="mt-8 space-y-4">
         <div>
           <label htmlFor="email" className="text-[13px] font-medium text-ink-2">
             邮箱
@@ -52,8 +82,8 @@ export default function LoginPage() {
           />
         </div>
 
-        {state?.error ? (
-          <p className="rounded-xl bg-danger/10 px-3.5 py-2.5 text-[13px] text-danger">{state.error}</p>
+        {error ? (
+          <p className="rounded-xl bg-danger/10 px-3.5 py-2.5 text-[13px] text-danger">{error}</p>
         ) : null}
 
         <button

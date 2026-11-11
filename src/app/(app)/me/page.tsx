@@ -1,9 +1,8 @@
-import { LogOut } from "lucide-react";
 import Link from "next/link";
 import { prisma } from "@/lib/db";
 import { requireAccount } from "@/lib/account";
 import { calcMetabolic, GOAL_LABEL, type Goal, type Sex } from "@/lib/metabolic";
-import { logoutAction } from "@/app/(auth)/actions";
+import { LogoutButton } from "./logout-button";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const SEX_LABEL: Record<string, string> = { MALE: "男", FEMALE: "女" };
@@ -147,15 +146,7 @@ export default async function MePage() {
         <span className="text-[12px] text-ink-3">外观 · 导出 · 清除记录 →</span>
       </Link>
 
-      <form action={logoutAction} className="mt-6">
-        <button
-          type="submit"
-          className="flex h-12 w-full items-center justify-center gap-2 rounded-btn border border-line bg-surface text-sm font-medium text-ink-2 transition-colors hover:text-danger"
-        >
-          <LogOut className="size-4" />
-          退出登录
-        </button>
-      </form>
+      <LogoutButton />
 
       <p className="mt-6 text-center text-[12px] text-ink-3">练迹 v0.1</p>
 
