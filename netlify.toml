@@ -1,0 +1,9 @@
+# Netlify 部署配置。Next.js 由 Netlify 的 OpenNext 适配器自动接管，
+# 不要在 package.json 或这里声明 @netlify/plugin-nextjs，否则会退出官方自动更新通道。
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"

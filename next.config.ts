@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // 自建容器部署需要 standalone 产物；Vercel 有自己的一套打包方式，两者不要同时开
-  output: process.env.VERCEL ? undefined : "standalone",
+  // 自建容器部署需要 standalone 产物；Vercel 与 Netlify 各有自己的打包方式，三者不要同时开
+  output: process.env.VERCEL || process.env.NETLIFY ? undefined : "standalone",
   // dev 与 build 用不同产物目录，避免每次切换模式都要清空对方的缓存
   // NEXT_DIST_DIR 可覆盖（CI 里一次构建一个空目录，就不会去清理上一次的产物）
   distDir:
