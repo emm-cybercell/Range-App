@@ -5,6 +5,7 @@ import { requireAccount } from "@/lib/account";
 import { estimateMinutes, recommendTemplates, type UserEquipment } from "@/lib/plan-templates";
 import { startBlankPlanAction } from "../actions";
 import { TemplateCard } from "./template-card";
+import { SubmitButton } from "@/components/submit-button";
 
 const EQUIPMENT_LABEL: Record<UserEquipment, string> = {
   GYM: "健身房",
@@ -61,8 +62,8 @@ export default async function PlanTemplatesPage({
       ) : null}
 
       <form action={startBlankPlanAction} className="mt-6">
-        <button
-          type="submit"
+        <SubmitButton
+          pendingText="正在创建…"
           className="flex w-full items-center gap-3 rounded-card border border-dashed border-line bg-surface px-4 py-3.5 text-left transition-colors hover:border-brand/50"
         >
           <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-brand-soft text-brand">
@@ -75,7 +76,7 @@ export default async function PlanTemplatesPage({
             </span>
           </span>
           <ArrowRight className="size-4 shrink-0 text-ink-3" />
-        </button>
+        </SubmitButton>
       </form>
 
       <div className="mt-6 space-y-3">
