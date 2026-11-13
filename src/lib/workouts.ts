@@ -66,32 +66,35 @@ export type StartResult =
  * 计划动作在这里做快照，之后计划被改动不影响本次记录。
  */
 export async function startWorkout(accountId: string, planDayId: string): Promise<StartResult> {
-  const active = await prisma.workoutSession.findFirst({
-    where: { accountId, status: "ACTIVE" },
-    select: { id: true },
-  });
-  if (active) return { kind: "existing", sessionId: active.id };
-
-  const day = await prisma.planDay.findFirst({
-    where: { id: planDayId, plan: { accountId, deletedAt: null } },
-    include: {
-      plan: { select: { id: true, name: true } },
-      exercises: {
-        orderBy: { order: "asc" },
-        include: {
-          exercise: {
-            select: {
-              id: true,
-              name: true,
-              bodyPart: true,
-              equipment: true,
-              primaryMuscle: { select: { name: true } },
+  // 这两次查询互不依赖，合并成一次往返。跨境部署时每次往返要几百毫秒，省一次就快一截。
+  const [active, day] = await Promise.all([
+    prisma.workoutSession.findFirst({
+      where: { accountId, status: "ACTIVE" },
+      select: { id: true },
+    }),
+    prisma.planDay.findFirst({
+      where: { id: planDayId, plan: { accountId, deletedAt: null } },
+      include: {
+        plan: { select: { id: true, name: true } },
+        exercises: {
+          orderBy: { order: "asc" },
+          include: {
+            exercise: {
+              select: {
+                id: true,
+                name: true,
+                bodyPart: true,
+                equipment: true,
+                primaryMuscle: { select: { name: true } },
+              },
             },
           },
         },
       },
-    },
-  });
+    }),
+  ]);
+
+  if (active) return { kind: "existing", sessionId: active.id };
 
   if (!day) return { kind: "error", message: "找不到这个训练日" };
   if (day.exercises.length === 0) return { kind: "error", message: "这个训练日还没有动作" };

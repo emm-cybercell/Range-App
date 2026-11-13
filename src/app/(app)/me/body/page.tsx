@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { ArrowLeft, Trash2, TrendingDown, TrendingUp } from "lucide-react";
+import { ArrowLeft, Loader2, Trash2, TrendingDown, TrendingUp } from "lucide-react";
 import { prisma } from "@/lib/db";
 import { requireAccount } from "@/lib/account";
+import { SubmitButton } from "@/components/submit-button";
 import { deleteWeightForm, recordWeightForm } from "./actions";
 
 const RANGES = [
@@ -219,13 +220,13 @@ export default async function BodyPage({
                 ) : null}
                 <form action={deleteWeightForm}>
                   <input type="hidden" name="id" value={m.id} />
-                  <button
-                    type="submit"
-                    aria-label="删除这条记录"
-                    className="grid size-7 place-items-center rounded-full text-ink-3 hover:text-danger"
+                  <SubmitButton
+                    ariaLabel="删除这条记录"
+                    pendingNode={<Loader2 className="size-3.5 animate-spin" />}
+                    className="size-7 rounded-full text-ink-3 hover:text-danger"
                   >
                     <Trash2 className="size-3.5" />
-                  </button>
+                  </SubmitButton>
                 </form>
               </li>
             ))}

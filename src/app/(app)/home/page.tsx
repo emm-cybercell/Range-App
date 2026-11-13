@@ -9,6 +9,7 @@ import { startWorkoutAction } from "@/app/workout/actions";
 import { WEEKDAY_LABEL } from "@/lib/plan-templates";
 import { todayString } from "@/lib/date";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { SubmitButton } from "@/components/submit-button";
 
 const WEEK_SHORT = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
 
@@ -145,13 +146,13 @@ export default async function HomePage() {
               ) : (
                 <form action={startWorkoutAction} className="mt-4">
                   <input type="hidden" name="planDayId" value={todayPlan.day.id} />
-                  <button
-                    type="submit"
-                    className="flex h-11 w-full items-center justify-center gap-1.5 rounded-btn bg-brand text-sm font-semibold text-white transition-colors hover:bg-brand-hover"
+                  <SubmitButton
+                    pendingText="正在开始…"
+                    className="h-11 w-full gap-1.5 rounded-btn bg-brand text-sm font-semibold text-white transition-colors hover:bg-brand-hover"
                   >
                     开始训练
                     <ArrowRight className="size-4" />
-                  </button>
+                  </SubmitButton>
                 </form>
               )}
             </>

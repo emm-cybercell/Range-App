@@ -6,6 +6,7 @@ import { prisma } from "@/lib/db";
 import { getActivePlan, isoWeekday, planDayMinutes } from "@/lib/plans";
 import { WEEKDAY_LABEL } from "@/lib/plan-templates";
 import { startWorkoutAction } from "@/app/workout/actions";
+import { SubmitButton } from "@/components/submit-button";
 import { activatePlanAction } from "./actions";
 
 const BODY_PART_LABEL: Record<string, string> = {
@@ -214,12 +215,12 @@ async function PlanBody() {
               {isToday ? (
                 <form action={startWorkoutAction} className="mt-4">
                   <input type="hidden" name="planDayId" value={day.id} />
-                  <button
-                    type="submit"
-                    className="flex h-11 w-full items-center justify-center rounded-btn bg-brand text-sm font-semibold text-white transition-colors hover:bg-brand-hover"
+                  <SubmitButton
+                    pendingText="正在开始…"
+                    className="h-11 w-full rounded-btn bg-brand text-sm font-semibold text-white transition-colors hover:bg-brand-hover"
                   >
                     开始训练
-                  </button>
+                  </SubmitButton>
                 </form>
               ) : null}
             </section>
