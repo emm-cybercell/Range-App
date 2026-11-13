@@ -48,3 +48,7 @@ yarn-error.log*
 next-env.d.ts
 
 /src/generated/prisma
+
+# 本地备份与 Netlify 构建缓存
+/.backup
+/.netlify
